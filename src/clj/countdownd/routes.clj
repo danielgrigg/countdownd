@@ -7,9 +7,15 @@
             [compojure.response :as response]))
 
 (defroutes main-routes
-           (GET "/" [] (index-page))
-           (route/resources "/")
-           (route/not-found "Page not found"))
+  (GET "/" [] (index-page
+               {:event-name "some event"
+                :year 2012
+                :month 7
+                :day 3
+                :hours 14
+                :minutes 12}))
+       (route/resources "/")
+       (route/not-found "Page not found"))
 
 (def app
   (handler/site main-routes))

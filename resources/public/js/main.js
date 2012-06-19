@@ -20761,12 +20761,1370 @@ clojure.browser.dom.click_element = function click_element(e) {
 goog.provide("countdownd.manip");
 goog.require("cljs.core");
 goog.require("clojure.browser.dom");
-goog.provide("goog.events.EventWrapper");
+goog.provide("goog.i18n.DateTimeSymbols");
+goog.provide("goog.i18n.DateTimeSymbols_am");
+goog.provide("goog.i18n.DateTimeSymbols_ar");
+goog.provide("goog.i18n.DateTimeSymbols_bg");
+goog.provide("goog.i18n.DateTimeSymbols_bn");
+goog.provide("goog.i18n.DateTimeSymbols_ca");
+goog.provide("goog.i18n.DateTimeSymbols_cs");
+goog.provide("goog.i18n.DateTimeSymbols_da");
+goog.provide("goog.i18n.DateTimeSymbols_de");
+goog.provide("goog.i18n.DateTimeSymbols_de_AT");
+goog.provide("goog.i18n.DateTimeSymbols_de_CH");
+goog.provide("goog.i18n.DateTimeSymbols_el");
+goog.provide("goog.i18n.DateTimeSymbols_en");
+goog.provide("goog.i18n.DateTimeSymbols_en_AU");
+goog.provide("goog.i18n.DateTimeSymbols_en_GB");
+goog.provide("goog.i18n.DateTimeSymbols_en_IE");
+goog.provide("goog.i18n.DateTimeSymbols_en_IN");
+goog.provide("goog.i18n.DateTimeSymbols_en_ISO");
+goog.provide("goog.i18n.DateTimeSymbols_en_SG");
+goog.provide("goog.i18n.DateTimeSymbols_en_US");
+goog.provide("goog.i18n.DateTimeSymbols_en_ZA");
+goog.provide("goog.i18n.DateTimeSymbols_es");
+goog.provide("goog.i18n.DateTimeSymbols_es_419");
+goog.provide("goog.i18n.DateTimeSymbols_et");
+goog.provide("goog.i18n.DateTimeSymbols_eu");
+goog.provide("goog.i18n.DateTimeSymbols_fa");
+goog.provide("goog.i18n.DateTimeSymbols_fi");
+goog.provide("goog.i18n.DateTimeSymbols_fil");
+goog.provide("goog.i18n.DateTimeSymbols_fr");
+goog.provide("goog.i18n.DateTimeSymbols_fr_CA");
+goog.provide("goog.i18n.DateTimeSymbols_gl");
+goog.provide("goog.i18n.DateTimeSymbols_gsw");
+goog.provide("goog.i18n.DateTimeSymbols_gu");
+goog.provide("goog.i18n.DateTimeSymbols_he");
+goog.provide("goog.i18n.DateTimeSymbols_hi");
+goog.provide("goog.i18n.DateTimeSymbols_hr");
+goog.provide("goog.i18n.DateTimeSymbols_hu");
+goog.provide("goog.i18n.DateTimeSymbols_id");
+goog.provide("goog.i18n.DateTimeSymbols_in");
+goog.provide("goog.i18n.DateTimeSymbols_is");
+goog.provide("goog.i18n.DateTimeSymbols_it");
+goog.provide("goog.i18n.DateTimeSymbols_iw");
+goog.provide("goog.i18n.DateTimeSymbols_ja");
+goog.provide("goog.i18n.DateTimeSymbols_kn");
+goog.provide("goog.i18n.DateTimeSymbols_ko");
+goog.provide("goog.i18n.DateTimeSymbols_ln");
+goog.provide("goog.i18n.DateTimeSymbols_lt");
+goog.provide("goog.i18n.DateTimeSymbols_lv");
+goog.provide("goog.i18n.DateTimeSymbols_ml");
+goog.provide("goog.i18n.DateTimeSymbols_mr");
+goog.provide("goog.i18n.DateTimeSymbols_ms");
+goog.provide("goog.i18n.DateTimeSymbols_mt");
+goog.provide("goog.i18n.DateTimeSymbols_nl");
+goog.provide("goog.i18n.DateTimeSymbols_no");
+goog.provide("goog.i18n.DateTimeSymbols_or");
+goog.provide("goog.i18n.DateTimeSymbols_pl");
+goog.provide("goog.i18n.DateTimeSymbols_pt");
+goog.provide("goog.i18n.DateTimeSymbols_pt_BR");
+goog.provide("goog.i18n.DateTimeSymbols_pt_PT");
+goog.provide("goog.i18n.DateTimeSymbols_ro");
+goog.provide("goog.i18n.DateTimeSymbols_ru");
+goog.provide("goog.i18n.DateTimeSymbols_sk");
+goog.provide("goog.i18n.DateTimeSymbols_sl");
+goog.provide("goog.i18n.DateTimeSymbols_sq");
+goog.provide("goog.i18n.DateTimeSymbols_sr");
+goog.provide("goog.i18n.DateTimeSymbols_sv");
+goog.provide("goog.i18n.DateTimeSymbols_sw");
+goog.provide("goog.i18n.DateTimeSymbols_ta");
+goog.provide("goog.i18n.DateTimeSymbols_te");
+goog.provide("goog.i18n.DateTimeSymbols_th");
+goog.provide("goog.i18n.DateTimeSymbols_tl");
+goog.provide("goog.i18n.DateTimeSymbols_tr");
+goog.provide("goog.i18n.DateTimeSymbols_uk");
+goog.provide("goog.i18n.DateTimeSymbols_ur");
+goog.provide("goog.i18n.DateTimeSymbols_vi");
+goog.provide("goog.i18n.DateTimeSymbols_zh");
+goog.provide("goog.i18n.DateTimeSymbols_zh_CN");
+goog.provide("goog.i18n.DateTimeSymbols_zh_HK");
+goog.provide("goog.i18n.DateTimeSymbols_zh_TW");
+goog.i18n.DateTimeSymbols_en_ISO = {ERAS:["BC", "AD"], ERANAMES:["Before Christ", "Anno Domini"], NARROWMONTHS:["J", "F", "M", "A", "M", "J", "J", "A", "S", "O", "N", "D"], STANDALONENARROWMONTHS:["J", "F", "M", "A", "M", "J", "J", "A", "S", "O", "N", "D"], MONTHS:["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"], STANDALONEMONTHS:["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", 
+"November", "December"], SHORTMONTHS:["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"], STANDALONESHORTMONTHS:["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"], WEEKDAYS:["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"], STANDALONEWEEKDAYS:["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"], SHORTWEEKDAYS:["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"], STANDALONESHORTWEEKDAYS:["Sun", 
+"Mon", "Tue", "Wed", "Thu", "Fri", "Sat"], NARROWWEEKDAYS:["S", "M", "T", "W", "T", "F", "S"], STANDALONENARROWWEEKDAYS:["S", "M", "T", "W", "T", "F", "S"], SHORTQUARTERS:["Q1", "Q2", "Q3", "Q4"], QUARTERS:["1st quarter", "2nd quarter", "3rd quarter", "4th quarter"], AMPMS:["AM", "PM"], DATEFORMATS:["EEEE, y MMMM dd", "y MMMM d", "y MMM d", "yyyy-MM-dd"], TIMEFORMATS:["HH:mm:ss v", "HH:mm:ss z", "HH:mm:ss", "HH:mm"], AVAILABLEFORMATS:{"Md":"M/d", "MMMMd":"MMMM d", "MMMd":"MMM d"}, FIRSTDAYOFWEEK:0, 
+WEEKENDRANGE:[5, 6], FIRSTWEEKCUTOFFDAY:3};
+goog.i18n.DateTimeSymbols_am = {ERAS:["\u12d3/\u12d3", "\u12d3/\u121d"], ERANAMES:["\u12d3\u1218\u1270 \u12d3\u1208\u121d", "\u12d3\u1218\u1270 \u121d\u1215\u1228\u1275"], NARROWMONTHS:["\u1303", "\u134c", "\u121b", "\u12a4", "\u121c", "\u1301", "\u1301", "\u12a6", "\u1234", "\u12a6", "\u1296", "\u12f2"], STANDALONENARROWMONTHS:["\u1303", "\u134c", "\u121b", "\u12a4", "\u121c", "\u1301", "\u1301", "\u12a6", "\u1234", "\u12a6", "\u1296", "\u12f2"], MONTHS:["\u1303\u1295\u12e9\u12c8\u122a", "\u134c\u1265\u1229\u12c8\u122a", 
+"\u121b\u122d\u127d", "\u12a4\u1355\u1228\u120d", "\u121c\u12ed", "\u1301\u1295", "\u1301\u120b\u12ed", "\u12a6\u1308\u1235\u1275", "\u1234\u1355\u1274\u121d\u1260\u122d", "\u12a6\u12ad\u1270\u12cd\u1260\u122d", "\u1296\u126c\u121d\u1260\u122d", "\u12f2\u1234\u121d\u1260\u122d"], STANDALONEMONTHS:["\u1303\u1295\u12e9\u12c8\u122a", "\u134c\u1265\u1229\u12c8\u122a", "\u121b\u122d\u127d", "\u12a4\u1355\u1228\u120d", "\u121c\u12ed", "\u1301\u1295", "\u1301\u120b\u12ed", "\u12a6\u1308\u1235\u1275", "\u1234\u1355\u1274\u121d\u1260\u122d", 
+"\u12a6\u12ad\u1270\u12cd\u1260\u122d", "\u1296\u126c\u121d\u1260\u122d", "\u12f2\u1234\u121d\u1260\u122d"], SHORTMONTHS:["\u1303\u1295\u12e9", "\u134c\u1265\u1229", "\u121b\u122d\u127d", "\u12a4\u1355\u1228", "\u121c\u12ed", "\u1301\u1295", "\u1301\u120b\u12ed", "\u12a6\u1308\u1235", "\u1234\u1355\u1274", "\u12a6\u12ad\u1270", "\u1296\u126c\u121d", "\u12f2\u1234\u121d"], STANDALONESHORTMONTHS:["\u1303\u1295\u12e9", "\u134c\u1265\u1229", "\u121b\u122d\u127d", "\u12a4\u1355\u1228", "\u121c\u12ed", 
+"\u1301\u1295", "\u1301\u120b\u12ed", "\u12a6\u1308\u1235", "\u1234\u1355\u1274", "\u12a6\u12ad\u1270", "\u1296\u126c\u121d", "\u12f2\u1234\u121d"], WEEKDAYS:["\u12a5\u1211\u12f5", "\u1230\u129e", "\u121b\u12ad\u1230\u129e", "\u1228\u1261\u12d5", "\u1210\u1219\u1235", "\u12d3\u122d\u1265", "\u1245\u12f3\u121c"], STANDALONEWEEKDAYS:["\u12a5\u1211\u12f5", "\u1230\u129e", "\u121b\u12ad\u1230\u129e", "\u1228\u1261\u12d5", "\u1210\u1219\u1235", "\u12d3\u122d\u1265", "\u1245\u12f3\u121c"], SHORTWEEKDAYS:["\u12a5\u1211\u12f5", 
+"\u1230\u129e", "\u121b\u12ad\u1230", "\u1228\u1261\u12d5", "\u1210\u1219\u1235", "\u12d3\u122d\u1265", "\u1245\u12f3\u121c"], STANDALONESHORTWEEKDAYS:["\u12a5\u1211\u12f5", "\u1230\u129e", "\u121b\u12ad\u1230", "\u1228\u1261\u12d5", "\u1210\u1219\u1235", "\u12d3\u122d\u1265", "\u1245\u12f3\u121c"], NARROWWEEKDAYS:["\u12a5", "\u1230", "\u121b", "\u1228", "\u1210", "\u12d3", "\u1245"], STANDALONENARROWWEEKDAYS:["\u12a5", "\u1230", "\u121b", "\u1228", "\u1210", "\u12d3", "\u1245"], SHORTQUARTERS:["Q1", 
+"Q2", "Q3", "Q4"], QUARTERS:["1\u129b\u12cd \u1229\u1265", "\u1201\u1208\u1270\u129b\u12cd \u1229\u1265", "3\u129b\u12cd \u1229\u1265", "4\u129b\u12cd \u1229\u1265"], AMPMS:["\u1321\u12cb\u1275", "\u12a8\u1233\u12d3\u1275"], DATEFORMATS:["EEEE, d MMMM y", "d MMMM y", "d MMM y", "dd/MM/yyyy"], TIMEFORMATS:["h:mm:ss a zzzz", "h:mm:ss a z", "h:mm:ss a", "h:mm a"], FIRSTDAYOFWEEK:5, WEEKENDRANGE:[5, 6], FIRSTWEEKCUTOFFDAY:1};
+goog.i18n.DateTimeSymbols_ar = {ERAS:["\u0642.\u0645", "\u0645"], ERANAMES:["\u0642\u0628\u0644 \u0627\u0644\u0645\u064a\u0644\u0627\u062f", "\u0645\u064a\u0644\u0627\u062f\u064a"], NARROWMONTHS:["\u064a", "\u0641", "\u0645", "\u0623", "\u0648", "\u0646", "\u0644", "\u063a", "\u0633", "\u0643", "\u0628", "\u062f"], STANDALONENARROWMONTHS:["\u064a", "\u0641", "\u0645", "\u0623", "\u0648", "\u0646", "\u0644", "\u063a", "\u0633", "\u0643", "\u0628", "\u062f"], MONTHS:["\u064a\u0646\u0627\u064a\u0631", 
+"\u0641\u0628\u0631\u0627\u064a\u0631", "\u0645\u0627\u0631\u0633", "\u0623\u0628\u0631\u064a\u0644", "\u0645\u0627\u064a\u0648", "\u064a\u0648\u0646\u064a\u0648", "\u064a\u0648\u0644\u064a\u0648", "\u0623\u063a\u0633\u0637\u0633", "\u0633\u0628\u062a\u0645\u0628\u0631", "\u0623\u0643\u062a\u0648\u0628\u0631", "\u0646\u0648\u0641\u0645\u0628\u0631", "\u062f\u064a\u0633\u0645\u0628\u0631"], STANDALONEMONTHS:["\u064a\u0646\u0627\u064a\u0631", "\u0641\u0628\u0631\u0627\u064a\u0631", "\u0645\u0627\u0631\u0633", 
+"\u0623\u0628\u0631\u064a\u0644", "\u0645\u0627\u064a\u0648", "\u064a\u0648\u0646\u064a\u0648", "\u064a\u0648\u0644\u064a\u0648", "\u0623\u063a\u0633\u0637\u0633", "\u0633\u0628\u062a\u0645\u0628\u0631", "\u0623\u0643\u062a\u0648\u0628\u0631", "\u0646\u0648\u0641\u0645\u0628\u0631", "\u062f\u064a\u0633\u0645\u0628\u0631"], SHORTMONTHS:["\u064a\u0646\u0627\u064a\u0631", "\u0641\u0628\u0631\u0627\u064a\u0631", "\u0645\u0627\u0631\u0633", "\u0623\u0628\u0631\u064a\u0644", "\u0645\u0627\u064a\u0648", 
+"\u064a\u0648\u0646\u064a\u0648", "\u064a\u0648\u0644\u064a\u0648", "\u0623\u063a\u0633\u0637\u0633", "\u0633\u0628\u062a\u0645\u0628\u0631", "\u0623\u0643\u062a\u0648\u0628\u0631", "\u0646\u0648\u0641\u0645\u0628\u0631", "\u062f\u064a\u0633\u0645\u0628\u0631"], STANDALONESHORTMONTHS:["\u064a\u0646\u0627\u064a\u0631", "\u0641\u0628\u0631\u0627\u064a\u0631", "\u0645\u0627\u0631\u0633", "\u0623\u0628\u0631\u064a\u0644", "\u0645\u0627\u064a\u0648", "\u064a\u0648\u0646\u064a\u0648", "\u064a\u0648\u0644\u064a\u0648", 
+"\u0623\u063a\u0633\u0637\u0633", "\u0633\u0628\u062a\u0645\u0628\u0631", "\u0623\u0643\u062a\u0648\u0628\u0631", "\u0646\u0648\u0641\u0645\u0628\u0631", "\u062f\u064a\u0633\u0645\u0628\u0631"], WEEKDAYS:["\u0627\u0644\u0623\u062d\u062f", "\u0627\u0644\u0627\u062b\u0646\u064a\u0646", "\u0627\u0644\u062b\u0644\u0627\u062b\u0627\u0621", "\u0627\u0644\u0623\u0631\u0628\u0639\u0627\u0621", "\u0627\u0644\u062e\u0645\u064a\u0633", "\u0627\u0644\u062c\u0645\u0639\u0629", "\u0627\u0644\u0633\u0628\u062a"], 
+STANDALONEWEEKDAYS:["\u0627\u0644\u0623\u062d\u062f", "\u0627\u0644\u0627\u062b\u0646\u064a\u0646", "\u0627\u0644\u062b\u0644\u0627\u062b\u0627\u0621", "\u0627\u0644\u0623\u0631\u0628\u0639\u0627\u0621", "\u0627\u0644\u062e\u0645\u064a\u0633", "\u0627\u0644\u062c\u0645\u0639\u0629", "\u0627\u0644\u0633\u0628\u062a"], SHORTWEEKDAYS:["\u0627\u0644\u0623\u062d\u062f", "\u0627\u0644\u0627\u062b\u0646\u064a\u0646", "\u0627\u0644\u062b\u0644\u0627\u062b\u0627\u0621", "\u0627\u0644\u0623\u0631\u0628\u0639\u0627\u0621", 
+"\u0627\u0644\u062e\u0645\u064a\u0633", "\u0627\u0644\u062c\u0645\u0639\u0629", "\u0627\u0644\u0633\u0628\u062a"], STANDALONESHORTWEEKDAYS:["\u0627\u0644\u0623\u062d\u062f", "\u0627\u0644\u0627\u062b\u0646\u064a\u0646", "\u0627\u0644\u062b\u0644\u0627\u062b\u0627\u0621", "\u0627\u0644\u0623\u0631\u0628\u0639\u0627\u0621", "\u0627\u0644\u062e\u0645\u064a\u0633", "\u0627\u0644\u062c\u0645\u0639\u0629", "\u0627\u0644\u0633\u0628\u062a"], NARROWWEEKDAYS:["\u062d", "\u0646", "\u062b", "\u0631", "\u062e", 
+"\u062c", "\u0633"], STANDALONENARROWWEEKDAYS:["\u062d", "\u0646", "\u062b", "\u0631", "\u062e", "\u062c", "\u0633"], SHORTQUARTERS:["\u0627\u0644\u0631\u0628\u0639 \u0627\u0644\u0623\u0648\u0644", "\u0627\u0644\u0631\u0628\u0639 \u0627\u0644\u062b\u0627\u0646\u064a", "\u0627\u0644\u0631\u0628\u0639 \u0627\u0644\u062b\u0627\u0644\u062b", "\u0627\u0644\u0631\u0628\u0639 \u0627\u0644\u0631\u0627\u0628\u0639"], QUARTERS:["\u0627\u0644\u0631\u0628\u0639 \u0627\u0644\u0623\u0648\u0644", "\u0627\u0644\u0631\u0628\u0639 \u0627\u0644\u062b\u0627\u0646\u064a", 
+"\u0627\u0644\u0631\u0628\u0639 \u0627\u0644\u062b\u0627\u0644\u062b", "\u0627\u0644\u0631\u0628\u0639 \u0627\u0644\u0631\u0627\u0628\u0639"], AMPMS:["\u0635", "\u0645"], DATEFORMATS:["EEEE\u060c d MMMM\u060c y", "d MMMM\u060c y", "dd\u200f/MM\u200f/yyyy", "d\u200f/M\u200f/yyyy"], TIMEFORMATS:["zzzz h:mm:ss a", "z h:mm:ss a", "h:mm:ss a", "h:mm a"], FIRSTDAYOFWEEK:5, WEEKENDRANGE:[4, 5], FIRSTWEEKCUTOFFDAY:1};
+goog.i18n.DateTimeSymbols_bg = {ERAS:["\u043f\u0440. \u043d. \u0435.", "\u043e\u0442 \u043d. \u0435."], ERANAMES:["\u043f\u0440.\u0425\u0440.", "\u0441\u043b.\u0425\u0440."], NARROWMONTHS:["\u044f", "\u0444", "\u043c", "\u0430", "\u043c", "\u044e", "\u044e", "\u0430", "\u0441", "\u043e", "\u043d", "\u0434"], STANDALONENARROWMONTHS:["\u044f", "\u0444", "\u043c", "\u0430", "\u043c", "\u044e", "\u044e", "\u0430", "\u0441", "\u043e", "\u043d", "\u0434"], MONTHS:["\u044f\u043d\u0443\u0430\u0440\u0438", 
+"\u0444\u0435\u0432\u0440\u0443\u0430\u0440\u0438", "\u043c\u0430\u0440\u0442", "\u0430\u043f\u0440\u0438\u043b", "\u043c\u0430\u0439", "\u044e\u043d\u0438", "\u044e\u043b\u0438", "\u0430\u0432\u0433\u0443\u0441\u0442", "\u0441\u0435\u043f\u0442\u0435\u043c\u0432\u0440\u0438", "\u043e\u043a\u0442\u043e\u043c\u0432\u0440\u0438", "\u043d\u043e\u0435\u043c\u0432\u0440\u0438", "\u0434\u0435\u043a\u0435\u043c\u0432\u0440\u0438"], STANDALONEMONTHS:["\u044f\u043d\u0443\u0430\u0440\u0438", "\u0444\u0435\u0432\u0440\u0443\u0430\u0440\u0438", 
+"\u043c\u0430\u0440\u0442", "\u0430\u043f\u0440\u0438\u043b", "\u043c\u0430\u0439", "\u044e\u043d\u0438", "\u044e\u043b\u0438", "\u0430\u0432\u0433\u0443\u0441\u0442", "\u0441\u0435\u043f\u0442\u0435\u043c\u0432\u0440\u0438", "\u043e\u043a\u0442\u043e\u043c\u0432\u0440\u0438", "\u043d\u043e\u0435\u043c\u0432\u0440\u0438", "\u0434\u0435\u043a\u0435\u043c\u0432\u0440\u0438"], SHORTMONTHS:["\u044f\u043d.", "\u0444\u0435\u0432\u0440.", "\u043c\u0430\u0440\u0442", "\u0430\u043f\u0440.", "\u043c\u0430\u0439", 
+"\u044e\u043d\u0438", "\u044e\u043b\u0438", "\u0430\u0432\u0433.", "\u0441\u0435\u043f\u0442.", "\u043e\u043a\u0442.", "\u043d\u043e\u0435\u043c.", "\u0434\u0435\u043a."], STANDALONESHORTMONTHS:["\u044f\u043d.", "\u0444\u0435\u0432\u0440.", "\u043c\u0430\u0440\u0442", "\u0430\u043f\u0440.", "\u043c\u0430\u0439", "\u044e\u043d\u0438", "\u044e\u043b\u0438", "\u0430\u0432\u0433.", "\u0441\u0435\u043f\u0442.", "\u043e\u043a\u0442.", "\u043d\u043e\u0435\u043c.", "\u0434\u0435\u043a."], WEEKDAYS:["\u043d\u0435\u0434\u0435\u043b\u044f", 
+"\u043f\u043e\u043d\u0435\u0434\u0435\u043b\u043d\u0438\u043a", "\u0432\u0442\u043e\u0440\u043d\u0438\u043a", "\u0441\u0440\u044f\u0434\u0430", "\u0447\u0435\u0442\u0432\u044a\u0440\u0442\u044a\u043a", "\u043f\u0435\u0442\u044a\u043a", "\u0441\u044a\u0431\u043e\u0442\u0430"], STANDALONEWEEKDAYS:["\u043d\u0435\u0434\u0435\u043b\u044f", "\u043f\u043e\u043d\u0435\u0434\u0435\u043b\u043d\u0438\u043a", "\u0432\u0442\u043e\u0440\u043d\u0438\u043a", "\u0441\u0440\u044f\u0434\u0430", "\u0447\u0435\u0442\u0432\u044a\u0440\u0442\u044a\u043a", 
+"\u043f\u0435\u0442\u044a\u043a", "\u0441\u044a\u0431\u043e\u0442\u0430"], SHORTWEEKDAYS:["\u043d\u0434", "\u043f\u043d", "\u0432\u0442", "\u0441\u0440", "\u0447\u0442", "\u043f\u0442", "\u0441\u0431"], STANDALONESHORTWEEKDAYS:["\u043d\u0434", "\u043f\u043d", "\u0432\u0442", "\u0441\u0440", "\u0447\u0442", "\u043f\u0442", "\u0441\u0431"], NARROWWEEKDAYS:["\u043d", "\u043f", "\u0432", "\u0441", "\u0447", "\u043f", "\u0441"], STANDALONENARROWWEEKDAYS:["\u043d", "\u043f", "\u0432", "\u0441", "\u0447", 
+"\u043f", "\u0441"], SHORTQUARTERS:["I \u0442\u0440\u0438\u043c.", "II \u0442\u0440\u0438\u043c.", "III \u0442\u0440\u0438\u043c.", "IV \u0442\u0440\u0438\u043c."], QUARTERS:["1-\u0432\u043e \u0442\u0440\u0438\u043c\u0435\u0441\u0435\u0447\u0438\u0435", "2-\u0440\u043e \u0442\u0440\u0438\u043c\u0435\u0441\u0435\u0447\u0438\u0435", "3-\u0442\u043e \u0442\u0440\u0438\u043c\u0435\u0441\u0435\u0447\u0438\u0435", "4-\u0442\u043e \u0442\u0440\u0438\u043c\u0435\u0441\u0435\u0447\u0438\u0435"], AMPMS:["\u043f\u0440. \u043e\u0431.", 
+"\u0441\u043b. \u043e\u0431."], DATEFORMATS:["dd MMMM y, EEEE", "dd MMMM y", "dd.MM.yyyy", "dd.MM.yy"], TIMEFORMATS:["HH:mm:ss zzzz", "HH:mm:ss z", "HH:mm:ss", "HH:mm"], FIRSTDAYOFWEEK:0, WEEKENDRANGE:[5, 6], FIRSTWEEKCUTOFFDAY:3};
+goog.i18n.DateTimeSymbols_bn = {ERAS:["\u0996\u09c3\u09b7\u09cd\u099f\u09aa\u09c2\u09b0\u09cd\u09ac", "\u0996\u09c3\u09b7\u09cd\u099f\u09be\u09ac\u09cd\u09a6"], ERANAMES:["\u0996\u09c3\u09b7\u09cd\u099f\u09aa\u09c2\u09b0\u09cd\u09ac", "\u0996\u09c3\u09b7\u09cd\u099f\u09be\u09ac\u09cd\u09a6"], NARROWMONTHS:["\u099c\u09be", "\u09ab\u09c7", "\u09ae\u09be", "\u098f", "\u09ae\u09c7", "\u099c\u09c1\u09a8", "\u099c\u09c1", "\u0986", "\u09b8\u09c7", "\u0985", "\u09a8", "\u09a1\u09bf"], STANDALONENARROWMONTHS:["\u099c\u09be", 
+"\u09ab\u09c7", "\u09ae\u09be", "\u098f", "\u09ae\u09c7", "\u099c\u09c1\u09a8", "\u099c\u09c1", "\u0986", "\u09b8\u09c7", "\u0985", "\u09a8", "\u09a1\u09bf"], MONTHS:["\u099c\u09be\u09a8\u09c1\u09af\u09bc\u09be\u09b0\u09c0", "\u09ab\u09c7\u09ac\u09cd\u09b0\u09c1\u09af\u09bc\u09be\u09b0\u09c0", "\u09ae\u09be\u09b0\u09cd\u099a", "\u098f\u09aa\u09cd\u09b0\u09bf\u09b2", "\u09ae\u09c7", "\u099c\u09c1\u09a8", "\u099c\u09c1\u09b2\u09be\u0987", "\u0986\u0997\u09b8\u09cd\u099f", "\u09b8\u09c7\u09aa\u09cd\u099f\u09c7\u09ae\u09cd\u09ac\u09b0", 
+"\u0985\u0995\u09cd\u099f\u09cb\u09ac\u09b0", "\u09a8\u09ad\u09c7\u09ae\u09cd\u09ac\u09b0", "\u09a1\u09bf\u09b8\u09c7\u09ae\u09cd\u09ac\u09b0"], STANDALONEMONTHS:["\u099c\u09be\u09a8\u09c1\u09af\u09bc\u09be\u09b0\u09c0", "\u09ab\u09c7\u09ac\u09cd\u09b0\u09c1\u09af\u09bc\u09be\u09b0\u09c0", "\u09ae\u09be\u09b0\u09cd\u099a", "\u098f\u09aa\u09cd\u09b0\u09bf\u09b2", "\u09ae\u09c7", "\u099c\u09c1\u09a8", "\u099c\u09c1\u09b2\u09be\u0987", "\u0986\u0997\u09b8\u09cd\u099f", "\u09b8\u09c7\u09aa\u09cd\u099f\u09c7\u09ae\u09cd\u09ac\u09b0", 
+"\u0985\u0995\u09cd\u099f\u09cb\u09ac\u09b0", "\u09a8\u09ad\u09c7\u09ae\u09cd\u09ac\u09b0", "\u09a1\u09bf\u09b8\u09c7\u09ae\u09cd\u09ac\u09b0"], SHORTMONTHS:["\u099c\u09be\u09a8\u09c1\u09af\u09bc\u09be\u09b0\u09c0", "\u09ab\u09c7\u09ac\u09cd\u09b0\u09c1\u09af\u09bc\u09be\u09b0\u09c0", "\u09ae\u09be\u09b0\u09cd\u099a", "\u098f\u09aa\u09cd\u09b0\u09bf\u09b2", "\u09ae\u09c7", "\u099c\u09c1\u09a8", "\u099c\u09c1\u09b2\u09be\u0987", "\u0986\u0997\u09b8\u09cd\u099f", "\u09b8\u09c7\u09aa\u09cd\u099f\u09c7\u09ae\u09cd\u09ac\u09b0", 
+"\u0985\u0995\u09cd\u099f\u09cb\u09ac\u09b0", "\u09a8\u09ad\u09c7\u09ae\u09cd\u09ac\u09b0", "\u09a1\u09bf\u09b8\u09c7\u09ae\u09cd\u09ac\u09b0"], STANDALONESHORTMONTHS:["\u099c\u09be\u09a8\u09c1\u09af\u09bc\u09be\u09b0\u09c0", "\u09ab\u09c7\u09ac\u09cd\u09b0\u09c1\u09af\u09bc\u09be\u09b0\u09c0", "\u09ae\u09be\u09b0\u09cd\u099a", "\u098f\u09aa\u09cd\u09b0\u09bf\u09b2", "\u09ae\u09c7", "\u099c\u09c1\u09a8", "\u099c\u09c1\u09b2\u09be\u0987", "\u0986\u0997\u09b8\u09cd\u099f", "\u09b8\u09c7\u09aa\u09cd\u099f\u09c7\u09ae\u09cd\u09ac\u09b0", 
+"\u0985\u0995\u09cd\u099f\u09cb\u09ac\u09b0", "\u09a8\u09ad\u09c7\u09ae\u09cd\u09ac\u09b0", "\u09a1\u09bf\u09b8\u09c7\u09ae\u09cd\u09ac\u09b0"], WEEKDAYS:["\u09b0\u09ac\u09bf\u09ac\u09be\u09b0", "\u09b8\u09cb\u09ae\u09ac\u09be\u09b0", "\u09ae\u0999\u09cd\u0997\u09b2\u09ac\u09be\u09b0", "\u09ac\u09c1\u09a7\u09ac\u09be\u09b0", "\u09ac\u09c3\u09b9\u09b7\u09cd\u09aa\u09a4\u09bf\u09ac\u09be\u09b0", "\u09b6\u09c1\u0995\u09cd\u09b0\u09ac\u09be\u09b0", "\u09b6\u09a8\u09bf\u09ac\u09be\u09b0"], STANDALONEWEEKDAYS:["\u09b0\u09ac\u09bf\u09ac\u09be\u09b0", 
+"\u09b8\u09cb\u09ae\u09ac\u09be\u09b0", "\u09ae\u0999\u09cd\u0997\u09b2\u09ac\u09be\u09b0", "\u09ac\u09c1\u09a7\u09ac\u09be\u09b0", "\u09ac\u09c3\u09b9\u09b7\u09cd\u09aa\u09a4\u09bf\u09ac\u09be\u09b0", "\u09b6\u09c1\u0995\u09cd\u09b0\u09ac\u09be\u09b0", "\u09b6\u09a8\u09bf\u09ac\u09be\u09b0"], SHORTWEEKDAYS:["\u09b0\u09ac\u09bf", "\u09b8\u09cb\u09ae", "\u09ae\u0999\u09cd\u0997\u09b2", "\u09ac\u09c1\u09a7", "\u09ac\u09c3\u09b9\u09b8\u09cd\u09aa\u09a4\u09bf", "\u09b6\u09c1\u0995\u09cd\u09b0", "\u09b6\u09a8\u09bf"], 
+STANDALONESHORTWEEKDAYS:["\u09b0\u09ac\u09bf", "\u09b8\u09cb\u09ae", "\u09ae\u0999\u09cd\u0997\u09b2", "\u09ac\u09c1\u09a7", "\u09ac\u09c3\u09b9\u09b8\u09cd\u09aa\u09a4\u09bf", "\u09b6\u09c1\u0995\u09cd\u09b0", "\u09b6\u09a8\u09bf"], NARROWWEEKDAYS:["\u09b0", "\u09b8\u09cb", "\u09ae", "\u09ac\u09c1", "\u09ac\u09c3", "\u09b6\u09c1", "\u09b6"], STANDALONENARROWWEEKDAYS:["\u09b0", "\u09b8\u09cb", "\u09ae", "\u09ac\u09c1", "\u09ac\u09c3", "\u09b6\u09c1", "\u09b6"], SHORTQUARTERS:["\u099a\u09a4\u09c1\u09b0\u09cd\u09a5\u09be\u0982\u09b6 \u09e7", 
+"\u099a\u09a4\u09c1\u09b0\u09cd\u09a5\u09be\u0982\u09b6 \u09e8", "\u099a\u09a4\u09c1\u09b0\u09cd\u09a5\u09be\u0982\u09b6 \u09e9", "\u099a\u09a4\u09c1\u09b0\u09cd\u09a5\u09be\u0982\u09b6 \u09ea"], QUARTERS:["\u09aa\u09cd\u09b0\u09a5\u09ae \u099a\u09a4\u09c1\u09b0\u09cd\u09a5\u09be\u0982\u09b6", "\u09a6\u09cd\u09ac\u09bf\u09a4\u09c0\u09af\u09bc \u099a\u09a4\u09c1\u09b0\u09cd\u09a5\u09be\u0982\u09b6", "\u09a4\u09c3\u09a4\u09c0\u09af\u09bc \u099a\u09a4\u09c1\u09b0\u09cd\u09a5\u09be\u0982\u09b6", "\u099a\u09a4\u09c1\u09b0\u09cd\u09a5 \u099a\u09a4\u09c1\u09b0\u09cd\u09a5\u09be\u0982\u09b6"], 
+AMPMS:["am", "pm"], DATEFORMATS:["EEEE, d MMMM, y", "d MMMM, y", "d MMM, y", "d/M/yy"], TIMEFORMATS:["h:mm:ss a zzzz", "h:mm:ss a z", "h:mm:ss a", "h:mm a"], FIRSTDAYOFWEEK:0, WEEKENDRANGE:[5, 6], FIRSTWEEKCUTOFFDAY:3};
+goog.i18n.DateTimeSymbols_ca = {ERAS:["aC", "dC"], ERANAMES:["abans de Crist", "despr\u00e9s de Crist"], NARROWMONTHS:["G", "F", "M", "A", "M", "J", "G", "A", "S", "O", "N", "D"], STANDALONENARROWMONTHS:["g", "f", "m", "a", "m", "j", "j", "a", "s", "o", "n", "d"], MONTHS:["de gener", "de febrer", "de mar\u00e7", "d\u2019abril", "de maig", "de juny", "de juliol", "d\u2019agost", "de setembre", "d\u2019octubre", "de novembre", "de desembre"], STANDALONEMONTHS:["gener", "febrer", "mar\u00e7", "abril", 
+"maig", "juny", "juliol", "agost", "setembre", "octubre", "novembre", "desembre"], SHORTMONTHS:["de gen.", "de febr.", "de mar\u00e7", "d\u2019abr.", "de maig", "de juny", "de jul.", "d\u2019ag.", "de set.", "d\u2019oct.", "de nov.", "de des."], STANDALONESHORTMONTHS:["gen.", "febr.", "mar\u00e7", "abr.", "maig", "juny", "jul.", "ag.", "set.", "oct.", "nov.", "des."], WEEKDAYS:["diumenge", "dilluns", "dimarts", "dimecres", "dijous", "divendres", "dissabte"], STANDALONEWEEKDAYS:["Diumenge", "Dilluns", 
+"Dimarts", "Dimecres", "Dijous", "Divendres", "Dissabte"], SHORTWEEKDAYS:["dg.", "dl.", "dt.", "dc.", "dj.", "dv.", "ds."], STANDALONESHORTWEEKDAYS:["dg", "dl", "dt", "dc", "dj", "dv", "ds"], NARROWWEEKDAYS:["G", "l", "T", "C", "J", "V", "S"], STANDALONENARROWWEEKDAYS:["g", "l", "t", "c", "j", "v", "s"], SHORTQUARTERS:["1T", "2T", "3T", "4T"], QUARTERS:["1r trimestre", "2n trimestre", "3r trimestre", "4t trimestre"], AMPMS:["a.m.", "p.m."], DATEFORMATS:["EEEE d MMMM 'de' y", "d MMMM 'de' y", "dd/MM/yyyy", 
+"dd/MM/yy"], TIMEFORMATS:["H:mm:ss zzzz", "H:mm:ss z", "H:mm:ss", "H:mm"], FIRSTDAYOFWEEK:0, WEEKENDRANGE:[5, 6], FIRSTWEEKCUTOFFDAY:3};
+goog.i18n.DateTimeSymbols_cs = {ERAS:["p\u0159. n. l.", "n. l."], ERANAMES:["p\u0159. n. l.", "n. l."], NARROWMONTHS:["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12"], STANDALONENARROWMONTHS:["l", "\u00fa", "b", "d", "k", "\u010d", "\u010d", "s", "z", "\u0159", "l", "p"], MONTHS:["ledna", "\u00fanora", "b\u0159ezna", "dubna", "kv\u011btna", "\u010dervna", "\u010dervence", "srpna", "z\u00e1\u0159\u00ed", "\u0159\u00edjna", "listopadu", "prosince"], STANDALONEMONTHS:["leden", "\u00fanor", 
+"b\u0159ezen", "duben", "kv\u011bten", "\u010derven", "\u010dervenec", "srpen", "z\u00e1\u0159\u00ed", "\u0159\u00edjen", "listopad", "prosinec"], SHORTMONTHS:["Led", "\u00dano", "B\u0159e", "Dub", "Kv\u011b", "\u010cer", "\u010cvc", "Srp", "Z\u00e1\u0159", "\u0158\u00edj", "Lis", "Pro"], STANDALONESHORTMONTHS:["1.", "2.", "3.", "4.", "5.", "6.", "7.", "8.", "9.", "10.", "11.", "12."], WEEKDAYS:["ned\u011ble", "pond\u011bl\u00ed", "\u00fater\u00fd", "st\u0159eda", "\u010dtvrtek", "p\u00e1tek", "sobota"], 
+STANDALONEWEEKDAYS:["ned\u011ble", "pond\u011bl\u00ed", "\u00fater\u00fd", "st\u0159eda", "\u010dtvrtek", "p\u00e1tek", "sobota"], SHORTWEEKDAYS:["ne", "po", "\u00fat", "st", "\u010dt", "p\u00e1", "so"], STANDALONESHORTWEEKDAYS:["ne", "po", "\u00fat", "st", "\u010dt", "p\u00e1", "so"], NARROWWEEKDAYS:["N", "P", "\u00da", "S", "\u010c", "P", "S"], STANDALONENARROWWEEKDAYS:["N", "P", "\u00da", "S", "\u010c", "P", "S"], SHORTQUARTERS:["Q1", "Q2", "Q3", "Q4"], QUARTERS:["1. \u010dtvrtlet\u00ed", "2. \u010dtvrtlet\u00ed", 
+"3. \u010dtvrtlet\u00ed", "4. \u010dtvrtlet\u00ed"], AMPMS:["dop.", "odp."], DATEFORMATS:["EEEE, d. MMMM y", "d. MMMM y", "d.M.yyyy", "dd.MM.yy"], TIMEFORMATS:["H:mm:ss zzzz", "H:mm:ss z", "H:mm:ss", "H:mm"], FIRSTDAYOFWEEK:0, WEEKENDRANGE:[5, 6], FIRSTWEEKCUTOFFDAY:3};
+goog.i18n.DateTimeSymbols_da = {ERAS:["f.Kr.", "e.Kr."], ERANAMES:["f.Kr.", "e.Kr."], NARROWMONTHS:["J", "F", "M", "A", "M", "J", "J", "A", "S", "O", "N", "D"], STANDALONENARROWMONTHS:["J", "F", "M", "A", "M", "J", "J", "A", "S", "O", "N", "D"], MONTHS:["januar", "februar", "marts", "april", "maj", "juni", "juli", "august", "september", "oktober", "november", "december"], STANDALONEMONTHS:["januar", "februar", "marts", "april", "maj", "juni", "juli", "august", "september", "oktober", "november", 
+"december"], SHORTMONTHS:["jan.", "feb.", "mar.", "apr.", "maj", "jun.", "jul.", "aug.", "sep.", "okt.", "nov.", "dec."], STANDALONESHORTMONTHS:["jan", "feb", "mar", "apr", "maj", "jun", "jul", "aug", "sep", "okt", "nov", "dec"], WEEKDAYS:["s\u00f8ndag", "mandag", "tirsdag", "onsdag", "torsdag", "fredag", "l\u00f8rdag"], STANDALONEWEEKDAYS:["s\u00f8ndag", "mandag", "tirsdag", "onsdag", "torsdag", "fredag", "l\u00f8rdag"], SHORTWEEKDAYS:["s\u00f8n", "man", "tir", "ons", "tor", "fre", "l\u00f8r"], 
+STANDALONESHORTWEEKDAYS:["s\u00f8n", "man", "tir", "ons", "tor", "fre", "l\u00f8r"], NARROWWEEKDAYS:["S", "M", "T", "O", "T", "F", "L"], STANDALONENARROWWEEKDAYS:["S", "M", "T", "O", "T", "F", "L"], SHORTQUARTERS:["K1", "K2", "K3", "K4"], QUARTERS:["1. kvartal", "2. kvartal", "3. kvartal", "4. kvartal"], AMPMS:["f.m.", "e.m."], DATEFORMATS:["EEEE 'den' d. MMMM y", "d. MMM y", "dd/MM/yyyy", "dd/MM/yy"], TIMEFORMATS:["HH.mm.ss zzzz", "HH.mm.ss z", "HH.mm.ss", "HH.mm"], FIRSTDAYOFWEEK:0, WEEKENDRANGE:[5, 
+6], FIRSTWEEKCUTOFFDAY:3};
+goog.i18n.DateTimeSymbols_de = {ERAS:["v. Chr.", "n. Chr."], ERANAMES:["v. Chr.", "n. Chr."], NARROWMONTHS:["J", "F", "M", "A", "M", "J", "J", "A", "S", "O", "N", "D"], STANDALONENARROWMONTHS:["J", "F", "M", "A", "M", "J", "J", "A", "S", "O", "N", "D"], MONTHS:["Januar", "Februar", "M\u00e4rz", "April", "Mai", "Juni", "Juli", "August", "September", "Oktober", "November", "Dezember"], STANDALONEMONTHS:["Januar", "Februar", "M\u00e4rz", "April", "Mai", "Juni", "Juli", "August", "September", "Oktober", 
+"November", "Dezember"], SHORTMONTHS:["Jan", "Feb", "M\u00e4r", "Apr", "Mai", "Jun", "Jul", "Aug", "Sep", "Okt", "Nov", "Dez"], STANDALONESHORTMONTHS:["Jan", "Feb", "M\u00e4r", "Apr", "Mai", "Jun", "Jul", "Aug", "Sep", "Okt", "Nov", "Dez"], WEEKDAYS:["Sonntag", "Montag", "Dienstag", "Mittwoch", "Donnerstag", "Freitag", "Samstag"], STANDALONEWEEKDAYS:["Sonntag", "Montag", "Dienstag", "Mittwoch", "Donnerstag", "Freitag", "Samstag"], SHORTWEEKDAYS:["So.", "Mo.", "Di.", "Mi.", "Do.", "Fr.", "Sa."], STANDALONESHORTWEEKDAYS:["So", 
+"Mo", "Di", "Mi", "Do", "Fr", "Sa"], NARROWWEEKDAYS:["S", "M", "D", "M", "D", "F", "S"], STANDALONENARROWWEEKDAYS:["S", "M", "D", "M", "D", "F", "S"], SHORTQUARTERS:["Q1", "Q2", "Q3", "Q4"], QUARTERS:["1. Quartal", "2. Quartal", "3. Quartal", "4. Quartal"], AMPMS:["vorm.", "nachm."], DATEFORMATS:["EEEE, d. MMMM y", "d. MMMM y", "dd.MM.yyyy", "dd.MM.yy"], TIMEFORMATS:["HH:mm:ss zzzz", "HH:mm:ss z", "HH:mm:ss", "HH:mm"], FIRSTDAYOFWEEK:0, WEEKENDRANGE:[5, 6], FIRSTWEEKCUTOFFDAY:3};
+goog.i18n.DateTimeSymbols_de_AT = {ERAS:["v. Chr.", "n. Chr."], ERANAMES:["v. Chr.", "n. Chr."], NARROWMONTHS:["J", "F", "M", "A", "M", "J", "J", "A", "S", "O", "N", "D"], STANDALONENARROWMONTHS:["J", "F", "M", "A", "M", "J", "J", "A", "S", "O", "N", "D"], MONTHS:["J\u00e4nner", "Februar", "M\u00e4rz", "April", "Mai", "Juni", "Juli", "August", "September", "Oktober", "November", "Dezember"], STANDALONEMONTHS:["J\u00e4nner", "Februar", "M\u00e4rz", "April", "Mai", "Juni", "Juli", "August", "September", 
+"Oktober", "November", "Dezember"], SHORTMONTHS:["J\u00e4n", "Feb", "M\u00e4r", "Apr", "Mai", "Jun", "Jul", "Aug", "Sep", "Okt", "Nov", "Dez"], STANDALONESHORTMONTHS:["J\u00e4n", "Feb", "M\u00e4r", "Apr", "Mai", "Jun", "Jul", "Aug", "Sep", "Okt", "Nov", "Dez"], WEEKDAYS:["Sonntag", "Montag", "Dienstag", "Mittwoch", "Donnerstag", "Freitag", "Samstag"], STANDALONEWEEKDAYS:["Sonntag", "Montag", "Dienstag", "Mittwoch", "Donnerstag", "Freitag", "Samstag"], SHORTWEEKDAYS:["So.", "Mo.", "Di.", "Mi.", "Do.", 
+"Fr.", "Sa."], STANDALONESHORTWEEKDAYS:["So", "Mo", "Di", "Mi", "Do", "Fr", "Sa"], NARROWWEEKDAYS:["S", "M", "D", "M", "D", "F", "S"], STANDALONENARROWWEEKDAYS:["S", "M", "D", "M", "D", "F", "S"], SHORTQUARTERS:["Q1", "Q2", "Q3", "Q4"], QUARTERS:["1. Quartal", "2. Quartal", "3. Quartal", "4. Quartal"], AMPMS:["vorm.", "nachm."], DATEFORMATS:["EEEE, dd. MMMM y", "dd. MMMM y", "dd.MM.yyyy", "dd.MM.yy"], TIMEFORMATS:["HH:mm:ss zzzz", "HH:mm:ss z", "HH:mm:ss", "HH:mm"], FIRSTDAYOFWEEK:0, WEEKENDRANGE:[5, 
+6], FIRSTWEEKCUTOFFDAY:3};
+goog.i18n.DateTimeSymbols_de_CH = goog.i18n.DateTimeSymbols_de;
+goog.i18n.DateTimeSymbols_el = {ERAS:["\u03c0.\u03a7.", "\u03bc.\u03a7."], ERANAMES:["\u03c0.\u03a7.", "\u03bc.\u03a7."], NARROWMONTHS:["\u0399", "\u03a6", "\u039c", "\u0391", "\u039c", "\u0399", "\u0399", "\u0391", "\u03a3", "\u039f", "\u039d", "\u0394"], STANDALONENARROWMONTHS:["\u0399", "\u03a6", "\u039c", "\u0391", "\u039c", "\u0399", "\u0399", "\u0391", "\u03a3", "\u039f", "\u039d", "\u0394"], MONTHS:["\u0399\u03b1\u03bd\u03bf\u03c5\u03b1\u03c1\u03af\u03bf\u03c5", "\u03a6\u03b5\u03b2\u03c1\u03bf\u03c5\u03b1\u03c1\u03af\u03bf\u03c5", 
+"\u039c\u03b1\u03c1\u03c4\u03af\u03bf\u03c5", "\u0391\u03c0\u03c1\u03b9\u03bb\u03af\u03bf\u03c5", "\u039c\u03b1\u0390\u03bf\u03c5", "\u0399\u03bf\u03c5\u03bd\u03af\u03bf\u03c5", "\u0399\u03bf\u03c5\u03bb\u03af\u03bf\u03c5", "\u0391\u03c5\u03b3\u03bf\u03cd\u03c3\u03c4\u03bf\u03c5", "\u03a3\u03b5\u03c0\u03c4\u03b5\u03bc\u03b2\u03c1\u03af\u03bf\u03c5", "\u039f\u03ba\u03c4\u03c9\u03b2\u03c1\u03af\u03bf\u03c5", "\u039d\u03bf\u03b5\u03bc\u03b2\u03c1\u03af\u03bf\u03c5", "\u0394\u03b5\u03ba\u03b5\u03bc\u03b2\u03c1\u03af\u03bf\u03c5"], 
+STANDALONEMONTHS:["\u0399\u03b1\u03bd\u03bf\u03c5\u03ac\u03c1\u03b9\u03bf\u03c2", "\u03a6\u03b5\u03b2\u03c1\u03bf\u03c5\u03ac\u03c1\u03b9\u03bf\u03c2", "\u039c\u03ac\u03c1\u03c4\u03b9\u03bf\u03c2", "\u0391\u03c0\u03c1\u03af\u03bb\u03b9\u03bf\u03c2", "\u039c\u03ac\u03b9\u03bf\u03c2", "\u0399\u03bf\u03cd\u03bd\u03b9\u03bf\u03c2", "\u0399\u03bf\u03cd\u03bb\u03b9\u03bf\u03c2", "\u0391\u03cd\u03b3\u03bf\u03c5\u03c3\u03c4\u03bf\u03c2", "\u03a3\u03b5\u03c0\u03c4\u03ad\u03bc\u03b2\u03c1\u03b9\u03bf\u03c2", 
+"\u039f\u03ba\u03c4\u03ce\u03b2\u03c1\u03b9\u03bf\u03c2", "\u039d\u03bf\u03ad\u03bc\u03b2\u03c1\u03b9\u03bf\u03c2", "\u0394\u03b5\u03ba\u03ad\u03bc\u03b2\u03c1\u03b9\u03bf\u03c2"], SHORTMONTHS:["\u0399\u03b1\u03bd", "\u03a6\u03b5\u03b2", "\u039c\u03b1\u03c1", "\u0391\u03c0\u03c1", "\u039c\u03b1\u03ca", "\u0399\u03bf\u03c5\u03bd", "\u0399\u03bf\u03c5\u03bb", "\u0391\u03c5\u03b3", "\u03a3\u03b5\u03c0", "\u039f\u03ba\u03c4", "\u039d\u03bf\u03b5", "\u0394\u03b5\u03ba"], STANDALONESHORTMONTHS:["\u0399\u03b1\u03bd", 
+"\u03a6\u03b5\u03b2", "\u039c\u03ac\u03c1", "\u0391\u03c0\u03c1", "\u039c\u03ac\u03b9", "\u0399\u03bf\u03cd\u03bd", "\u0399\u03bf\u03cd\u03bb", "\u0391\u03c5\u03b3", "\u03a3\u03b5\u03c0", "\u039f\u03ba\u03c4", "\u039d\u03bf\u03ad", "\u0394\u03b5\u03ba"], WEEKDAYS:["\u039a\u03c5\u03c1\u03b9\u03b1\u03ba\u03ae", "\u0394\u03b5\u03c5\u03c4\u03ad\u03c1\u03b1", "\u03a4\u03c1\u03af\u03c4\u03b7", "\u03a4\u03b5\u03c4\u03ac\u03c1\u03c4\u03b7", "\u03a0\u03ad\u03bc\u03c0\u03c4\u03b7", "\u03a0\u03b1\u03c1\u03b1\u03c3\u03ba\u03b5\u03c5\u03ae", 
+"\u03a3\u03ac\u03b2\u03b2\u03b1\u03c4\u03bf"], STANDALONEWEEKDAYS:["\u039a\u03c5\u03c1\u03b9\u03b1\u03ba\u03ae", "\u0394\u03b5\u03c5\u03c4\u03ad\u03c1\u03b1", "\u03a4\u03c1\u03af\u03c4\u03b7", "\u03a4\u03b5\u03c4\u03ac\u03c1\u03c4\u03b7", "\u03a0\u03ad\u03bc\u03c0\u03c4\u03b7", "\u03a0\u03b1\u03c1\u03b1\u03c3\u03ba\u03b5\u03c5\u03ae", "\u03a3\u03ac\u03b2\u03b2\u03b1\u03c4\u03bf"], SHORTWEEKDAYS:["\u039a\u03c5\u03c1", "\u0394\u03b5\u03c5", "\u03a4\u03c1\u03b9", "\u03a4\u03b5\u03c4", "\u03a0\u03b5\u03bc", 
+"\u03a0\u03b1\u03c1", "\u03a3\u03b1\u03b2"], STANDALONESHORTWEEKDAYS:["\u039a\u03c5\u03c1", "\u0394\u03b5\u03c5", "\u03a4\u03c1\u03af", "\u03a4\u03b5\u03c4", "\u03a0\u03ad\u03bc", "\u03a0\u03b1\u03c1", "\u03a3\u03ac\u03b2"], NARROWWEEKDAYS:["\u039a", "\u0394", "\u03a4", "\u03a4", "\u03a0", "\u03a0", "\u03a3"], STANDALONENARROWWEEKDAYS:["\u039a", "\u0394", "\u03a4", "\u03a4", "\u03a0", "\u03a0", "\u03a3"], SHORTQUARTERS:["\u03a41", "\u03a42", "\u03a43", "\u03a44"], QUARTERS:["1\u03bf \u03c4\u03c1\u03af\u03bc\u03b7\u03bd\u03bf", 
+"2\u03bf \u03c4\u03c1\u03af\u03bc\u03b7\u03bd\u03bf", "3\u03bf \u03c4\u03c1\u03af\u03bc\u03b7\u03bd\u03bf", "4\u03bf \u03c4\u03c1\u03af\u03bc\u03b7\u03bd\u03bf"], AMPMS:["\u03c0.\u03bc.", "\u03bc.\u03bc."], DATEFORMATS:["EEEE, d MMMM y", "d MMMM y", "d MMM y", "d/M/yy"], TIMEFORMATS:["h:mm:ss a zzzz", "h:mm:ss a z", "h:mm:ss a", "h:mm a"], FIRSTDAYOFWEEK:0, WEEKENDRANGE:[5, 6], FIRSTWEEKCUTOFFDAY:3};
+goog.i18n.DateTimeSymbols_en = {ERAS:["BC", "AD"], ERANAMES:["Before Christ", "Anno Domini"], NARROWMONTHS:["J", "F", "M", "A", "M", "J", "J", "A", "S", "O", "N", "D"], STANDALONENARROWMONTHS:["J", "F", "M", "A", "M", "J", "J", "A", "S", "O", "N", "D"], MONTHS:["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"], STANDALONEMONTHS:["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", 
+"November", "December"], SHORTMONTHS:["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"], STANDALONESHORTMONTHS:["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"], WEEKDAYS:["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"], STANDALONEWEEKDAYS:["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"], SHORTWEEKDAYS:["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"], STANDALONESHORTWEEKDAYS:["Sun", 
+"Mon", "Tue", "Wed", "Thu", "Fri", "Sat"], NARROWWEEKDAYS:["S", "M", "T", "W", "T", "F", "S"], STANDALONENARROWWEEKDAYS:["S", "M", "T", "W", "T", "F", "S"], SHORTQUARTERS:["Q1", "Q2", "Q3", "Q4"], QUARTERS:["1st quarter", "2nd quarter", "3rd quarter", "4th quarter"], AMPMS:["AM", "PM"], DATEFORMATS:["EEEE, MMMM d, y", "MMMM d, y", "MMM d, y", "M/d/yy"], TIMEFORMATS:["h:mm:ss a zzzz", "h:mm:ss a z", "h:mm:ss a", "h:mm a"], FIRSTDAYOFWEEK:6, WEEKENDRANGE:[5, 6], FIRSTWEEKCUTOFFDAY:2};
+goog.i18n.DateTimeSymbols_en_AU = {ERAS:["BC", "AD"], ERANAMES:["Before Christ", "Anno Domini"], NARROWMONTHS:["J", "F", "M", "A", "M", "J", "J", "A", "S", "O", "N", "D"], STANDALONENARROWMONTHS:["J", "F", "M", "A", "M", "J", "J", "A", "S", "O", "N", "D"], MONTHS:["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"], STANDALONEMONTHS:["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", 
+"November", "December"], SHORTMONTHS:["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"], STANDALONESHORTMONTHS:["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"], WEEKDAYS:["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"], STANDALONEWEEKDAYS:["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"], SHORTWEEKDAYS:["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"], STANDALONESHORTWEEKDAYS:["Sun", 
+"Mon", "Tue", "Wed", "Thu", "Fri", "Sat"], NARROWWEEKDAYS:["S", "M", "T", "W", "T", "F", "S"], STANDALONENARROWWEEKDAYS:["S", "M", "T", "W", "T", "F", "S"], SHORTQUARTERS:["Q1", "Q2", "Q3", "Q4"], QUARTERS:["1st quarter", "2nd quarter", "3rd quarter", "4th quarter"], AMPMS:["AM", "PM"], DATEFORMATS:["EEEE, d MMMM y", "d MMMM y", "dd/MM/yyyy", "d/MM/yy"], TIMEFORMATS:["h:mm:ss a zzzz", "h:mm:ss a z", "h:mm:ss a", "h:mm a"], FIRSTDAYOFWEEK:0, WEEKENDRANGE:[5, 6], FIRSTWEEKCUTOFFDAY:3};
+goog.i18n.DateTimeSymbols_en_GB = {ERAS:["BC", "AD"], ERANAMES:["Before Christ", "Anno Domini"], NARROWMONTHS:["J", "F", "M", "A", "M", "J", "J", "A", "S", "O", "N", "D"], STANDALONENARROWMONTHS:["J", "F", "M", "A", "M", "J", "J", "A", "S", "O", "N", "D"], MONTHS:["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"], STANDALONEMONTHS:["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", 
+"November", "December"], SHORTMONTHS:["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"], STANDALONESHORTMONTHS:["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"], WEEKDAYS:["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"], STANDALONEWEEKDAYS:["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"], SHORTWEEKDAYS:["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"], STANDALONESHORTWEEKDAYS:["Sun", 
+"Mon", "Tue", "Wed", "Thu", "Fri", "Sat"], NARROWWEEKDAYS:["S", "M", "T", "W", "T", "F", "S"], STANDALONENARROWWEEKDAYS:["S", "M", "T", "W", "T", "F", "S"], SHORTQUARTERS:["Q1", "Q2", "Q3", "Q4"], QUARTERS:["1st quarter", "2nd quarter", "3rd quarter", "4th quarter"], AMPMS:["AM", "PM"], DATEFORMATS:["EEEE, d MMMM y", "d MMMM y", "d MMM y", "dd/MM/yyyy"], TIMEFORMATS:["HH:mm:ss zzzz", "HH:mm:ss z", "HH:mm:ss", "HH:mm"], FIRSTDAYOFWEEK:0, WEEKENDRANGE:[5, 6], FIRSTWEEKCUTOFFDAY:3};
+goog.i18n.DateTimeSymbols_en_IE = {ERAS:["BC", "AD"], ERANAMES:["Before Christ", "Anno Domini"], NARROWMONTHS:["J", "F", "M", "A", "M", "J", "J", "A", "S", "O", "N", "D"], STANDALONENARROWMONTHS:["J", "F", "M", "A", "M", "J", "J", "A", "S", "O", "N", "D"], MONTHS:["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"], STANDALONEMONTHS:["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", 
+"November", "December"], SHORTMONTHS:["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"], STANDALONESHORTMONTHS:["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"], WEEKDAYS:["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"], STANDALONEWEEKDAYS:["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"], SHORTWEEKDAYS:["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"], STANDALONESHORTWEEKDAYS:["Sun", 
+"Mon", "Tue", "Wed", "Thu", "Fri", "Sat"], NARROWWEEKDAYS:["S", "M", "T", "W", "T", "F", "S"], STANDALONENARROWWEEKDAYS:["S", "M", "T", "W", "T", "F", "S"], SHORTQUARTERS:["Q1", "Q2", "Q3", "Q4"], QUARTERS:["1st quarter", "2nd quarter", "3rd quarter", "4th quarter"], AMPMS:["a.m.", "p.m."], DATEFORMATS:["EEEE d MMMM y", "d MMMM y", "d MMM y", "dd/MM/yyyy"], TIMEFORMATS:["HH:mm:ss zzzz", "HH:mm:ss z", "HH:mm:ss", "HH:mm"], FIRSTDAYOFWEEK:0, WEEKENDRANGE:[5, 6], FIRSTWEEKCUTOFFDAY:3};
+goog.i18n.DateTimeSymbols_en_IN = {ERAS:["BC", "AD"], ERANAMES:["Before Christ", "Anno Domini"], NARROWMONTHS:["J", "F", "M", "A", "M", "J", "J", "A", "S", "O", "N", "D"], STANDALONENARROWMONTHS:["J", "F", "M", "A", "M", "J", "J", "A", "S", "O", "N", "D"], MONTHS:["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"], STANDALONEMONTHS:["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", 
+"November", "December"], SHORTMONTHS:["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"], STANDALONESHORTMONTHS:["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"], WEEKDAYS:["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"], STANDALONEWEEKDAYS:["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"], SHORTWEEKDAYS:["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"], STANDALONESHORTWEEKDAYS:["Sun", 
+"Mon", "Tue", "Wed", "Thu", "Fri", "Sat"], NARROWWEEKDAYS:["S", "M", "T", "W", "T", "F", "S"], STANDALONENARROWWEEKDAYS:["S", "M", "T", "W", "T", "F", "S"], SHORTQUARTERS:["Q1", "Q2", "Q3", "Q4"], QUARTERS:["1st quarter", "2nd quarter", "3rd quarter", "4th quarter"], AMPMS:["AM", "PM"], DATEFORMATS:["EEEE d MMMM y", "d MMMM y", "dd-MMM-y", "dd/MM/yy"], TIMEFORMATS:["h:mm:ss a zzzz", "h:mm:ss a z", "h:mm:ss a", "h:mm a"], FIRSTDAYOFWEEK:6, WEEKENDRANGE:[6, 6], FIRSTWEEKCUTOFFDAY:2};
+goog.i18n.DateTimeSymbols_en_SG = {ERAS:["BC", "AD"], ERANAMES:["Before Christ", "Anno Domini"], NARROWMONTHS:["J", "F", "M", "A", "M", "J", "J", "A", "S", "O", "N", "D"], STANDALONENARROWMONTHS:["J", "F", "M", "A", "M", "J", "J", "A", "S", "O", "N", "D"], MONTHS:["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"], STANDALONEMONTHS:["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", 
+"November", "December"], SHORTMONTHS:["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"], STANDALONESHORTMONTHS:["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"], WEEKDAYS:["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"], STANDALONEWEEKDAYS:["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"], SHORTWEEKDAYS:["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"], STANDALONESHORTWEEKDAYS:["Sun", 
+"Mon", "Tue", "Wed", "Thu", "Fri", "Sat"], NARROWWEEKDAYS:["S", "M", "T", "W", "T", "F", "S"], STANDALONENARROWWEEKDAYS:["S", "M", "T", "W", "T", "F", "S"], SHORTQUARTERS:["Q1", "Q2", "Q3", "Q4"], QUARTERS:["1st quarter", "2nd quarter", "3rd quarter", "4th quarter"], AMPMS:["AM", "PM"], DATEFORMATS:["EEEE, d MMMM, y", "d MMMM, y", "d MMM, y", "d/M/yy"], TIMEFORMATS:["h:mm:ss a zzzz", "h:mm:ss a z", "h:mm:ss a", "h:mm a"], FIRSTDAYOFWEEK:6, WEEKENDRANGE:[5, 6], FIRSTWEEKCUTOFFDAY:2};
+goog.i18n.DateTimeSymbols_en_US = goog.i18n.DateTimeSymbols_en;
+goog.i18n.DateTimeSymbols_en_ZA = {ERAS:["BC", "AD"], ERANAMES:["Before Christ", "Anno Domini"], NARROWMONTHS:["J", "F", "M", "A", "M", "J", "J", "A", "S", "O", "N", "D"], STANDALONENARROWMONTHS:["J", "F", "M", "A", "M", "J", "J", "A", "S", "O", "N", "D"], MONTHS:["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"], STANDALONEMONTHS:["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", 
+"November", "December"], SHORTMONTHS:["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"], STANDALONESHORTMONTHS:["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"], WEEKDAYS:["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"], STANDALONEWEEKDAYS:["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"], SHORTWEEKDAYS:["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"], STANDALONESHORTWEEKDAYS:["Sun", 
+"Mon", "Tue", "Wed", "Thu", "Fri", "Sat"], NARROWWEEKDAYS:["S", "M", "T", "W", "T", "F", "S"], STANDALONENARROWWEEKDAYS:["S", "M", "T", "W", "T", "F", "S"], SHORTQUARTERS:["Q1", "Q2", "Q3", "Q4"], QUARTERS:["1st quarter", "2nd quarter", "3rd quarter", "4th quarter"], AMPMS:["AM", "PM"], DATEFORMATS:["EEEE dd MMMM y", "dd MMMM y", "dd MMM y", "yyyy/MM/dd"], TIMEFORMATS:["h:mm:ss a zzzz", "h:mm:ss a z", "h:mm:ss a", "h:mm a"], FIRSTDAYOFWEEK:0, WEEKENDRANGE:[5, 6], FIRSTWEEKCUTOFFDAY:3};
+goog.i18n.DateTimeSymbols_es = {ERAS:["a.C.", "d.C."], ERANAMES:["antes de Cristo", "anno D\u00f3mini"], NARROWMONTHS:["E", "F", "M", "A", "M", "J", "J", "A", "S", "O", "N", "D"], STANDALONENARROWMONTHS:["E", "F", "M", "A", "M", "J", "J", "A", "S", "O", "N", "D"], MONTHS:["enero", "febrero", "marzo", "abril", "mayo", "junio", "julio", "agosto", "septiembre", "octubre", "noviembre", "diciembre"], STANDALONEMONTHS:["enero", "febrero", "marzo", "abril", "mayo", "junio", "julio", "agosto", "septiembre", 
+"octubre", "noviembre", "diciembre"], SHORTMONTHS:["ene", "feb", "mar", "abr", "may", "jun", "jul", "ago", "sep", "oct", "nov", "dic"], STANDALONESHORTMONTHS:["ene", "feb", "mar", "abr", "mayo", "jun", "jul", "ago", "sep", "oct", "nov", "dic"], WEEKDAYS:["domingo", "lunes", "martes", "mi\u00e9rcoles", "jueves", "viernes", "s\u00e1bado"], STANDALONEWEEKDAYS:["domingo", "lunes", "martes", "mi\u00e9rcoles", "jueves", "viernes", "s\u00e1bado"], SHORTWEEKDAYS:["dom", "lun", "mar", "mi\u00e9", "jue", "vie", 
+"s\u00e1b"], STANDALONESHORTWEEKDAYS:["dom", "lun", "mar", "mi\u00e9", "jue", "vie", "s\u00e1b"], NARROWWEEKDAYS:["D", "L", "M", "M", "J", "V", "S"], STANDALONENARROWWEEKDAYS:["D", "L", "M", "M", "J", "V", "S"], SHORTQUARTERS:["T1", "T2", "T3", "T4"], QUARTERS:["1er trimestre", "2\u00ba trimestre", "3er trimestre", "4\u00ba trimestre"], AMPMS:["a.m.", "p.m."], DATEFORMATS:["EEEE d 'de' MMMM 'de' y", "d 'de' MMMM 'de' y", "dd/MM/yyyy", "dd/MM/yy"], TIMEFORMATS:["HH:mm:ss zzzz", "HH:mm:ss z", "HH:mm:ss", 
+"HH:mm"], FIRSTDAYOFWEEK:0, WEEKENDRANGE:[5, 6], FIRSTWEEKCUTOFFDAY:3};
+goog.i18n.DateTimeSymbols_es_419 = goog.i18n.DateTimeSymbols_es;
+goog.i18n.DateTimeSymbols_et = {ERAS:["e.m.a.", "m.a.j."], ERANAMES:["enne meie aega", "meie aja j\u00e4rgi"], NARROWMONTHS:["J", "V", "M", "A", "M", "J", "J", "A", "S", "O", "N", "D"], STANDALONENARROWMONTHS:["J", "V", "M", "A", "M", "J", "J", "A", "S", "O", "N", "D"], MONTHS:["jaanuar", "veebruar", "m\u00e4rts", "aprill", "mai", "juuni", "juuli", "august", "september", "oktoober", "november", "detsember"], STANDALONEMONTHS:["jaanuar", "veebruar", "m\u00e4rts", "aprill", "mai", "juuni", "juuli", 
+"august", "september", "oktoober", "november", "detsember"], SHORTMONTHS:["jaan", "veebr", "m\u00e4rts", "apr", "mai", "juuni", "juuli", "aug", "sept", "okt", "nov", "dets"], STANDALONESHORTMONTHS:["jaan", "veebr", "m\u00e4rts", "apr", "mai", "juuni", "juuli", "aug", "sept", "okt", "nov", "dets"], WEEKDAYS:["p\u00fchap\u00e4ev", "esmasp\u00e4ev", "teisip\u00e4ev", "kolmap\u00e4ev", "neljap\u00e4ev", "reede", "laup\u00e4ev"], STANDALONEWEEKDAYS:["p\u00fchap\u00e4ev", "esmasp\u00e4ev", "teisip\u00e4ev", 
+"kolmap\u00e4ev", "neljap\u00e4ev", "reede", "laup\u00e4ev"], SHORTWEEKDAYS:["P", "E", "T", "K", "N", "R", "L"], STANDALONESHORTWEEKDAYS:["P", "E", "T", "K", "N", "R", "L"], NARROWWEEKDAYS:["P", "E", "T", "K", "N", "R", "L"], STANDALONENARROWWEEKDAYS:["P", "E", "T", "K", "N", "R", "L"], SHORTQUARTERS:["K1", "K2", "K3", "K4"], QUARTERS:["1. kvartal", "2. kvartal", "3. kvartal", "4. kvartal"], AMPMS:["enne keskp\u00e4eva", "p\u00e4rast keskp\u00e4eva"], DATEFORMATS:["EEEE, d. MMMM y", "d. MMMM y", 
+"dd.MM.yyyy", "dd.MM.yy"], TIMEFORMATS:["H:mm.ss zzzz", "H:mm.ss z", "H:mm.ss", "H:mm"], FIRSTDAYOFWEEK:0, WEEKENDRANGE:[5, 6], FIRSTWEEKCUTOFFDAY:3};
+goog.i18n.DateTimeSymbols_eu = {ERAS:["K.a.", "K.o."], ERANAMES:["K.a.", "K.o."], NARROWMONTHS:["U", "O", "M", "A", "M", "E", "U", "A", "I", "U", "A", "A"], STANDALONENARROWMONTHS:["U", "O", "M", "A", "M", "E", "U", "A", "I", "U", "A", "A"], MONTHS:["urtarrila", "otsaila", "martxoa", "apirila", "maiatza", "ekaina", "uztaila", "abuztua", "iraila", "urria", "azaroa", "abendua"], STANDALONEMONTHS:["urtarrila", "otsaila", "martxoa", "apirila", "maiatza", "ekaina", "uztaila", "abuztua", "iraila", "urria", 
+"azaroa", "abendua"], SHORTMONTHS:["urt", "ots", "mar", "api", "mai", "eka", "uzt", "abu", "ira", "urr", "aza", "abe"], STANDALONESHORTMONTHS:["urt", "ots", "mar", "api", "mai", "eka", "uzt", "abu", "ira", "urr", "aza", "abe"], WEEKDAYS:["igandea", "astelehena", "asteartea", "asteazkena", "osteguna", "ostirala", "larunbata"], STANDALONEWEEKDAYS:["igandea", "astelehena", "asteartea", "asteazkena", "osteguna", "ostirala", "larunbata"], SHORTWEEKDAYS:["ig", "al", "as", "az", "og", "or", "lr"], STANDALONESHORTWEEKDAYS:["ig", 
+"al", "as", "az", "og", "or", "lr"], NARROWWEEKDAYS:["I", "M", "A", "A", "A", "O", "I"], STANDALONENARROWWEEKDAYS:["I", "M", "A", "L", "A", "O", "I"], SHORTQUARTERS:["1Hh", "2Hh", "3Hh", "4Hh"], QUARTERS:["1. hiruhilekoa", "2. hiruhilekoa", "3. hiruhilekoa", "4. hiruhilekoa"], AMPMS:["AM", "PM"], DATEFORMATS:["EEEE, y'eko' MMMM'ren' dd'a'", "y'eko' MMM'ren' dd'a'", "y MMM d", "yyyy-MM-dd"], TIMEFORMATS:["HH:mm:ss zzzz", "HH:mm:ss z", "HH:mm:ss", "HH:mm"], FIRSTDAYOFWEEK:0, WEEKENDRANGE:[5, 6], FIRSTWEEKCUTOFFDAY:3};
+goog.i18n.DateTimeSymbols_fa = {ERAS:["\u0642.\u0645.", "\u0645."], ERANAMES:["\u0642\u0628\u0644 \u0627\u0632 \u0645\u06cc\u0644\u0627\u062f", "\u0645\u06cc\u0644\u0627\u062f\u06cc"], NARROWMONTHS:["\u0698", "\u0641", "\u0645", "\u0622", "\u0645", "\u0698", "\u0698", "\u0627", "\u0633", "\u0627", "\u0646", "\u062f"], STANDALONENARROWMONTHS:["\u0698", "\u0641", "\u0645", "\u0622", "\u0645", "\u0698", "\u0698", "\u0627", "\u0633", "\u0627", "\u0646", "\u062f"], MONTHS:["\u0698\u0627\u0646\u0648\u06cc\u0647\u0654", 
+"\u0641\u0648\u0631\u06cc\u0647\u0654", "\u0645\u0627\u0631\u0633", "\u0622\u0648\u0631\u06cc\u0644", "\u0645\u0647\u0654", "\u0698\u0648\u0626\u0646", "\u0698\u0648\u0626\u06cc\u0647\u0654", "\u0627\u0648\u062a", "\u0633\u067e\u062a\u0627\u0645\u0628\u0631", "\u0627\u06a9\u062a\u0628\u0631", "\u0646\u0648\u0627\u0645\u0628\u0631", "\u062f\u0633\u0627\u0645\u0628\u0631"], STANDALONEMONTHS:["\u0698\u0627\u0646\u0648\u06cc\u0647", "\u0641\u0648\u0631\u06cc\u0647", "\u0645\u0627\u0631\u0633", "\u0622\u0648\u0631\u06cc\u0644", 
+"\u0645\u0647", "\u0698\u0648\u0626\u0646", "\u0698\u0648\u0626\u06cc\u0647", "\u0627\u0648\u062a", "\u0633\u067e\u062a\u0627\u0645\u0628\u0631", "\u0627\u06a9\u062a\u0628\u0631", "\u0646\u0648\u0627\u0645\u0628\u0631", "\u062f\u0633\u0627\u0645\u0628\u0631"], SHORTMONTHS:["\u0698\u0627\u0646\u0648\u06cc\u0647\u0654", "\u0641\u0648\u0631\u06cc\u0647\u0654", "\u0645\u0627\u0631\u0633", "\u0622\u0648\u0631\u06cc\u0644", "\u0645\u0647\u0654", "\u0698\u0648\u0626\u0646", "\u0698\u0648\u0626\u06cc\u0647\u0654", 
+"\u0627\u0648\u062a", "\u0633\u067e\u062a\u0627\u0645\u0628\u0631", "\u0627\u06a9\u062a\u0628\u0631", "\u0646\u0648\u0627\u0645\u0628\u0631", "\u062f\u0633\u0627\u0645\u0628\u0631"], STANDALONESHORTMONTHS:["\u0698\u0627\u0646\u0648\u06cc\u0647", "\u0641\u0648\u0631\u06cc\u0647", "\u0645\u0627\u0631\u0633", "\u0622\u0648\u0631\u06cc\u0644", "\u0645\u0647", "\u0698\u0648\u0626\u0646", "\u0698\u0648\u0626\u06cc\u0647", "\u0627\u0648\u062a", "\u0633\u067e\u062a\u0627\u0645\u0628\u0631", "\u0627\u06a9\u062a\u0628\u0631", 
+"\u0646\u0648\u0627\u0645\u0628\u0631", "\u062f\u0633\u0627\u0645\u0628\u0631"], WEEKDAYS:["\u06cc\u06a9\u0634\u0646\u0628\u0647", "\u062f\u0648\u0634\u0646\u0628\u0647", "\u0633\u0647\u200c\u0634\u0646\u0628\u0647", "\u0686\u0647\u0627\u0631\u0634\u0646\u0628\u0647", "\u067e\u0646\u062c\u0634\u0646\u0628\u0647", "\u062c\u0645\u0639\u0647", "\u0634\u0646\u0628\u0647"], STANDALONEWEEKDAYS:["\u06cc\u06a9\u0634\u0646\u0628\u0647", "\u062f\u0648\u0634\u0646\u0628\u0647", "\u0633\u0647\u200c\u0634\u0646\u0628\u0647", 
+"\u0686\u0647\u0627\u0631\u0634\u0646\u0628\u0647", "\u067e\u0646\u062c\u0634\u0646\u0628\u0647", "\u062c\u0645\u0639\u0647", "\u0634\u0646\u0628\u0647"], SHORTWEEKDAYS:["\u06cc\u06a9\u0634\u0646\u0628\u0647", "\u062f\u0648\u0634\u0646\u0628\u0647", "\u0633\u0647\u200c\u0634\u0646\u0628\u0647", "\u0686\u0647\u0627\u0631\u0634\u0646\u0628\u0647", "\u067e\u0646\u062c\u0634\u0646\u0628\u0647", "\u062c\u0645\u0639\u0647", "\u0634\u0646\u0628\u0647"], STANDALONESHORTWEEKDAYS:["\u06cc\u06a9\u0634\u0646\u0628\u0647", 
+"\u062f\u0648\u0634\u0646\u0628\u0647", "\u0633\u0647\u200c\u0634\u0646\u0628\u0647", "\u0686\u0647\u0627\u0631\u0634\u0646\u0628\u0647", "\u067e\u0646\u062c\u0634\u0646\u0628\u0647", "\u062c\u0645\u0639\u0647", "\u0634\u0646\u0628\u0647"], NARROWWEEKDAYS:["\u06cc", "\u062f", "\u0633", "\u0686", "\u067e", "\u062c", "\u0634"], STANDALONENARROWWEEKDAYS:["\u06cc", "\u062f", "\u0633", "\u0686", "\u067e", "\u062c", "\u0634"], SHORTQUARTERS:["\u0633\u200c\u0645\u06f1", "\u0633\u200c\u0645\u06f2", "\u0633\u200c\u0645\u06f3", 
+"\u0633\u200c\u0645\u06f4"], QUARTERS:["\u0633\u0647\u200c\u0645\u0627\u0647\u0647\u0654 \u0627\u0648\u0644", "\u0633\u0647\u200c\u0645\u0627\u0647\u0647\u0654 \u062f\u0648\u0645", "\u0633\u0647\u200c\u0645\u0627\u0647\u0647\u0654 \u0633\u0648\u0645", "\u0633\u0647\u200c\u0645\u0627\u0647\u0647\u0654 \u0686\u0647\u0627\u0631\u0645"], AMPMS:["\u0642\u0628\u0644\u200c\u0627\u0632\u0638\u0647\u0631", "\u0628\u0639\u062f\u0627\u0632\u0638\u0647\u0631"], DATEFORMATS:["EEEE d MMMM y", "d MMMM y", "d MMM y", 
+"yyyy/M/d"], TIMEFORMATS:["H:mm:ss (zzzz)", "H:mm:ss (z)", "H:mm:ss", "H:mm"], FIRSTDAYOFWEEK:5, WEEKENDRANGE:[3, 4], FIRSTWEEKCUTOFFDAY:1};
+goog.i18n.DateTimeSymbols_fi = {ERAS:["eKr.", "jKr."], ERANAMES:["ennen Kristuksen syntym\u00e4\u00e4", "j\u00e4lkeen Kristuksen syntym\u00e4n"], NARROWMONTHS:["T", "H", "M", "H", "T", "K", "H", "E", "S", "L", "M", "J"], STANDALONENARROWMONTHS:["T", "H", "M", "H", "T", "K", "H", "E", "S", "L", "M", "J"], MONTHS:["tammikuuta", "helmikuuta", "maaliskuuta", "huhtikuuta", "toukokuuta", "kes\u00e4kuuta", "hein\u00e4kuuta", "elokuuta", "syyskuuta", "lokakuuta", "marraskuuta", "joulukuuta"], STANDALONEMONTHS:["tammikuu", 
+"helmikuu", "maaliskuu", "huhtikuu", "toukokuu", "kes\u00e4kuu", "hein\u00e4kuu", "elokuu", "syyskuu", "lokakuu", "marraskuu", "joulukuu"], SHORTMONTHS:["tammikuuta", "helmikuuta", "maaliskuuta", "huhtikuuta", "toukokuuta", "kes\u00e4kuuta", "hein\u00e4kuuta", "elokuuta", "syyskuuta", "lokakuuta", "marraskuuta", "joulukuuta"], STANDALONESHORTMONTHS:["tammi", "helmi", "maalis", "huhti", "touko", "kes\u00e4", "hein\u00e4", "elo", "syys", "loka", "marras", "joulu"], WEEKDAYS:["sunnuntaina", "maanantaina", 
+"tiistaina", "keskiviikkona", "torstaina", "perjantaina", "lauantaina"], STANDALONEWEEKDAYS:["sunnuntai", "maanantai", "tiistai", "keskiviikko", "torstai", "perjantai", "lauantai"], SHORTWEEKDAYS:["su", "ma", "ti", "ke", "to", "pe", "la"], STANDALONESHORTWEEKDAYS:["su", "ma", "ti", "ke", "to", "pe", "la"], NARROWWEEKDAYS:["S", "M", "T", "K", "T", "P", "L"], STANDALONENARROWWEEKDAYS:["S", "M", "T", "K", "T", "P", "L"], SHORTQUARTERS:["1. nelj.", "2. nelj.", "3. nelj.", "4. nelj."], QUARTERS:["1. nelj\u00e4nnes", 
+"2. nelj\u00e4nnes", "3. nelj\u00e4nnes", "4. nelj\u00e4nnes"], AMPMS:["ap.", "ip."], DATEFORMATS:["cccc, d. MMMM y", "d. MMMM y", "d.M.yyyy", "d.M.yyyy"], TIMEFORMATS:["H.mm.ss zzzz", "H.mm.ss z", "H.mm.ss", "H.mm"], FIRSTDAYOFWEEK:0, WEEKENDRANGE:[5, 6], FIRSTWEEKCUTOFFDAY:3};
+goog.i18n.DateTimeSymbols_fil = {ERAS:["BC", "AD"], ERANAMES:["BC", "AD"], NARROWMONTHS:["E", "P", "M", "A", "M", "H", "H", "A", "S", "O", "N", "D"], STANDALONENARROWMONTHS:["E", "P", "M", "A", "M", "H", "H", "A", "S", "O", "N", "D"], MONTHS:["Enero", "Pebrero", "Marso", "Abril", "Mayo", "Hunyo", "Hulyo", "Agosto", "Setyembre", "Oktubre", "Nobyembre", "Disyembre"], STANDALONEMONTHS:["Enero", "Pebrero", "Marso", "Abril", "Mayo", "Hunyo", "Hulyo", "Agosto", "Setyembre", "Oktubre", "Nobyembre", "Disyembre"], 
+SHORTMONTHS:["Ene", "Peb", "Mar", "Abr", "May", "Hun", "Hul", "Ago", "Set", "Okt", "Nob", "Dis"], STANDALONESHORTMONTHS:["Ene", "Peb", "Mar", "Abr", "May", "Hun", "Hul", "Ago", "Set", "Okt", "Nob", "Dis"], WEEKDAYS:["Linggo", "Lunes", "Martes", "Miyerkules", "Huwebes", "Biyernes", "Sabado"], STANDALONEWEEKDAYS:["Linggo", "Lunes", "Martes", "Miyerkules", "Huwebes", "Biyernes", "Sabado"], SHORTWEEKDAYS:["Lin", "Lun", "Mar", "Mye", "Huw", "Bye", "Sab"], STANDALONESHORTWEEKDAYS:["Lin", "Lun", "Mar", 
+"Miy", "Huw", "Biy", "Sab"], NARROWWEEKDAYS:["L", "L", "M", "M", "H", "B", "S"], STANDALONENARROWWEEKDAYS:["L", "L", "M", "M", "H", "B", "S"], SHORTQUARTERS:["Q1", "Q2", "Q3", "Q4"], QUARTERS:["ika-1 sangkapat", "ika-2 sangkapat", "ika-3 quarter", "ika-4 na quarter"], AMPMS:["AM", "PM"], DATEFORMATS:["EEEE, MMMM dd y", "MMMM d, y", "MMM d, y", "M/d/yy"], TIMEFORMATS:["HH:mm:ss zzzz", "HH:mm:ss z", "HH:mm:ss", "HH:mm"], FIRSTDAYOFWEEK:6, WEEKENDRANGE:[5, 6], FIRSTWEEKCUTOFFDAY:2};
+goog.i18n.DateTimeSymbols_fr = {ERAS:["av. J.-C.", "ap. J.-C."], ERANAMES:["avant J\u00e9sus-Christ", "apr\u00e8s J\u00e9sus-Christ"], NARROWMONTHS:["J", "F", "M", "A", "M", "J", "J", "A", "S", "O", "N", "D"], STANDALONENARROWMONTHS:["J", "F", "M", "A", "M", "J", "J", "A", "S", "O", "N", "D"], MONTHS:["janvier", "f\u00e9vrier", "mars", "avril", "mai", "juin", "juillet", "ao\u00fbt", "septembre", "octobre", "novembre", "d\u00e9cembre"], STANDALONEMONTHS:["janvier", "f\u00e9vrier", "mars", "avril", 
+"mai", "juin", "juillet", "ao\u00fbt", "septembre", "octobre", "novembre", "d\u00e9cembre"], SHORTMONTHS:["janv.", "f\u00e9vr.", "mars", "avr.", "mai", "juin", "juil.", "ao\u00fbt", "sept.", "oct.", "nov.", "d\u00e9c."], STANDALONESHORTMONTHS:["janv.", "f\u00e9vr.", "mars", "avr.", "mai", "juin", "juil.", "ao\u00fbt", "sept.", "oct.", "nov.", "d\u00e9c."], WEEKDAYS:["dimanche", "lundi", "mardi", "mercredi", "jeudi", "vendredi", "samedi"], STANDALONEWEEKDAYS:["dimanche", "lundi", "mardi", "mercredi", 
+"jeudi", "vendredi", "samedi"], SHORTWEEKDAYS:["dim.", "lun.", "mar.", "mer.", "jeu.", "ven.", "sam."], STANDALONESHORTWEEKDAYS:["dim.", "lun.", "mar.", "mer.", "jeu.", "ven.", "sam."], NARROWWEEKDAYS:["D", "L", "M", "M", "J", "V", "S"], STANDALONENARROWWEEKDAYS:["D", "L", "M", "M", "J", "V", "S"], SHORTQUARTERS:["T1", "T2", "T3", "T4"], QUARTERS:["1er trimestre", "2e trimestre", "3e trimestre", "4e trimestre"], AMPMS:["AM", "PM"], DATEFORMATS:["EEEE d MMMM y", "d MMMM y", "d MMM y", "dd/MM/yy"], 
+TIMEFORMATS:["HH:mm:ss zzzz", "HH:mm:ss z", "HH:mm:ss", "HH:mm"], FIRSTDAYOFWEEK:0, WEEKENDRANGE:[5, 6], FIRSTWEEKCUTOFFDAY:3};
+goog.i18n.DateTimeSymbols_fr_CA = {ERAS:["av. J.-C.", "ap. J.-C."], ERANAMES:["avant J\u00e9sus-Christ", "apr\u00e8s J\u00e9sus-Christ"], NARROWMONTHS:["J", "F", "M", "A", "M", "J", "J", "A", "S", "O", "N", "D"], STANDALONENARROWMONTHS:["J", "F", "M", "A", "M", "J", "J", "A", "S", "O", "N", "D"], MONTHS:["janvier", "f\u00e9vrier", "mars", "avril", "mai", "juin", "juillet", "ao\u00fbt", "septembre", "octobre", "novembre", "d\u00e9cembre"], STANDALONEMONTHS:["janvier", "f\u00e9vrier", "mars", "avril", 
+"mai", "juin", "juillet", "ao\u00fbt", "septembre", "octobre", "novembre", "d\u00e9cembre"], SHORTMONTHS:["janv.", "f\u00e9vr.", "mars", "avr.", "mai", "juin", "juil.", "ao\u00fbt", "sept.", "oct.", "nov.", "d\u00e9c."], STANDALONESHORTMONTHS:["janv.", "f\u00e9vr.", "mars", "avr.", "mai", "juin", "juil.", "ao\u00fbt", "sept.", "oct.", "nov.", "d\u00e9c."], WEEKDAYS:["dimanche", "lundi", "mardi", "mercredi", "jeudi", "vendredi", "samedi"], STANDALONEWEEKDAYS:["dimanche", "lundi", "mardi", "mercredi", 
+"jeudi", "vendredi", "samedi"], SHORTWEEKDAYS:["dim.", "lun.", "mar.", "mer.", "jeu.", "ven.", "sam."], STANDALONESHORTWEEKDAYS:["dim.", "lun.", "mar.", "mer.", "jeu.", "ven.", "sam."], NARROWWEEKDAYS:["D", "L", "M", "M", "J", "V", "S"], STANDALONENARROWWEEKDAYS:["D", "L", "M", "M", "J", "V", "S"], SHORTQUARTERS:["T1", "T2", "T3", "T4"], QUARTERS:["1er trimestre", "2e trimestre", "3e trimestre", "4e trimestre"], AMPMS:["AM", "PM"], DATEFORMATS:["EEEE d MMMM y", "d MMMM y", "yyyy-MM-dd", "yy-MM-dd"], 
+TIMEFORMATS:["HH 'h' mm 'min' ss 's' zzzz", "HH:mm:ss z", "HH:mm:ss", "HH:mm"], FIRSTDAYOFWEEK:6, WEEKENDRANGE:[5, 6], FIRSTWEEKCUTOFFDAY:2};
+goog.i18n.DateTimeSymbols_gl = {ERAS:["a.C.", "d.C."], ERANAMES:["antes de Cristo", "despois de Cristo"], NARROWMONTHS:["X", "F", "M", "A", "M", "X", "X", "A", "S", "O", "N", "D"], STANDALONENARROWMONTHS:["X", "F", "M", "A", "M", "X", "X", "A", "S", "O", "N", "D"], MONTHS:["Xaneiro", "Febreiro", "Marzo", "Abril", "Maio", "Xu\u00f1o", "Xullo", "Agosto", "Setembro", "Outubro", "Novembro", "Decembro"], STANDALONEMONTHS:["Xaneiro", "Febreiro", "Marzo", "Abril", "Maio", "Xu\u00f1o", "Xullo", "Agosto", 
+"Setembro", "Outubro", "Novembro", "Decembro"], SHORTMONTHS:["Xan", "Feb", "Mar", "Abr", "Mai", "Xu\u00f1", "Xul", "Ago", "Set", "Out", "Nov", "Dec"], STANDALONESHORTMONTHS:["Xan", "Feb", "Mar", "Abr", "Mai", "Xu\u00f1", "Xul", "Ago", "Set", "Out", "Nov", "Dec"], WEEKDAYS:["Domingo", "Luns", "Martes", "M\u00e9rcores", "Xoves", "Venres", "S\u00e1bado"], STANDALONEWEEKDAYS:["Domingo", "Luns", "Martes", "M\u00e9rcores", "Xoves", "Venres", "S\u00e1bado"], SHORTWEEKDAYS:["Dom", "Lun", "Mar", "M\u00e9r", 
+"Xov", "Ven", "S\u00e1b"], STANDALONESHORTWEEKDAYS:["Dom", "Lun", "Mar", "M\u00e9r", "Xov", "Ven", "S\u00e1b"], NARROWWEEKDAYS:["D", "L", "M", "M", "X", "V", "S"], STANDALONENARROWWEEKDAYS:["D", "L", "M", "M", "X", "V", "S"], SHORTQUARTERS:["T1", "T2", "T3", "T4"], QUARTERS:["1o trimestre", "2o trimestre", "3o trimestre", "4o trimestre"], AMPMS:["a.m.", "p.m."], DATEFORMATS:["EEEE dd MMMM y", "dd MMMM y", "d MMM, y", "dd/MM/yy"], TIMEFORMATS:["HH:mm:ss zzzz", "HH:mm:ss z", "HH:mm:ss", "HH:mm"], FIRSTDAYOFWEEK:0, 
+WEEKENDRANGE:[5, 6], FIRSTWEEKCUTOFFDAY:3};
+goog.i18n.DateTimeSymbols_gsw = {ERAS:["v. Chr.", "n. Chr."], ERANAMES:["v. Chr.", "n. Chr."], NARROWMONTHS:["J", "F", "M", "A", "M", "J", "J", "A", "S", "O", "N", "D"], STANDALONENARROWMONTHS:["J", "F", "M", "A", "M", "J", "J", "A", "S", "O", "N", "D"], MONTHS:["Januar", "Februar", "M\u00e4rz", "April", "Mai", "Juni", "Juli", "Auguscht", "Sept\u00e4mber", "Oktoober", "Nov\u00e4mber", "Dez\u00e4mber"], STANDALONEMONTHS:["Januar", "Februar", "M\u00e4rz", "April", "Mai", "Juni", "Juli", "Auguscht", 
+"Sept\u00e4mber", "Oktoober", "Nov\u00e4mber", "Dez\u00e4mber"], SHORTMONTHS:["Jan", "Feb", "M\u00e4r", "Apr", "Mai", "Jun", "Jul", "Aug", "Sep", "Okt", "Nov", "Dez"], STANDALONESHORTMONTHS:["Jan", "Feb", "M\u00e4r", "Apr", "Mai", "Jun", "Jul", "Aug", "Sep", "Okt", "Nov", "Dez"], WEEKDAYS:["Sunntig", "M\u00e4\u00e4ntig", "Ziischtig", "Mittwuch", "Dunschtig", "Friitig", "Samschtig"], STANDALONEWEEKDAYS:["Sunntig", "M\u00e4\u00e4ntig", "Ziischtig", "Mittwuch", "Dunschtig", "Friitig", "Samschtig"], 
+SHORTWEEKDAYS:["Su.", "M\u00e4.", "Zi.", "Mi.", "Du.", "Fr.", "Sa."], STANDALONESHORTWEEKDAYS:["Su.", "M\u00e4.", "Zi.", "Mi.", "Du.", "Fr.", "Sa."], NARROWWEEKDAYS:["S", "M", "D", "M", "D", "F", "S"], STANDALONENARROWWEEKDAYS:["S", "M", "D", "M", "D", "F", "S"], SHORTQUARTERS:["Q1", "Q2", "Q3", "Q4"], QUARTERS:["1. Quartal", "2. Quartal", "3. Quartal", "4. Quartal"], AMPMS:["vorm.", "nam."], DATEFORMATS:["EEEE, d. MMMM y", "d. MMMM y", "dd.MM.yyyy", "dd.MM.yy"], TIMEFORMATS:["HH:mm:ss zzzz", "HH:mm:ss z", 
+"HH:mm:ss", "HH:mm"], FIRSTDAYOFWEEK:0, WEEKENDRANGE:[5, 6], FIRSTWEEKCUTOFFDAY:3};
+goog.i18n.DateTimeSymbols_gu = {ERAS:["\u0a88\u0ab2\u0ac1\u0aa8\u0abe \u0a9c\u0aa8\u0acd\u0aae \u0aaa\u0ab9\u0ac7\u0ab8\u0abe\u0a82", "\u0a87\u0ab8\u0ab5\u0ac0\u0ab8\u0aa8"], ERANAMES:["\u0a88\u0ab8\u0ab5\u0ac0\u0ab8\u0aa8 \u0aaa\u0ac2\u0ab0\u0acd\u0ab5\u0ac7", "\u0a87\u0ab8\u0ab5\u0ac0\u0ab8\u0aa8"], NARROWMONTHS:["\u0a9c\u0abe", "\u0aab\u0ac7", "\u0aae\u0abe", "\u0a8f", "\u0aae\u0ac7", "\u0a9c\u0ac2", "\u0a9c\u0ac1", "\u0a91", "\u0ab8", "\u0a91", "\u0aa8", "\u0aa1\u0abf"], STANDALONENARROWMONTHS:["\u0a9c\u0abe", 
+"\u0aab\u0ac7", "\u0aae\u0abe", "\u0a8f", "\u0aae\u0ac7", "\u0a9c\u0ac2", "\u0a9c\u0ac1", "\u0a91", "\u0ab8", "\u0a91", "\u0aa8", "\u0aa1\u0abf"], MONTHS:["\u0a9c\u0abe\u0aa8\u0acd\u0aaf\u0ac1\u0a86\u0ab0\u0ac0", "\u0aab\u0ac7\u0aac\u0acd\u0ab0\u0ac1\u0a86\u0ab0\u0ac0", "\u0aae\u0abe\u0ab0\u0acd\u0a9a", "\u0a8f\u0aaa\u0acd\u0ab0\u0abf\u0ab2", "\u0aae\u0ac7", "\u0a9c\u0ac2\u0aa8", "\u0a9c\u0ac1\u0ab2\u0abe\u0a88", "\u0a91\u0a97\u0ab8\u0acd\u0a9f", "\u0ab8\u0aaa\u0acd\u0a9f\u0ac7\u0aae\u0acd\u0aac\u0ab0", 
+"\u0a91\u0a95\u0acd\u0a9f\u0acd\u0aac\u0ab0", "\u0aa8\u0ab5\u0ac7\u0aae\u0acd\u0aac\u0ab0", "\u0aa1\u0abf\u0ab8\u0ac7\u0aae\u0acd\u0aac\u0ab0"], STANDALONEMONTHS:["\u0a9c\u0abe\u0aa8\u0acd\u0aaf\u0ac1\u0a86\u0ab0\u0ac0", "\u0aab\u0ac7\u0aac\u0acd\u0ab0\u0ac1\u0a86\u0ab0\u0ac0", "\u0aae\u0abe\u0ab0\u0acd\u0a9a", "\u0a8f\u0aaa\u0acd\u0ab0\u0abf\u0ab2", "\u0aae\u0ac7", "\u0a9c\u0ac2\u0aa8", "\u0a9c\u0ac1\u0ab2\u0abe\u0a88", "\u0a91\u0a97\u0ab8\u0acd\u0a9f", "\u0ab8\u0aaa\u0acd\u0a9f\u0ac7\u0aae\u0acd\u0aac\u0ab0", 
+"\u0a91\u0a95\u0acd\u0a9f\u0acd\u0aac\u0ab0", "\u0aa8\u0ab5\u0ac7\u0aae\u0acd\u0aac\u0ab0", "\u0aa1\u0abf\u0ab8\u0ac7\u0aae\u0acd\u0aac\u0ab0"], SHORTMONTHS:["\u0a9c\u0abe\u0aa8\u0acd\u0aaf\u0ac1", "\u0aab\u0ac7\u0aac\u0acd\u0ab0\u0ac1", "\u0aae\u0abe\u0ab0\u0acd\u0a9a", "\u0a8f\u0aaa\u0acd\u0ab0\u0abf\u0ab2", "\u0aae\u0ac7", "\u0a9c\u0ac2\u0aa8", "\u0a9c\u0ac1\u0ab2\u0abe\u0a88", "\u0a91\u0a97\u0ab8\u0acd\u0a9f", "\u0ab8\u0aaa\u0acd\u0a9f\u0ac7", "\u0a91\u0a95\u0acd\u0a9f\u0acb", "\u0aa8\u0ab5\u0ac7", 
+"\u0aa1\u0abf\u0ab8\u0ac7"], STANDALONESHORTMONTHS:["\u0a9c\u0abe\u0aa8\u0acd\u0aaf\u0ac1", "\u0aab\u0ac7\u0aac\u0acd\u0ab0\u0ac1", "\u0aae\u0abe\u0ab0\u0acd\u0a9a", "\u0a8f\u0aaa\u0acd\u0ab0\u0abf\u0ab2", "\u0aae\u0ac7", "\u0a9c\u0ac2\u0aa8", "\u0a9c\u0ac1\u0ab2\u0abe\u0a88", "\u0a91\u0a97\u0ab8\u0acd\u0a9f", "\u0ab8\u0aaa\u0acd\u0a9f\u0ac7", "\u0a91\u0a95\u0acd\u0a9f\u0acb", "\u0aa8\u0ab5\u0ac7", "\u0aa1\u0abf\u0ab8\u0ac7"], WEEKDAYS:["\u0ab0\u0ab5\u0abf\u0ab5\u0abe\u0ab0", "\u0ab8\u0acb\u0aae\u0ab5\u0abe\u0ab0", 
+"\u0aae\u0a82\u0a97\u0ab3\u0ab5\u0abe\u0ab0", "\u0aac\u0ac1\u0aa7\u0ab5\u0abe\u0ab0", "\u0a97\u0ac1\u0ab0\u0ac1\u0ab5\u0abe\u0ab0", "\u0ab6\u0ac1\u0a95\u0acd\u0ab0\u0ab5\u0abe\u0ab0", "\u0ab6\u0aa8\u0abf\u0ab5\u0abe\u0ab0"], STANDALONEWEEKDAYS:["\u0ab0\u0ab5\u0abf\u0ab5\u0abe\u0ab0", "\u0ab8\u0acb\u0aae\u0ab5\u0abe\u0ab0", "\u0aae\u0a82\u0a97\u0ab3\u0ab5\u0abe\u0ab0", "\u0aac\u0ac1\u0aa7\u0ab5\u0abe\u0ab0", "\u0a97\u0ac1\u0ab0\u0ac1\u0ab5\u0abe\u0ab0", "\u0ab6\u0ac1\u0a95\u0acd\u0ab0\u0ab5\u0abe\u0ab0", 
+"\u0ab6\u0aa8\u0abf\u0ab5\u0abe\u0ab0"], SHORTWEEKDAYS:["\u0ab0\u0ab5\u0abf", "\u0ab8\u0acb\u0aae", "\u0aae\u0a82\u0a97\u0ab3", "\u0aac\u0ac1\u0aa7", "\u0a97\u0ac1\u0ab0\u0ac1", "\u0ab6\u0ac1\u0a95\u0acd\u0ab0", "\u0ab6\u0aa8\u0abf"], STANDALONESHORTWEEKDAYS:["\u0ab0\u0ab5\u0abf", "\u0ab8\u0acb\u0aae", "\u0aae\u0a82\u0a97\u0ab3", "\u0aac\u0ac1\u0aa7", "\u0a97\u0ac1\u0ab0\u0ac1", "\u0ab6\u0ac1\u0a95\u0acd\u0ab0", "\u0ab6\u0aa8\u0abf"], NARROWWEEKDAYS:["\u0ab0", "\u0ab8\u0acb", "\u0aae\u0a82", "\u0aac\u0ac1", 
+"\u0a97\u0ac1", "\u0ab6\u0ac1", "\u0ab6"], STANDALONENARROWWEEKDAYS:["\u0ab0", "\u0ab8\u0acb", "\u0aae\u0a82", "\u0aac\u0ac1", "\u0a97\u0ac1", "\u0ab6\u0ac1", "\u0ab6"], SHORTQUARTERS:["\u0aaa\u0ac7\u0ab9\u0ab2\u0abe \u0ab9\u0a82\u0aa4 1", "Q2", "Q3", "\u0a9a\u0acc\u0aa4\u0abe \u0ab9\u0a82\u0aa4 4"], QUARTERS:["\u0aaa\u0ac7\u0ab9\u0ab2\u0abe \u0ab9\u0a82\u0aa4 1", "\u0aa1\u0ac2\u0ab8\u0a8b\u0abe \u0ab9\u0a82\u0aa4 2", "\u0aa4\u0ac0\u0ab8\u0a8b\u0abe \u0ab9\u0a82\u0aa4 3", "\u0a9a\u0acc\u0aa4\u0abe \u0ab9\u0a82\u0aa4 4"], 
+AMPMS:["\u0aaa\u0ac2\u0ab0\u0acd\u0ab5 \u0aae\u0aa7\u0acd\u0aaf\u0abe\u0ab9\u0acd\u0aa8", "\u0a89\u0aa4\u0acd\u0aa4\u0ab0 \u0aae\u0aa7\u0acd\u0aaf\u0abe\u0ab9\u0acd\u0aa8"], DATEFORMATS:["EEEE, d MMMM, y", "d MMMM, y", "d MMM, y", "d-MM-yy"], TIMEFORMATS:["hh:mm:ss a zzzz", "hh:mm:ss a z", "hh:mm:ss a", "hh:mm a"], FIRSTDAYOFWEEK:6, WEEKENDRANGE:[6, 6], FIRSTWEEKCUTOFFDAY:2};
+goog.i18n.DateTimeSymbols_he = {ERAS:["\u05dc\u05e4\u05e0\u05d4\u05f4\u05e1", "\u05dc\u05e1\u05d4\u05f4\u05e0"], ERANAMES:["\u05dc\u05e4\u05e0\u05d9 \u05d4\u05e1\u05e4\u05d9\u05e8\u05d4", "\u05dc\u05e1\u05e4\u05d9\u05e8\u05d4"], NARROWMONTHS:["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12"], STANDALONENARROWMONTHS:["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12"], MONTHS:["\u05d9\u05e0\u05d5\u05d0\u05e8", "\u05e4\u05d1\u05e8\u05d5\u05d0\u05e8", "\u05de\u05e8\u05e5", "\u05d0\u05e4\u05e8\u05d9\u05dc", 
+"\u05de\u05d0\u05d9", "\u05d9\u05d5\u05e0\u05d9", "\u05d9\u05d5\u05dc\u05d9", "\u05d0\u05d5\u05d2\u05d5\u05e1\u05d8", "\u05e1\u05e4\u05d8\u05de\u05d1\u05e8", "\u05d0\u05d5\u05e7\u05d8\u05d5\u05d1\u05e8", "\u05e0\u05d5\u05d1\u05de\u05d1\u05e8", "\u05d3\u05e6\u05de\u05d1\u05e8"], STANDALONEMONTHS:["\u05d9\u05e0\u05d5\u05d0\u05e8", "\u05e4\u05d1\u05e8\u05d5\u05d0\u05e8", "\u05de\u05e8\u05e5", "\u05d0\u05e4\u05e8\u05d9\u05dc", "\u05de\u05d0\u05d9", "\u05d9\u05d5\u05e0\u05d9", "\u05d9\u05d5\u05dc\u05d9", 
+"\u05d0\u05d5\u05d2\u05d5\u05e1\u05d8", "\u05e1\u05e4\u05d8\u05de\u05d1\u05e8", "\u05d0\u05d5\u05e7\u05d8\u05d5\u05d1\u05e8", "\u05e0\u05d5\u05d1\u05de\u05d1\u05e8", "\u05d3\u05e6\u05de\u05d1\u05e8"], SHORTMONTHS:["\u05d9\u05e0\u05d5", "\u05e4\u05d1\u05e8", "\u05de\u05e8\u05e5", "\u05d0\u05e4\u05e8", "\u05de\u05d0\u05d9", "\u05d9\u05d5\u05e0", "\u05d9\u05d5\u05dc", "\u05d0\u05d5\u05d2", "\u05e1\u05e4\u05d8", "\u05d0\u05d5\u05e7", "\u05e0\u05d5\u05d1", "\u05d3\u05e6\u05de"], STANDALONESHORTMONTHS:["\u05d9\u05e0\u05d5\u05f3", 
+"\u05e4\u05d1\u05e8\u05f3", "\u05de\u05e8\u05e5", "\u05d0\u05e4\u05e8\u05f3", "\u05de\u05d0\u05d9", "\u05d9\u05d5\u05e0\u05f3", "\u05d9\u05d5\u05dc\u05f3", "\u05d0\u05d5\u05d2\u05f3", "\u05e1\u05e4\u05d8\u05f3", "\u05d0\u05d5\u05e7\u05f3", "\u05e0\u05d5\u05d1\u05f3", "\u05d3\u05e6\u05de\u05f3"], WEEKDAYS:["\u05d9\u05d5\u05dd \u05e8\u05d0\u05e9\u05d5\u05df", "\u05d9\u05d5\u05dd \u05e9\u05e0\u05d9", "\u05d9\u05d5\u05dd \u05e9\u05dc\u05d9\u05e9\u05d9", "\u05d9\u05d5\u05dd \u05e8\u05d1\u05d9\u05e2\u05d9", 
+"\u05d9\u05d5\u05dd \u05d7\u05de\u05d9\u05e9\u05d9", "\u05d9\u05d5\u05dd \u05e9\u05d9\u05e9\u05d9", "\u05d9\u05d5\u05dd \u05e9\u05d1\u05ea"], STANDALONEWEEKDAYS:["\u05d9\u05d5\u05dd \u05e8\u05d0\u05e9\u05d5\u05df", "\u05d9\u05d5\u05dd \u05e9\u05e0\u05d9", "\u05d9\u05d5\u05dd \u05e9\u05dc\u05d9\u05e9\u05d9", "\u05d9\u05d5\u05dd \u05e8\u05d1\u05d9\u05e2\u05d9", "\u05d9\u05d5\u05dd \u05d7\u05de\u05d9\u05e9\u05d9", "\u05d9\u05d5\u05dd \u05e9\u05d9\u05e9\u05d9", "\u05d9\u05d5\u05dd \u05e9\u05d1\u05ea"], 
+SHORTWEEKDAYS:["\u05d9\u05d5\u05dd \u05d0\u05f3", "\u05d9\u05d5\u05dd \u05d1\u05f3", "\u05d9\u05d5\u05dd \u05d2\u05f3", "\u05d9\u05d5\u05dd \u05d3\u05f3", "\u05d9\u05d5\u05dd \u05d4\u05f3", "\u05d9\u05d5\u05dd \u05d5\u05f3", "\u05e9\u05d1\u05ea"], STANDALONESHORTWEEKDAYS:["\u05d9\u05d5\u05dd \u05d0\u05f3", "\u05d9\u05d5\u05dd \u05d1\u05f3", "\u05d9\u05d5\u05dd \u05d2\u05f3", "\u05d9\u05d5\u05dd \u05d3\u05f3", "\u05d9\u05d5\u05dd \u05d4\u05f3", "\u05d9\u05d5\u05dd \u05d5\u05f3", "\u05e9\u05d1\u05ea"], 
+NARROWWEEKDAYS:["\u05d0", "\u05d1", "\u05d2", "\u05d3", "\u05d4", "\u05d5", "\u05e9"], STANDALONENARROWWEEKDAYS:["\u05d0", "\u05d1", "\u05d2", "\u05d3", "\u05d4", "\u05d5", "\u05e9"], SHORTQUARTERS:["\u05e8\u05d1\u05e2\u05d5\u05df 1", "\u05e8\u05d1\u05e2\u05d5\u05df 2", "\u05e8\u05d1\u05e2\u05d5\u05df 3", "\u05e8\u05d1\u05e2\u05d5\u05df 4"], QUARTERS:["\u05e8\u05d1\u05e2\u05d5\u05df 1", "\u05e8\u05d1\u05e2\u05d5\u05df 2", "\u05e8\u05d1\u05e2\u05d5\u05df 3", "\u05e8\u05d1\u05e2\u05d5\u05df 4"], AMPMS:["\u05dc\u05e4\u05e0\u05d4\u05f4\u05e6", 
+"\u05d0\u05d7\u05d4\u05f4\u05e6"], DATEFORMATS:["EEEE, d \u05d1MMMM y", "d \u05d1MMMM y", "d \u05d1MMM yyyy", "dd/MM/yy"], TIMEFORMATS:["HH:mm:ss zzzz", "HH:mm:ss z", "HH:mm:ss", "HH:mm"], FIRSTDAYOFWEEK:6, WEEKENDRANGE:[4, 5], FIRSTWEEKCUTOFFDAY:2};
+goog.i18n.DateTimeSymbols_hi = {ERAS:["\u0908\u0938\u093e\u092a\u0942\u0930\u094d\u0935", "\u0938\u0928"], ERANAMES:["\u0908\u0938\u093e\u092a\u0942\u0930\u094d\u0935", "\u0938\u0928"], NARROWMONTHS:["\u091c", "\u092b\u093c", "\u092e\u093e", "\u0905", "\u092e", "\u091c\u0942", "\u091c\u0941", "\u0905", "\u0938\u093f", "\u0905", "\u0928", "\u0926\u093f"], STANDALONENARROWMONTHS:["\u091c", "\u092b\u093c", "\u092e\u093e", "\u0905", "\u092e", "\u091c\u0942", "\u091c\u0941", "\u0905", "\u0938\u093f", 
+"\u0905", "\u0928", "\u0926\u093f"], MONTHS:["\u091c\u0928\u0935\u0930\u0940", "\u092b\u0930\u0935\u0930\u0940", "\u092e\u093e\u0930\u094d\u091a", "\u0905\u092a\u094d\u0930\u0948\u0932", "\u092e\u0908", "\u091c\u0942\u0928", "\u091c\u0941\u0932\u093e\u0908", "\u0905\u0917\u0938\u094d\u0924", "\u0938\u093f\u0924\u092e\u094d\u092c\u0930", "\u0905\u0915\u094d\u0924\u0942\u092c\u0930", "\u0928\u0935\u092e\u094d\u092c\u0930", "\u0926\u093f\u0938\u092e\u094d\u092c\u0930"], STANDALONEMONTHS:["\u091c\u0928\u0935\u0930\u0940", 
+"\u092b\u0930\u0935\u0930\u0940", "\u092e\u093e\u0930\u094d\u091a", "\u0905\u092a\u094d\u0930\u0948\u0932", "\u092e\u0908", "\u091c\u0942\u0928", "\u091c\u0941\u0932\u093e\u0908", "\u0905\u0917\u0938\u094d\u0924", "\u0938\u093f\u0924\u092e\u094d\u092c\u0930", "\u0905\u0915\u094d\u0924\u0942\u092c\u0930", "\u0928\u0935\u092e\u094d\u092c\u0930", "\u0926\u093f\u0938\u092e\u094d\u092c\u0930"], SHORTMONTHS:["\u091c\u0928\u0935\u0930\u0940", "\u092b\u0930\u0935\u0930\u0940", "\u092e\u093e\u0930\u094d\u091a", 
+"\u0905\u092a\u094d\u0930\u0948\u0932", "\u092e\u0908", "\u091c\u0942\u0928", "\u091c\u0941\u0932\u093e\u0908", "\u0905\u0917\u0938\u094d\u0924", "\u0938\u093f\u0924\u092e\u094d\u092c\u0930", "\u0905\u0915\u094d\u0924\u0942\u092c\u0930", "\u0928\u0935\u092e\u094d\u092c\u0930", "\u0926\u093f\u0938\u092e\u094d\u092c\u0930"], STANDALONESHORTMONTHS:["\u091c\u0928\u0935\u0930\u0940", "\u092b\u0930\u0935\u0930\u0940", "\u092e\u093e\u0930\u094d\u091a", "\u0905\u092a\u094d\u0930\u0948\u0932", "\u092e\u0908", 
+"\u091c\u0942\u0928", "\u091c\u0941\u0932\u093e\u0908", "\u0905\u0917\u0938\u094d\u0924", "\u0938\u093f\u0924\u092e\u094d\u092c\u0930", "\u0905\u0915\u094d\u0924\u0942\u092c\u0930", "\u0928\u0935\u092e\u094d\u092c\u0930", "\u0926\u093f\u0938\u092e\u094d\u092c\u0930"], WEEKDAYS:["\u0930\u0935\u093f\u0935\u093e\u0930", "\u0938\u094b\u092e\u0935\u093e\u0930", "\u092e\u0902\u0917\u0932\u0935\u093e\u0930", "\u092c\u0941\u0927\u0935\u093e\u0930", "\u092c\u0943\u0939\u0938\u094d\u092a\u0924\u093f\u0935\u093e\u0930", 
+"\u0936\u0941\u0915\u094d\u0930\u0935\u093e\u0930", "\u0936\u0928\u093f\u0935\u093e\u0930"], STANDALONEWEEKDAYS:["\u0930\u0935\u093f\u0935\u093e\u0930", "\u0938\u094b\u092e\u0935\u093e\u0930", "\u092e\u0902\u0917\u0932\u0935\u093e\u0930", "\u092c\u0941\u0927\u0935\u093e\u0930", "\u092c\u0943\u0939\u0938\u094d\u092a\u0924\u093f\u0935\u093e\u0930", "\u0936\u0941\u0915\u094d\u0930\u0935\u093e\u0930", "\u0936\u0928\u093f\u0935\u093e\u0930"], SHORTWEEKDAYS:["\u0930\u0935\u093f.", "\u0938\u094b\u092e.", 
+"\u092e\u0902\u0917\u0932.", "\u092c\u0941\u0927.", "\u092c\u0943\u0939.", "\u0936\u0941\u0915\u094d\u0930.", "\u0936\u0928\u093f."], STANDALONESHORTWEEKDAYS:["\u0930\u0935\u093f.", "\u0938\u094b\u092e.", "\u092e\u0902\u0917\u0932.", "\u092c\u0941\u0927.", "\u092c\u0943\u0939.", "\u0936\u0941\u0915\u094d\u0930.", "\u0936\u0928\u093f."], NARROWWEEKDAYS:["\u0930", "\u0938\u094b", "\u092e\u0902", "\u092c\u0941", "\u0917\u0941", "\u0936\u0941", "\u0936"], STANDALONENARROWWEEKDAYS:["\u0930", "\u0938\u094b", 
+"\u092e\u0902", "\u092c\u0941", "\u0917\u0941", "\u0936\u0941", "\u0936"], SHORTQUARTERS:["\u0924\u093f\u092e\u093e\u0939\u0940", "\u0926\u0942\u0938\u0930\u0940 \u0924\u093f\u092e\u093e\u0939\u0940", "\u0924\u0940\u0938\u0930\u0940 \u0924\u093f\u092e\u093e\u0939\u0940", "\u091a\u094c\u0925\u0940 \u0924\u093f\u092e\u093e\u0939\u0940"], QUARTERS:["\u0924\u093f\u092e\u093e\u0939\u0940", "\u0926\u0942\u0938\u0930\u0940 \u0924\u093f\u092e\u093e\u0939\u0940", "\u0924\u0940\u0938\u0930\u0940 \u0924\u093f\u092e\u093e\u0939\u0940", 
+"\u091a\u094c\u0925\u0940 \u0924\u093f\u092e\u093e\u0939\u0940"], AMPMS:["\u092a\u0942\u0930\u094d\u0935\u093e\u0939\u094d\u0928", "\u0905\u092a\u0930\u093e\u0939\u094d\u0928"], DATEFORMATS:["EEEE, d MMMM y", "d MMMM y", "dd-MM-yyyy", "d-M-yy"], TIMEFORMATS:["h:mm:ss a zzzz", "h:mm:ss a z", "h:mm:ss a", "h:mm a"], FIRSTDAYOFWEEK:6, WEEKENDRANGE:[6, 6], FIRSTWEEKCUTOFFDAY:2};
+goog.i18n.DateTimeSymbols_hr = {ERAS:["p. n. e.", "A. D."], ERANAMES:["Prije Krista", "Poslije Krista"], NARROWMONTHS:["1.", "2.", "3.", "4.", "5.", "6.", "7.", "8.", "9.", "10.", "11.", "12."], STANDALONENARROWMONTHS:["1.", "2.", "3.", "4.", "5.", "6.", "7.", "8.", "9.", "10.", "11.", "12."], MONTHS:["sije\u010dnja", "velja\u010de", "o\u017eujka", "travnja", "svibnja", "lipnja", "srpnja", "kolovoza", "rujna", "listopada", "studenoga", "prosinca"], STANDALONEMONTHS:["sije\u010danj", "velja\u010da", 
+"o\u017eujak", "travanj", "svibanj", "lipanj", "srpanj", "kolovoz", "rujan", "listopad", "studeni", "prosinac"], SHORTMONTHS:["sij", "velj", "o\u017eu", "tra", "svi", "lip", "srp", "kol", "ruj", "lis", "stu", "pro"], STANDALONESHORTMONTHS:["sij", "velj", "o\u017eu", "tra", "svi", "lip", "srp", "kol", "ruj", "lis", "stu", "pro"], WEEKDAYS:["nedjelja", "ponedjeljak", "utorak", "srijeda", "\u010detvrtak", "petak", "subota"], STANDALONEWEEKDAYS:["nedjelja", "ponedjeljak", "utorak", "srijeda", "\u010detvrtak", 
+"petak", "subota"], SHORTWEEKDAYS:["ned", "pon", "uto", "sri", "\u010det", "pet", "sub"], STANDALONESHORTWEEKDAYS:["ned", "pon", "uto", "sri", "\u010det", "pet", "sub"], NARROWWEEKDAYS:["N", "P", "U", "S", "\u010c", "P", "S"], STANDALONENARROWWEEKDAYS:["n", "p", "u", "s", "\u010d", "p", "s"], SHORTQUARTERS:["1kv", "2kv", "3kv", "4kv"], QUARTERS:["1. kvartal", "2. kvartal", "3. kvartal", "4. kvartal"], AMPMS:["prije podne", "PM"], DATEFORMATS:["EEEE, d. MMMM y.", "d. MMMM y.", "d. M. y.", "d.M.y."], 
+TIMEFORMATS:["HH:mm:ss zzzz", "HH:mm:ss z", "HH:mm:ss", "HH:mm"], FIRSTDAYOFWEEK:0, WEEKENDRANGE:[5, 6], FIRSTWEEKCUTOFFDAY:3};
+goog.i18n.DateTimeSymbols_hu = {ERAS:["i. e.", "i. sz."], ERANAMES:["id\u0151sz\u00e1m\u00edt\u00e1sunk el\u0151tt", "id\u0151sz\u00e1m\u00edt\u00e1sunk szerint"], NARROWMONTHS:["J", "F", "M", "\u00c1", "M", "J", "J", "\u00c1", "Sz", "O", "N", "D"], STANDALONENARROWMONTHS:["J", "F", "M", "\u00c1", "M", "J", "J", "A", "Sz", "O", "N", "D"], MONTHS:["janu\u00e1r", "febru\u00e1r", "m\u00e1rcius", "\u00e1prilis", "m\u00e1jus", "j\u00fanius", "j\u00falius", "augusztus", "szeptember", "okt\u00f3ber", "november", 
+"december"], STANDALONEMONTHS:["janu\u00e1r", "febru\u00e1r", "m\u00e1rcius", "\u00e1prilis", "m\u00e1jus", "j\u00fanius", "j\u00falius", "augusztus", "szeptember", "okt\u00f3ber", "november", "december"], SHORTMONTHS:["jan.", "febr.", "m\u00e1rc.", "\u00e1pr.", "m\u00e1j.", "j\u00fan.", "j\u00fal.", "aug.", "szept.", "okt.", "nov.", "dec."], STANDALONESHORTMONTHS:["jan.", "febr.", "m\u00e1rc.", "\u00e1pr.", "m\u00e1j.", "j\u00fan.", "j\u00fal.", "aug.", "szept.", "okt.", "nov.", "dec."], WEEKDAYS:["vas\u00e1rnap", 
+"h\u00e9tf\u0151", "kedd", "szerda", "cs\u00fct\u00f6rt\u00f6k", "p\u00e9ntek", "szombat"], STANDALONEWEEKDAYS:["vas\u00e1rnap", "h\u00e9tf\u0151", "kedd", "szerda", "cs\u00fct\u00f6rt\u00f6k", "p\u00e9ntek", "szombat"], SHORTWEEKDAYS:["V", "H", "K", "Sze", "Cs", "P", "Szo"], STANDALONESHORTWEEKDAYS:["V", "H", "K", "Sze", "Cs", "P", "Szo"], NARROWWEEKDAYS:["V", "H", "K", "Sz", "Cs", "P", "Sz"], STANDALONENARROWWEEKDAYS:["V", "H", "K", "Sz", "Cs", "P", "Sz"], SHORTQUARTERS:["N1", "N2", "N3", "N4"], 
+QUARTERS:["I. negyed\u00e9v", "II. negyed\u00e9v", "III. negyed\u00e9v", "IV. negyed\u00e9v"], AMPMS:["de.", "du."], DATEFORMATS:["y. MMMM d., EEEE", "y. MMMM d.", "yyyy.MM.dd.", "yyyy.MM.dd."], TIMEFORMATS:["H:mm:ss zzzz", "H:mm:ss z", "H:mm:ss", "H:mm"], FIRSTDAYOFWEEK:0, WEEKENDRANGE:[5, 6], FIRSTWEEKCUTOFFDAY:3};
+goog.i18n.DateTimeSymbols_id = {ERAS:["SM", "M"], ERANAMES:["SM", "M"], NARROWMONTHS:["J", "F", "M", "A", "M", "J", "J", "A", "S", "O", "N", "D"], STANDALONENARROWMONTHS:["J", "F", "M", "A", "M", "J", "J", "A", "S", "O", "N", "D"], MONTHS:["Januari", "Februari", "Maret", "April", "Mei", "Juni", "Juli", "Agustus", "September", "Oktober", "November", "Desember"], STANDALONEMONTHS:["Januari", "Februari", "Maret", "April", "Mei", "Juni", "Juli", "Agustus", "September", "Oktober", "November", "Desember"], 
+SHORTMONTHS:["Jan", "Feb", "Mar", "Apr", "Mei", "Jun", "Jul", "Agt", "Sep", "Okt", "Nov", "Des"], STANDALONESHORTMONTHS:["Jan", "Feb", "Mar", "Apr", "Mei", "Jun", "Jul", "Agt", "Sep", "Okt", "Nov", "Des"], WEEKDAYS:["Minggu", "Senin", "Selasa", "Rabu", "Kamis", "Jumat", "Sabtu"], STANDALONEWEEKDAYS:["Minggu", "Senin", "Selasa", "Rabu", "Kamis", "Jumat", "Sabtu"], SHORTWEEKDAYS:["Min", "Sen", "Sel", "Rab", "Kam", "Jum", "Sab"], STANDALONESHORTWEEKDAYS:["Min", "Sen", "Sel", "Rab", "Kam", "Jum", "Sab"], 
+NARROWWEEKDAYS:["M", "S", "S", "R", "K", "J", "S"], STANDALONENARROWWEEKDAYS:["M", "S", "S", "R", "K", "J", "S"], SHORTQUARTERS:["K1", "K2", "K3", "K4"], QUARTERS:["kuartal pertama", "kuartal kedua", "kuartal ketiga", "kuartal keempat"], AMPMS:["pagi", "malam"], DATEFORMATS:["EEEE, dd MMMM yyyy", "d MMMM yyyy", "d MMM yyyy", "dd/MM/yy"], TIMEFORMATS:["H:mm:ss zzzz", "HH:mm:ss z", "HH:mm:ss", "HH:mm"], FIRSTDAYOFWEEK:0, WEEKENDRANGE:[5, 6], FIRSTWEEKCUTOFFDAY:3};
+goog.i18n.DateTimeSymbols_in = {ERAS:["SM", "M"], ERANAMES:["SM", "M"], NARROWMONTHS:["J", "F", "M", "A", "M", "J", "J", "A", "S", "O", "N", "D"], STANDALONENARROWMONTHS:["J", "F", "M", "A", "M", "J", "J", "A", "S", "O", "N", "D"], MONTHS:["Januari", "Februari", "Maret", "April", "Mei", "Juni", "Juli", "Agustus", "September", "Oktober", "November", "Desember"], STANDALONEMONTHS:["Januari", "Februari", "Maret", "April", "Mei", "Juni", "Juli", "Agustus", "September", "Oktober", "November", "Desember"], 
+SHORTMONTHS:["Jan", "Feb", "Mar", "Apr", "Mei", "Jun", "Jul", "Agt", "Sep", "Okt", "Nov", "Des"], STANDALONESHORTMONTHS:["Jan", "Feb", "Mar", "Apr", "Mei", "Jun", "Jul", "Agt", "Sep", "Okt", "Nov", "Des"], WEEKDAYS:["Minggu", "Senin", "Selasa", "Rabu", "Kamis", "Jumat", "Sabtu"], STANDALONEWEEKDAYS:["Minggu", "Senin", "Selasa", "Rabu", "Kamis", "Jumat", "Sabtu"], SHORTWEEKDAYS:["Min", "Sen", "Sel", "Rab", "Kam", "Jum", "Sab"], STANDALONESHORTWEEKDAYS:["Min", "Sen", "Sel", "Rab", "Kam", "Jum", "Sab"], 
+NARROWWEEKDAYS:["M", "S", "S", "R", "K", "J", "S"], STANDALONENARROWWEEKDAYS:["M", "S", "S", "R", "K", "J", "S"], SHORTQUARTERS:["K1", "K2", "K3", "K4"], QUARTERS:["kuartal pertama", "kuartal kedua", "kuartal ketiga", "kuartal keempat"], AMPMS:["pagi", "malam"], DATEFORMATS:["EEEE, dd MMMM yyyy", "d MMMM yyyy", "d MMM yyyy", "dd/MM/yy"], TIMEFORMATS:["H:mm:ss zzzz", "HH:mm:ss z", "HH:mm:ss", "HH:mm"], FIRSTDAYOFWEEK:0, WEEKENDRANGE:[5, 6], FIRSTWEEKCUTOFFDAY:3};
+goog.i18n.DateTimeSymbols_is = {ERAS:["fyrir Krist", "eftir Krist"], ERANAMES:["fyrir Krist", "eftir Krist"], NARROWMONTHS:["J", "F", "M", "A", "M", "J", "J", "\u00c1", "L", "O", "N", "D"], STANDALONENARROWMONTHS:["j", "f", "m", "a", "m", "j", "j", "\u00e1", "s", "o", "n", "d"], MONTHS:["jan\u00faar", "febr\u00faar", "mars", "apr\u00edl", "ma\u00ed", "j\u00fan\u00ed", "j\u00fal\u00ed", "\u00e1g\u00fast", "september", "okt\u00f3ber", "n\u00f3vember", "desember"], STANDALONEMONTHS:["jan\u00faar", "febr\u00faar", 
+"mars", "apr\u00edl", "ma\u00ed", "j\u00fan\u00ed", "j\u00fal\u00ed", "\u00e1g\u00fast", "september", "okt\u00f3ber", "n\u00f3vember", "desember"], SHORTMONTHS:["jan", "feb", "mar", "apr", "ma\u00ed", "j\u00fan", "j\u00fal", "\u00e1g\u00fa", "sep", "okt", "n\u00f3v", "des"], STANDALONESHORTMONTHS:["jan", "feb", "mar", "apr", "ma\u00ed", "j\u00fan", "j\u00fal", "\u00e1g\u00fa", "sep", "okt", "n\u00f3v", "des"], WEEKDAYS:["sunnudagur", "m\u00e1nudagur", "\u00feri\u00f0judagur", "mi\u00f0vikudagur", 
+"fimmtudagur", "f\u00f6studagur", "laugardagur"], STANDALONEWEEKDAYS:["sunnudagur", "m\u00e1nudagur", "\u00feri\u00f0judagur", "mi\u00f0vikudagur", "fimmtudagur", "f\u00f6studagur", "laugardagur"], SHORTWEEKDAYS:["sun", "m\u00e1n", "\u00feri", "mi\u00f0", "fim", "f\u00f6s", "lau"], STANDALONESHORTWEEKDAYS:["sun", "m\u00e1n", "\u00feri", "mi\u00f0", "fim", "f\u00f6s", "lau"], NARROWWEEKDAYS:["S", "M", "\u00de", "M", "F", "F", "L"], STANDALONENARROWWEEKDAYS:["s", "m", "\u00fe", "m", "f", "f", "l"], 
+SHORTQUARTERS:["F1", "F2", "F3", "F4"], QUARTERS:["1st fj\u00f3r\u00f0ungur", "2nd fj\u00f3r\u00f0ungur", "3rd fj\u00f3r\u00f0ungur", "4th fj\u00f3r\u00f0ungur"], AMPMS:["f.h.", "e.h."], DATEFORMATS:["EEEE, d. MMMM y", "d. MMMM y", "d.M.yyyy", "d.M.yyyy"], TIMEFORMATS:["HH:mm:ss zzzz", "HH:mm:ss z", "HH:mm:ss", "HH:mm"], FIRSTDAYOFWEEK:0, WEEKENDRANGE:[5, 6], FIRSTWEEKCUTOFFDAY:3};
+goog.i18n.DateTimeSymbols_it = {ERAS:["aC", "dC"], ERANAMES:["a.C.", "d.C"], NARROWMONTHS:["G", "F", "M", "A", "M", "G", "L", "A", "S", "O", "N", "D"], STANDALONENARROWMONTHS:["G", "F", "M", "A", "M", "G", "L", "A", "S", "O", "N", "D"], MONTHS:["gennaio", "febbraio", "marzo", "aprile", "maggio", "giugno", "luglio", "agosto", "settembre", "ottobre", "novembre", "dicembre"], STANDALONEMONTHS:["Gennaio", "Febbraio", "Marzo", "Aprile", "Maggio", "Giugno", "Luglio", "Agosto", "Settembre", "Ottobre", "Novembre", 
+"Dicembre"], SHORTMONTHS:["gen", "feb", "mar", "apr", "mag", "giu", "lug", "ago", "set", "ott", "nov", "dic"], STANDALONESHORTMONTHS:["gen", "feb", "mar", "apr", "mag", "giu", "lug", "ago", "set", "ott", "nov", "dic"], WEEKDAYS:["domenica", "luned\u00ec", "marted\u00ec", "mercoled\u00ec", "gioved\u00ec", "venerd\u00ec", "sabato"], STANDALONEWEEKDAYS:["Domenica", "Luned\u00ec", "Marted\u00ec", "Mercoled\u00ec", "Gioved\u00ec", "Venerd\u00ec", "Sabato"], SHORTWEEKDAYS:["dom", "lun", "mar", "mer", "gio", 
+"ven", "sab"], STANDALONESHORTWEEKDAYS:["dom", "lun", "mar", "mer", "gio", "ven", "sab"], NARROWWEEKDAYS:["D", "L", "M", "M", "G", "V", "S"], STANDALONENARROWWEEKDAYS:["D", "L", "M", "M", "G", "V", "S"], SHORTQUARTERS:["T1", "T2", "T3", "T4"], QUARTERS:["1o trimestre", "2o trimestre", "3o trimestre", "4o trimestre"], AMPMS:["m.", "p."], DATEFORMATS:["EEEE d MMMM y", "dd MMMM y", "dd/MMM/y", "dd/MM/yy"], TIMEFORMATS:["HH:mm:ss zzzz", "HH:mm:ss z", "HH:mm:ss", "HH:mm"], FIRSTDAYOFWEEK:0, WEEKENDRANGE:[5, 
+6], FIRSTWEEKCUTOFFDAY:3};
+goog.i18n.DateTimeSymbols_iw = {ERAS:["\u05dc\u05e4\u05e0\u05d4\u05f4\u05e1", "\u05dc\u05e1\u05d4\u05f4\u05e0"], ERANAMES:["\u05dc\u05e4\u05e0\u05d9 \u05d4\u05e1\u05e4\u05d9\u05e8\u05d4", "\u05dc\u05e1\u05e4\u05d9\u05e8\u05d4"], NARROWMONTHS:["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12"], STANDALONENARROWMONTHS:["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12"], MONTHS:["\u05d9\u05e0\u05d5\u05d0\u05e8", "\u05e4\u05d1\u05e8\u05d5\u05d0\u05e8", "\u05de\u05e8\u05e5", "\u05d0\u05e4\u05e8\u05d9\u05dc", 
+"\u05de\u05d0\u05d9", "\u05d9\u05d5\u05e0\u05d9", "\u05d9\u05d5\u05dc\u05d9", "\u05d0\u05d5\u05d2\u05d5\u05e1\u05d8", "\u05e1\u05e4\u05d8\u05de\u05d1\u05e8", "\u05d0\u05d5\u05e7\u05d8\u05d5\u05d1\u05e8", "\u05e0\u05d5\u05d1\u05de\u05d1\u05e8", "\u05d3\u05e6\u05de\u05d1\u05e8"], STANDALONEMONTHS:["\u05d9\u05e0\u05d5\u05d0\u05e8", "\u05e4\u05d1\u05e8\u05d5\u05d0\u05e8", "\u05de\u05e8\u05e5", "\u05d0\u05e4\u05e8\u05d9\u05dc", "\u05de\u05d0\u05d9", "\u05d9\u05d5\u05e0\u05d9", "\u05d9\u05d5\u05dc\u05d9", 
+"\u05d0\u05d5\u05d2\u05d5\u05e1\u05d8", "\u05e1\u05e4\u05d8\u05de\u05d1\u05e8", "\u05d0\u05d5\u05e7\u05d8\u05d5\u05d1\u05e8", "\u05e0\u05d5\u05d1\u05de\u05d1\u05e8", "\u05d3\u05e6\u05de\u05d1\u05e8"], SHORTMONTHS:["\u05d9\u05e0\u05d5", "\u05e4\u05d1\u05e8", "\u05de\u05e8\u05e5", "\u05d0\u05e4\u05e8", "\u05de\u05d0\u05d9", "\u05d9\u05d5\u05e0", "\u05d9\u05d5\u05dc", "\u05d0\u05d5\u05d2", "\u05e1\u05e4\u05d8", "\u05d0\u05d5\u05e7", "\u05e0\u05d5\u05d1", "\u05d3\u05e6\u05de"], STANDALONESHORTMONTHS:["\u05d9\u05e0\u05d5\u05f3", 
+"\u05e4\u05d1\u05e8\u05f3", "\u05de\u05e8\u05e5", "\u05d0\u05e4\u05e8\u05f3", "\u05de\u05d0\u05d9", "\u05d9\u05d5\u05e0\u05f3", "\u05d9\u05d5\u05dc\u05f3", "\u05d0\u05d5\u05d2\u05f3", "\u05e1\u05e4\u05d8\u05f3", "\u05d0\u05d5\u05e7\u05f3", "\u05e0\u05d5\u05d1\u05f3", "\u05d3\u05e6\u05de\u05f3"], WEEKDAYS:["\u05d9\u05d5\u05dd \u05e8\u05d0\u05e9\u05d5\u05df", "\u05d9\u05d5\u05dd \u05e9\u05e0\u05d9", "\u05d9\u05d5\u05dd \u05e9\u05dc\u05d9\u05e9\u05d9", "\u05d9\u05d5\u05dd \u05e8\u05d1\u05d9\u05e2\u05d9", 
+"\u05d9\u05d5\u05dd \u05d7\u05de\u05d9\u05e9\u05d9", "\u05d9\u05d5\u05dd \u05e9\u05d9\u05e9\u05d9", "\u05d9\u05d5\u05dd \u05e9\u05d1\u05ea"], STANDALONEWEEKDAYS:["\u05d9\u05d5\u05dd \u05e8\u05d0\u05e9\u05d5\u05df", "\u05d9\u05d5\u05dd \u05e9\u05e0\u05d9", "\u05d9\u05d5\u05dd \u05e9\u05dc\u05d9\u05e9\u05d9", "\u05d9\u05d5\u05dd \u05e8\u05d1\u05d9\u05e2\u05d9", "\u05d9\u05d5\u05dd \u05d7\u05de\u05d9\u05e9\u05d9", "\u05d9\u05d5\u05dd \u05e9\u05d9\u05e9\u05d9", "\u05d9\u05d5\u05dd \u05e9\u05d1\u05ea"], 
+SHORTWEEKDAYS:["\u05d9\u05d5\u05dd \u05d0\u05f3", "\u05d9\u05d5\u05dd \u05d1\u05f3", "\u05d9\u05d5\u05dd \u05d2\u05f3", "\u05d9\u05d5\u05dd \u05d3\u05f3", "\u05d9\u05d5\u05dd \u05d4\u05f3", "\u05d9\u05d5\u05dd \u05d5\u05f3", "\u05e9\u05d1\u05ea"], STANDALONESHORTWEEKDAYS:["\u05d9\u05d5\u05dd \u05d0\u05f3", "\u05d9\u05d5\u05dd \u05d1\u05f3", "\u05d9\u05d5\u05dd \u05d2\u05f3", "\u05d9\u05d5\u05dd \u05d3\u05f3", "\u05d9\u05d5\u05dd \u05d4\u05f3", "\u05d9\u05d5\u05dd \u05d5\u05f3", "\u05e9\u05d1\u05ea"], 
+NARROWWEEKDAYS:["\u05d0", "\u05d1", "\u05d2", "\u05d3", "\u05d4", "\u05d5", "\u05e9"], STANDALONENARROWWEEKDAYS:["\u05d0", "\u05d1", "\u05d2", "\u05d3", "\u05d4", "\u05d5", "\u05e9"], SHORTQUARTERS:["\u05e8\u05d1\u05e2\u05d5\u05df 1", "\u05e8\u05d1\u05e2\u05d5\u05df 2", "\u05e8\u05d1\u05e2\u05d5\u05df 3", "\u05e8\u05d1\u05e2\u05d5\u05df 4"], QUARTERS:["\u05e8\u05d1\u05e2\u05d5\u05df 1", "\u05e8\u05d1\u05e2\u05d5\u05df 2", "\u05e8\u05d1\u05e2\u05d5\u05df 3", "\u05e8\u05d1\u05e2\u05d5\u05df 4"], AMPMS:["\u05dc\u05e4\u05e0\u05d4\u05f4\u05e6", 
+"\u05d0\u05d7\u05d4\u05f4\u05e6"], DATEFORMATS:["EEEE, d \u05d1MMMM y", "d \u05d1MMMM y", "d \u05d1MMM yyyy", "dd/MM/yy"], TIMEFORMATS:["HH:mm:ss zzzz", "HH:mm:ss z", "HH:mm:ss", "HH:mm"], FIRSTDAYOFWEEK:0, WEEKENDRANGE:[5, 6], FIRSTWEEKCUTOFFDAY:3};
+goog.i18n.DateTimeSymbols_ja = {ERAS:["\u7d00\u5143\u524d", "\u897f\u66a6"], ERANAMES:["\u7d00\u5143\u524d", "\u897f\u66a6"], NARROWMONTHS:["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12"], STANDALONENARROWMONTHS:["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12"], MONTHS:["1\u6708", "2\u6708", "3\u6708", "4\u6708", "5\u6708", "6\u6708", "7\u6708", "8\u6708", "9\u6708", "10\u6708", "11\u6708", "12\u6708"], STANDALONEMONTHS:["1\u6708", "2\u6708", "3\u6708", "4\u6708", "5\u6708", 
+"6\u6708", "7\u6708", "8\u6708", "9\u6708", "10\u6708", "11\u6708", "12\u6708"], SHORTMONTHS:["1\u6708", "2\u6708", "3\u6708", "4\u6708", "5\u6708", "6\u6708", "7\u6708", "8\u6708", "9\u6708", "10\u6708", "11\u6708", "12\u6708"], STANDALONESHORTMONTHS:["1\u6708", "2\u6708", "3\u6708", "4\u6708", "5\u6708", "6\u6708", "7\u6708", "8\u6708", "9\u6708", "10\u6708", "11\u6708", "12\u6708"], WEEKDAYS:["\u65e5\u66dc\u65e5", "\u6708\u66dc\u65e5", "\u706b\u66dc\u65e5", "\u6c34\u66dc\u65e5", "\u6728\u66dc\u65e5", 
+"\u91d1\u66dc\u65e5", "\u571f\u66dc\u65e5"], STANDALONEWEEKDAYS:["\u65e5\u66dc\u65e5", "\u6708\u66dc\u65e5", "\u706b\u66dc\u65e5", "\u6c34\u66dc\u65e5", "\u6728\u66dc\u65e5", "\u91d1\u66dc\u65e5", "\u571f\u66dc\u65e5"], SHORTWEEKDAYS:["\u65e5", "\u6708", "\u706b", "\u6c34", "\u6728", "\u91d1", "\u571f"], STANDALONESHORTWEEKDAYS:["\u65e5", "\u6708", "\u706b", "\u6c34", "\u6728", "\u91d1", "\u571f"], NARROWWEEKDAYS:["\u65e5", "\u6708", "\u706b", "\u6c34", "\u6728", "\u91d1", "\u571f"], STANDALONENARROWWEEKDAYS:["\u65e5", 
+"\u6708", "\u706b", "\u6c34", "\u6728", "\u91d1", "\u571f"], SHORTQUARTERS:["Q1", "Q2", "Q3", "Q4"], QUARTERS:["\u7b2c1\u56db\u534a\u671f", "\u7b2c2\u56db\u534a\u671f", "\u7b2c3\u56db\u534a\u671f", "\u7b2c4\u56db\u534a\u671f"], AMPMS:["\u5348\u524d", "\u5348\u5f8c"], DATEFORMATS:["y\u5e74M\u6708d\u65e5EEEE", "y\u5e74M\u6708d\u65e5", "yyyy/MM/dd", "yy/MM/dd"], TIMEFORMATS:["H\u6642mm\u5206ss\u79d2 zzzz", "H:mm:ss z", "H:mm:ss", "H:mm"], FIRSTDAYOFWEEK:6, WEEKENDRANGE:[5, 6], FIRSTWEEKCUTOFFDAY:2};
+goog.i18n.DateTimeSymbols_kn = {ERAS:["\u0c95\u0ccd\u0cb0\u0cbf.\u0caa\u0cc2", "\u0c9c\u0cbe\u0cb9\u0cc0"], ERANAMES:["\u0c88\u0cb8\u0caa\u0cc2\u0cb5\u0cef.", "\u0c95\u0ccd\u0cb0\u0cbf\u0cb8\u0ccd\u0ca4 \u0cb6\u0c95"], NARROWMONTHS:["\u0c9c", "\u0cab\u0cc6", "\u0cae\u0cbe", "\u0c8e", "\u0cae\u0cc7", "\u0c9c\u0cc2", "\u0c9c\u0cc1", "\u0c86", "\u0cb8\u0cc6", "\u0c85", "\u0ca8", "\u0ca1\u0cbf"], STANDALONENARROWMONTHS:["\u0c9c", "\u0cab\u0cc6", "\u0cae\u0cbe", "\u0c8e", "\u0cae\u0cc7", "\u0c9c\u0cc2", 
+"\u0c9c\u0cc1", "\u0c86", "\u0cb8\u0cc6", "\u0c85", "\u0ca8", "\u0ca1\u0cbf"], MONTHS:["\u0c9c\u0ca8\u0cb5\u0cb0\u0cc0", "\u0cab\u0cc6\u0cac\u0ccd\u0cb0\u0cb5\u0cb0\u0cc0", "\u0cae\u0cbe\u0cb0\u0ccd\u0c9a\u0ccd", "\u0c8e\u0caa\u0ccd\u0cb0\u0cbf\u0cb2\u0ccd", "\u0cae\u0cc6", "\u0c9c\u0cc2\u0ca8\u0ccd", "\u0c9c\u0cc1\u0cb2\u0cc8", "\u0c86\u0c97\u0cb8\u0ccd\u0c9f\u0ccd", "\u0cb8\u0caa\u0ccd\u0c9f\u0cc6\u0c82\u0cac\u0cb0\u0ccd", "\u0c85\u0c95\u0ccd\u0c9f\u0ccb\u0cac\u0cb0\u0ccd", "\u0ca8\u0cb5\u0cc6\u0c82\u0cac\u0cb0\u0ccd", 
+"\u0ca1\u0cbf\u0cb8\u0cc6\u0c82\u0cac\u0cb0\u0ccd"], STANDALONEMONTHS:["\u0c9c\u0ca8\u0cb5\u0cb0\u0cc0", "\u0cab\u0cc6\u0cac\u0ccd\u0cb0\u0cb5\u0cb0\u0cc0", "\u0cae\u0cbe\u0cb0\u0ccd\u0c9a\u0ccd", "\u0c8e\u0caa\u0ccd\u0cb0\u0cbf\u0cb2\u0ccd", "\u0cae\u0cc6", "\u0c9c\u0cc2\u0ca8\u0ccd", "\u0c9c\u0cc1\u0cb2\u0cc8", "\u0c86\u0c97\u0cb8\u0ccd\u0c9f\u0ccd", "\u0cb8\u0caa\u0ccd\u0c9f\u0cc6\u0c82\u0cac\u0cb0\u0ccd", "\u0c85\u0c95\u0ccd\u0c9f\u0ccb\u0cac\u0cb0\u0ccd", "\u0ca8\u0cb5\u0cc6\u0c82\u0cac\u0cb0\u0ccd", 
+"\u0ca1\u0cbf\u0cb8\u0cc6\u0c82\u0cac\u0cb0\u0ccd"], SHORTMONTHS:["\u0c9c\u0ca8\u0cb5\u0cb0\u0cc0", "\u0cab\u0cc6\u0cac\u0ccd\u0cb0\u0cb5\u0cb0\u0cc0", "\u0cae\u0cbe\u0cb0\u0ccd\u0c9a\u0ccd", "\u0c8e\u0caa\u0ccd\u0cb0\u0cbf\u0cb2\u0ccd", "\u0cae\u0cc6", "\u0c9c\u0cc2\u0ca8\u0ccd", "\u0c9c\u0cc1\u0cb2\u0cc8", "\u0c86\u0c97\u0cb8\u0ccd\u0c9f\u0ccd", "\u0cb8\u0caa\u0ccd\u0c9f\u0cc6\u0c82\u0cac\u0cb0\u0ccd", "\u0c85\u0c95\u0ccd\u0c9f\u0ccb\u0cac\u0cb0\u0ccd", "\u0ca8\u0cb5\u0cc6\u0c82\u0cac\u0cb0\u0ccd", 
+"\u0ca1\u0cbf\u0cb8\u0cc6\u0c82\u0cac\u0cb0\u0ccd"], STANDALONESHORTMONTHS:["\u0c9c\u0ca8\u0cb5\u0cb0\u0cc0", "\u0cab\u0cc6\u0cac\u0ccd\u0cb0\u0cb5\u0cb0\u0cc0", "\u0cae\u0cbe\u0cb0\u0ccd\u0c9a\u0ccd", "\u0c8e\u0caa\u0ccd\u0cb0\u0cbf\u0cb2\u0ccd", "\u0cae\u0cc6", "\u0c9c\u0cc2\u0ca8\u0ccd", "\u0c9c\u0cc1\u0cb2\u0cc8", "\u0c86\u0c97\u0cb8\u0ccd\u0c9f\u0ccd", "\u0cb8\u0caa\u0ccd\u0c9f\u0cc6\u0c82\u0cac\u0cb0\u0ccd", "\u0c85\u0c95\u0ccd\u0c9f\u0ccb\u0cac\u0cb0\u0ccd", "\u0ca8\u0cb5\u0cc6\u0c82\u0cac\u0cb0\u0ccd", 
+"\u0ca1\u0cbf\u0cb8\u0cc6\u0c82\u0cac\u0cb0\u0ccd"], WEEKDAYS:["\u0cb0\u0cb5\u0cbf\u0cb5\u0cbe\u0cb0", "\u0cb8\u0ccb\u0cae\u0cb5\u0cbe\u0cb0", "\u0cae\u0c82\u0c97\u0cb3\u0cb5\u0cbe\u0cb0", "\u0cac\u0cc1\u0ca7\u0cb5\u0cbe\u0cb0", "\u0c97\u0cc1\u0cb0\u0cc1\u0cb5\u0cbe\u0cb0", "\u0cb6\u0cc1\u0c95\u0ccd\u0cb0\u0cb5\u0cbe\u0cb0", "\u0cb6\u0ca8\u0cbf\u0cb5\u0cbe\u0cb0"], STANDALONEWEEKDAYS:["\u0cb0\u0cb5\u0cbf\u0cb5\u0cbe\u0cb0", "\u0cb8\u0ccb\u0cae\u0cb5\u0cbe\u0cb0", "\u0cae\u0c82\u0c97\u0cb3\u0cb5\u0cbe\u0cb0", 
+"\u0cac\u0cc1\u0ca7\u0cb5\u0cbe\u0cb0", "\u0c97\u0cc1\u0cb0\u0cc1\u0cb5\u0cbe\u0cb0", "\u0cb6\u0cc1\u0c95\u0ccd\u0cb0\u0cb5\u0cbe\u0cb0", "\u0cb6\u0ca8\u0cbf\u0cb5\u0cbe\u0cb0"], SHORTWEEKDAYS:["\u0cb0.", "\u0cb8\u0ccb.", "\u0cae\u0c82.", "\u0cac\u0cc1.", "\u0c97\u0cc1.", "\u0cb6\u0cc1.", "\u0cb6\u0ca8\u0cbf."], STANDALONESHORTWEEKDAYS:["\u0cb0.", "\u0cb8\u0ccb.", "\u0cae\u0c82.", "\u0cac\u0cc1.", "\u0c97\u0cc1.", "\u0cb6\u0cc1.", "\u0cb6\u0ca8\u0cbf."], NARROWWEEKDAYS:["\u0cb0", "\u0cb8\u0ccb", 
+"\u0cae\u0c82", "\u0cac\u0cc1", "\u0c97\u0cc1", "\u0cb6\u0cc1", "\u0cb6"], STANDALONENARROWWEEKDAYS:["\u0cb0", "\u0cb8\u0ccb", "\u0cae\u0c82", "\u0cac\u0cc1", "\u0c97\u0cc1", "\u0cb6\u0cc1", "\u0cb6"], SHORTQUARTERS:["\u0c92\u0c82\u0ca6\u0cc1 1", "\u0c8e\u0cb0\u0ca1\u0cc1 2", "\u0cae\u0cc2\u0cb0\u0cc1 3", "\u0ca8\u0cbe\u0cb2\u0cc3\u0c95 4"], QUARTERS:["\u0c92\u0c82\u0ca6\u0cc1 1", "\u0c8e\u0cb0\u0ca1\u0cc1 2", "\u0cae\u0cc2\u0cb0\u0cc1 3", "\u0ca8\u0cbe\u0cb2\u0cc3\u0c95 4"], AMPMS:["AM", "PM"], 
+DATEFORMATS:["EEEE d MMMM y", "d MMMM y", "d MMM y", "d-M-yy"], TIMEFORMATS:["hh:mm:ss a zzzz", "hh:mm:ss a z", "hh:mm:ss a", "hh:mm a"], FIRSTDAYOFWEEK:6, WEEKENDRANGE:[6, 6], FIRSTWEEKCUTOFFDAY:2};
+goog.i18n.DateTimeSymbols_ko = {ERAS:["\uae30\uc6d0\uc804", "\uc11c\uae30"], ERANAMES:["\uc11c\ub825\uae30\uc6d0\uc804", "\uc11c\ub825\uae30\uc6d0"], NARROWMONTHS:["1\uc6d4", "2\uc6d4", "3\uc6d4", "4\uc6d4", "5\uc6d4", "6\uc6d4", "7\uc6d4", "8\uc6d4", "9\uc6d4", "10\uc6d4", "11\uc6d4", "12\uc6d4"], STANDALONENARROWMONTHS:["1\uc6d4", "2\uc6d4", "3\uc6d4", "4\uc6d4", "5\uc6d4", "6\uc6d4", "7\uc6d4", "8\uc6d4", "9\uc6d4", "10\uc6d4", "11\uc6d4", "12\uc6d4"], MONTHS:["1\uc6d4", "2\uc6d4", "3\uc6d4", 
+"4\uc6d4", "5\uc6d4", "6\uc6d4", "7\uc6d4", "8\uc6d4", "9\uc6d4", "10\uc6d4", "11\uc6d4", "12\uc6d4"], STANDALONEMONTHS:["1\uc6d4", "2\uc6d4", "3\uc6d4", "4\uc6d4", "5\uc6d4", "6\uc6d4", "7\uc6d4", "8\uc6d4", "9\uc6d4", "10\uc6d4", "11\uc6d4", "12\uc6d4"], SHORTMONTHS:["1\uc6d4", "2\uc6d4", "3\uc6d4", "4\uc6d4", "5\uc6d4", "6\uc6d4", "7\uc6d4", "8\uc6d4", "9\uc6d4", "10\uc6d4", "11\uc6d4", "12\uc6d4"], STANDALONESHORTMONTHS:["1\uc6d4", "2\uc6d4", "3\uc6d4", "4\uc6d4", "5\uc6d4", "6\uc6d4", "7\uc6d4", 
+"8\uc6d4", "9\uc6d4", "10\uc6d4", "11\uc6d4", "12\uc6d4"], WEEKDAYS:["\uc77c\uc694\uc77c", "\uc6d4\uc694\uc77c", "\ud654\uc694\uc77c", "\uc218\uc694\uc77c", "\ubaa9\uc694\uc77c", "\uae08\uc694\uc77c", "\ud1a0\uc694\uc77c"], STANDALONEWEEKDAYS:["\uc77c\uc694\uc77c", "\uc6d4\uc694\uc77c", "\ud654\uc694\uc77c", "\uc218\uc694\uc77c", "\ubaa9\uc694\uc77c", "\uae08\uc694\uc77c", "\ud1a0\uc694\uc77c"], SHORTWEEKDAYS:["\uc77c", "\uc6d4", "\ud654", "\uc218", "\ubaa9", "\uae08", "\ud1a0"], STANDALONESHORTWEEKDAYS:["\uc77c", 
+"\uc6d4", "\ud654", "\uc218", "\ubaa9", "\uae08", "\ud1a0"], NARROWWEEKDAYS:["\uc77c", "\uc6d4", "\ud654", "\uc218", "\ubaa9", "\uae08", "\ud1a0"], STANDALONENARROWWEEKDAYS:["\uc77c", "\uc6d4", "\ud654", "\uc218", "\ubaa9", "\uae08", "\ud1a0"], SHORTQUARTERS:["1\ubd84\uae30", "2\ubd84\uae30", "3\ubd84\uae30", "4\ubd84\uae30"], QUARTERS:["\uc81c 1/4\ubd84\uae30", "\uc81c 2/4\ubd84\uae30", "\uc81c 3/4\ubd84\uae30", "\uc81c 4/4\ubd84\uae30"], AMPMS:["\uc624\uc804", "\uc624\ud6c4"], DATEFORMATS:["y\ub144 M\uc6d4 d\uc77c EEEE", 
+"y\ub144 M\uc6d4 d\uc77c", "yyyy. M. d.", "yy. M. d."], TIMEFORMATS:["a h\uc2dc m\ubd84 s\ucd08 zzzz", "a h\uc2dc m\ubd84 s\ucd08 z", "a h:mm:ss", "a h:mm"], FIRSTDAYOFWEEK:6, WEEKENDRANGE:[5, 6], FIRSTWEEKCUTOFFDAY:2};
+goog.i18n.DateTimeSymbols_ln = {ERAS:["lib\u00f3so ya", "nsima ya Y"], ERANAMES:["Yambo ya Y\u00e9zu Kr\u00eds", "Nsima ya Y\u00e9zu Kr\u00eds"], NARROWMONTHS:["y", "f", "m", "a", "m", "y", "y", "a", "s", "\u0254", "n", "d"], STANDALONENARROWMONTHS:["y", "f", "m", "a", "m", "y", "y", "a", "s", "\u0254", "n", "d"], MONTHS:["s\u00e1nz\u00e1 ya yambo", "s\u00e1nz\u00e1 ya m\u00edbal\u00e9", "s\u00e1nz\u00e1 ya m\u00eds\u00e1to", "s\u00e1nz\u00e1 ya m\u00ednei", "s\u00e1nz\u00e1 ya m\u00edt\u00e1no", 
+"s\u00e1nz\u00e1 ya mot\u00f3b\u00e1", "s\u00e1nz\u00e1 ya nsambo", "s\u00e1nz\u00e1 ya mwambe", "s\u00e1nz\u00e1 ya libwa", "s\u00e1nz\u00e1 ya z\u00f3mi", "s\u00e1nz\u00e1 ya z\u00f3mi na m\u0254\u030ck\u0254\u0301", "s\u00e1nz\u00e1 ya z\u00f3mi na m\u00edbal\u00e9"], STANDALONEMONTHS:["s\u00e1nz\u00e1 ya yambo", "s\u00e1nz\u00e1 ya m\u00edbal\u00e9", "s\u00e1nz\u00e1 ya m\u00eds\u00e1to", "s\u00e1nz\u00e1 ya m\u00ednei", "s\u00e1nz\u00e1 ya m\u00edt\u00e1no", "s\u00e1nz\u00e1 ya mot\u00f3b\u00e1", 
+"s\u00e1nz\u00e1 ya nsambo", "s\u00e1nz\u00e1 ya mwambe", "s\u00e1nz\u00e1 ya libwa", "s\u00e1nz\u00e1 ya z\u00f3mi", "s\u00e1nz\u00e1 ya z\u00f3mi na m\u0254\u030ck\u0254\u0301", "s\u00e1nz\u00e1 ya z\u00f3mi na m\u00edbal\u00e9"], SHORTMONTHS:["yan", "fbl", "msi", "apl", "mai", "yun", "yul", "agt", "stb", "\u0254tb", "nvb", "dsb"], STANDALONESHORTMONTHS:["yan", "fbl", "msi", "apl", "mai", "yun", "yul", "agt", "stb", "\u0254tb", "nvb", "dsb"], WEEKDAYS:["eyenga", "mok\u0254l\u0254 mwa yambo", "mok\u0254l\u0254 mwa m\u00edbal\u00e9", 
+"mok\u0254l\u0254 mwa m\u00eds\u00e1to", "mok\u0254l\u0254 ya m\u00edn\u00e9i", "mok\u0254l\u0254 ya m\u00edt\u00e1no", "mp\u0254\u0301s\u0254"], STANDALONEWEEKDAYS:["eyenga", "mok\u0254l\u0254 mwa yambo", "mok\u0254l\u0254 mwa m\u00edbal\u00e9", "mok\u0254l\u0254 mwa m\u00eds\u00e1to", "mok\u0254l\u0254 ya m\u00edn\u00e9i", "mok\u0254l\u0254 ya m\u00edt\u00e1no", "mp\u0254\u0301s\u0254"], SHORTWEEKDAYS:["eye", "ybo", "mbl", "mst", "min", "mtn", "mps"], STANDALONESHORTWEEKDAYS:["eye", "ybo", "mbl", 
+"mst", "min", "mtn", "mps"], NARROWWEEKDAYS:["e", "y", "m", "m", "m", "m", "p"], STANDALONENARROWWEEKDAYS:["e", "y", "m", "m", "m", "m", "p"], SHORTQUARTERS:["SM1", "SM2", "SM3", "SM4"], QUARTERS:["s\u00e1nz\u00e1 m\u00eds\u00e1to ya yambo", "s\u00e1nz\u00e1 m\u00eds\u00e1to ya m\u00edbal\u00e9", "s\u00e1nz\u00e1 m\u00eds\u00e1to ya m\u00eds\u00e1to", "s\u00e1nz\u00e1 m\u00eds\u00e1to ya m\u00ednei"], AMPMS:["nt\u0254\u0301ng\u0254\u0301", "mp\u00f3kwa"], DATEFORMATS:["EEEE d MMMM y", "d MMMM y", 
+"d MMM y", "d/M/yyyy"], TIMEFORMATS:["HH:mm:ss zzzz", "HH:mm:ss z", "HH:mm:ss", "HH:mm"], FIRSTDAYOFWEEK:0, WEEKENDRANGE:[5, 6], FIRSTWEEKCUTOFFDAY:3};
+goog.i18n.DateTimeSymbols_lt = {ERAS:["pr. Kr.", "po Kr."], ERANAMES:["prie\u0161 Krist\u0173", "po Kristaus"], NARROWMONTHS:["S", "V", "K", "B", "G", "B", "L", "R", "R", "S", "L", "G"], STANDALONENARROWMONTHS:["S", "V", "K", "B", "G", "B", "L", "R", "R", "S", "L", "G"], MONTHS:["sausio", "vasaris", "kovas", "balandis", "gegu\u017e\u0117", "bir\u017eelis", "liepa", "rugpj\u016btis", "rugs\u0117jis", "spalis", "lapkritis", "gruodis"], STANDALONEMONTHS:["Sausis", "Vasaris", "Kovas", "Balandis", "Gegu\u017e\u0117", 
+"Bir\u017eelis", "Liepa", "Rugpj\u016btis", "Rugs\u0117jis", "Spalis", "Lapkritis", "Gruodis"], SHORTMONTHS:["Saus.", "Vas", "Kov.", "Bal.", "Geg.", "Bir.", "Liep.", "Rugp.", "Rugs.", "Spal.", "Lapkr.", "Gruod."], STANDALONESHORTMONTHS:["Saus.", "Vas.", "Kov.", "Bal.", "Geg.", "Bir.", "Liep.", "Rugp.", "Rugs.", "Spal.", "Lapkr.", "Gruod."], WEEKDAYS:["sekmadienis", "pirmadienis", "antradienis", "tre\u010diadienis", "ketvirtadienis", "penktadienis", "\u0161e\u0161tadienis"], STANDALONEWEEKDAYS:["sekmadienis", 
+"pirmadienis", "antradienis", "tre\u010diadienis", "ketvirtadienis", "penktadienis", "\u0161e\u0161tadienis"], SHORTWEEKDAYS:["Sk", "Pr", "An", "Tr", "Kt", "Pn", "\u0160t"], STANDALONESHORTWEEKDAYS:["Sk", "Pr", "An", "Tr", "Kt", "Pn", "\u0160t"], NARROWWEEKDAYS:["S", "P", "A", "T", "K", "P", "\u0160"], STANDALONENARROWWEEKDAYS:["S", "P", "A", "T", "K", "P", "\u0160"], SHORTQUARTERS:["I k.", "II k.", "III k.", "IV ketv."], QUARTERS:["I ketvirtis", "II ketvirtis", "III ketvirtis", "IV ketvirtis"], 
+AMPMS:["prie\u0161piet", "popiet"], DATEFORMATS:["y 'm'. MMMM d 'd'., EEEE", "y 'm'. MMMM d 'd'.", "y MMM d", "yyyy-MM-dd"], TIMEFORMATS:["HH:mm:ss zzzz", "HH:mm:ss z", "HH:mm:ss", "HH:mm"], FIRSTDAYOFWEEK:0, WEEKENDRANGE:[5, 6], FIRSTWEEKCUTOFFDAY:3};
+goog.i18n.DateTimeSymbols_lv = {ERAS:["p.m.\u0113.", "m.\u0113."], ERANAMES:["pirms m\u016bsu \u0113ras", "m\u016bsu \u0113r\u0101"], NARROWMONTHS:["J", "F", "M", "A", "M", "J", "J", "A", "S", "O", "N", "D"], STANDALONENARROWMONTHS:["J", "F", "M", "A", "M", "J", "J", "A", "S", "O", "N", "D"], MONTHS:["janv\u0101ris", "febru\u0101ris", "marts", "apr\u012blis", "maijs", "j\u016bnijs", "j\u016blijs", "augusts", "septembris", "oktobris", "novembris", "decembris"], STANDALONEMONTHS:["janv\u0101ris", "febru\u0101ris", 
+"marts", "apr\u012blis", "maijs", "j\u016bnijs", "j\u016blijs", "augusts", "septembris", "oktobris", "novembris", "decembris"], SHORTMONTHS:["janv.", "febr.", "marts", "apr.", "maijs", "j\u016bn.", "j\u016bl.", "aug.", "sept.", "okt.", "nov.", "dec."], STANDALONESHORTMONTHS:["janv.", "febr.", "marts", "apr.", "maijs", "j\u016bn.", "j\u016bl.", "aug.", "sept.", "okt.", "nov.", "dec."], WEEKDAYS:["sv\u0113tdiena", "pirmdiena", "otrdiena", "tre\u0161diena", "ceturtdiena", "piektdiena", "sestdiena"], 
+STANDALONEWEEKDAYS:["sv\u0113tdiena", "pirmdiena", "otrdiena", "tre\u0161diena", "ceturtdiena", "piektdiena", "sestdiena"], SHORTWEEKDAYS:["Sv", "Pr", "Ot", "Tr", "Ce", "Pk", "Se"], STANDALONESHORTWEEKDAYS:["Sv", "Pr", "Ot", "Tr", "Ce", "Pk", "Se"], NARROWWEEKDAYS:["S", "P", "O", "T", "C", "P", "S"], STANDALONENARROWWEEKDAYS:["S", "P", "O", "T", "C", "P", "S"], SHORTQUARTERS:["C1", "C2", "C3", "C4"], QUARTERS:["1. ceturksnis", "2. ceturksnis", "3. ceturksnis", "4. ceturksnis"], AMPMS:["priek\u0161pusdien\u0101", 
+"p\u0113cpusdien\u0101"], DATEFORMATS:["EEEE, y. 'gada' d. MMMM", "y. 'gada' d. MMMM", "y. 'gada' d. MMM", "dd.MM.yy"], TIMEFORMATS:["HH:mm:ss zzzz", "HH:mm:ss z", "HH:mm:ss", "HH:mm"], FIRSTDAYOFWEEK:0, WEEKENDRANGE:[5, 6], FIRSTWEEKCUTOFFDAY:3};
+goog.i18n.DateTimeSymbols_ml = {ERAS:["\u0d15\u0d4d\u0d30\u0d3f.\u0d2e\u0d42", "\u0d15\u0d4d\u0d30\u0d3f.\u0d2a\u0d3f."], ERANAMES:["\u0d15\u0d4d\u0d30\u0d3f\u0d38\u0d4d\u0d24\u0d41\u0d35\u0d3f\u0d28\u0d41\u0d4d \u0d2e\u0d41\u0d2e\u0d4d\u0d2a\u0d4d\u200c", "\u0d15\u0d4d\u0d30\u0d3f\u0d38\u0d4d\u0d24\u0d41\u0d35\u0d3f\u0d28\u0d4d \u0d2a\u0d3f\u0d28\u0d4d\u200d\u0d2a\u0d4d"], NARROWMONTHS:["\u0d1c", "\u0d2b\u0d46", "\u0d2e\u0d3e", "\u0d0f", "\u0d2e\u0d47", "\u0d1c\u0d42", "\u0d1c\u0d42", "\u0d13", 
+"\u0d38\u0d46", "\u0d12", "\u0d28", "\u0d21\u0d3f"], STANDALONENARROWMONTHS:["\u0d1c", "\u0d2b\u0d46", "\u0d2e\u0d3e", "\u0d0f", "\u0d2e\u0d47", "\u0d1c\u0d42", "\u0d1c\u0d42", "\u0d13", "\u0d38\u0d46", "\u0d12", "\u0d28", "\u0d21\u0d3f"], MONTHS:["\u0d1c\u0d28\u0d41\u0d35\u0d30\u0d3f", "\u0d2b\u0d46\u0d2c\u0d4d\u0d30\u0d41\u0d35\u0d30\u0d3f", "\u0d2e\u0d3e\u0d30\u0d4d\u200d\u0d1a\u0d4d\u0d1a\u0d4d", "\u0d0f\u0d2a\u0d4d\u0d30\u0d3f\u0d32\u0d4d\u200d", "\u0d2e\u0d47\u0d2f\u0d4d", "\u0d1c\u0d42\u0d23\u0d4d\u200d", 
+"\u0d1c\u0d42\u0d32\u0d48", "\u0d06\u0d17\u0d38\u0d4d\u0d31\u0d4d\u0d31\u0d4d", "\u0d38\u0d46\u0d2a\u0d4d\u0d31\u0d4d\u0d31\u0d02\u0d2c\u0d30\u0d4d\u200d", "\u0d12\u0d15\u0d4d\u0d1f\u0d4b\u0d2c\u0d30\u0d4d\u200d", "\u0d28\u0d35\u0d02\u0d2c\u0d30\u0d4d\u200d", "\u0d21\u0d3f\u0d38\u0d02\u0d2c\u0d30\u0d4d\u200d"], STANDALONEMONTHS:["\u0d1c\u0d28\u0d41\u0d35\u0d30\u0d3f", "\u0d2b\u0d46\u0d2c\u0d4d\u0d30\u0d41\u0d35\u0d30\u0d3f", "\u0d2e\u0d3e\u0d30\u0d4d\u200d\u0d1a\u0d4d\u0d1a\u0d4d", "\u0d0f\u0d2a\u0d4d\u0d30\u0d3f\u0d32\u0d4d\u200d", 
+"\u0d2e\u0d47\u0d2f\u0d4d", "\u0d1c\u0d42\u0d23\u0d4d\u200d", "\u0d1c\u0d42\u0d32\u0d48", "\u0d06\u0d17\u0d38\u0d4d\u0d31\u0d4d\u0d31\u0d4d", "\u0d38\u0d46\u0d2a\u0d4d\u0d31\u0d4d\u0d31\u0d02\u0d2c\u0d30\u0d4d\u200d", "\u0d12\u0d15\u0d4d\u0d1f\u0d4b\u0d2c\u0d30\u0d4d\u200d", "\u0d28\u0d35\u0d02\u0d2c\u0d30\u0d4d\u200d", "\u0d21\u0d3f\u0d38\u0d02\u0d2c\u0d30\u0d4d\u200d"], SHORTMONTHS:["\u0d1c\u0d28\u0d41", "\u0d2b\u0d46\u0d2c\u0d4d\u0d30\u0d41", "\u0d2e\u0d3e\u0d30\u0d4d\u200d", "\u0d0f\u0d2a\u0d4d\u0d30\u0d3f", 
+"\u0d2e\u0d47\u0d2f\u0d4d", "\u0d1c\u0d42\u0d23\u0d4d\u200d", "\u0d1c\u0d42\u0d32\u0d48", "\u0d13\u0d17", "\u0d38\u0d46\u0d2a\u0d4d\u0d31\u0d4d\u0d31\u0d02", "\u0d12\u0d15\u0d4d\u0d1f\u0d4b", "\u0d28\u0d35\u0d02", "\u0d21\u0d3f\u0d38\u0d02"], STANDALONESHORTMONTHS:["\u0d1c\u0d28\u0d41", "\u0d2b\u0d46\u0d2c\u0d4d\u0d30\u0d41", "\u0d2e\u0d3e\u0d30\u0d4d\u200d", "\u0d0f\u0d2a\u0d4d\u0d30\u0d3f", "\u0d2e\u0d47\u0d2f\u0d4d", "\u0d1c\u0d42\u0d23\u0d4d\u200d", "\u0d1c\u0d42\u0d32\u0d48", "\u0d13\u0d17", 
+"\u0d38\u0d46\u0d2a\u0d4d\u0d31\u0d4d\u0d31\u0d02", "\u0d12\u0d15\u0d4d\u0d1f\u0d4b", "\u0d28\u0d35\u0d02", "\u0d21\u0d3f\u0d38\u0d02"], WEEKDAYS:["\u0d1e\u0d3e\u0d2f\u0d31\u0d3e\u0d34\u0d4d\u0d1a", "\u0d24\u0d3f\u0d19\u0d4d\u0d15\u0d33\u0d3e\u0d34\u0d4d\u0d1a", "\u0d1a\u0d4a\u0d35\u0d4d\u0d35\u0d3e\u0d34\u0d4d\u0d1a", "\u0d2c\u0d41\u0d27\u0d28\u0d3e\u0d34\u0d4d\u0d1a", "\u0d35\u0d4d\u0d2f\u0d3e\u0d34\u0d3e\u0d34\u0d4d\u0d1a", "\u0d35\u0d46\u0d33\u0d4d\u0d33\u0d3f\u0d2f\u0d3e\u0d34\u0d4d\u0d1a", 
+"\u0d36\u0d28\u0d3f\u0d2f\u0d3e\u0d34\u0d4d\u0d1a"], STANDALONEWEEKDAYS:["\u0d1e\u0d3e\u0d2f\u0d31\u0d3e\u0d34\u0d4d\u0d1a", "\u0d24\u0d3f\u0d19\u0d4d\u0d15\u0d33\u0d3e\u0d34\u0d4d\u0d1a", "\u0d1a\u0d4a\u0d35\u0d4d\u0d35\u0d3e\u0d34\u0d4d\u0d1a", "\u0d2c\u0d41\u0d27\u0d28\u0d3e\u0d34\u0d4d\u0d1a", "\u0d35\u0d4d\u0d2f\u0d3e\u0d34\u0d3e\u0d34\u0d4d\u0d1a", "\u0d35\u0d46\u0d33\u0d4d\u0d33\u0d3f\u0d2f\u0d3e\u0d34\u0d4d\u0d1a", "\u0d36\u0d28\u0d3f\u0d2f\u0d3e\u0d34\u0d4d\u0d1a"], SHORTWEEKDAYS:["\u0d1e\u0d3e\u0d2f\u0d30\u0d4d\u200d", 
+"\u0d24\u0d3f\u0d19\u0d4d\u0d15\u0d33\u0d4d\u200d", "\u0d1a\u0d4a\u0d35\u0d4d\u0d35", "\u0d2c\u0d41\u0d27\u0d28\u0d4d\u200d", "\u0d35\u0d4d\u0d2f\u0d3e\u0d34\u0d02", "\u0d35\u0d46\u0d33\u0d4d\u0d33\u0d3f", "\u0d36\u0d28\u0d3f"], STANDALONESHORTWEEKDAYS:["\u0d1e\u0d3e\u0d2f\u0d30\u0d4d\u200d", "\u0d24\u0d3f\u0d19\u0d4d\u0d15\u0d33\u0d4d\u200d", "\u0d1a\u0d4a\u0d35\u0d4d\u0d35", "\u0d2c\u0d41\u0d27\u0d28\u0d4d\u200d", "\u0d35\u0d4d\u0d2f\u0d3e\u0d34\u0d02", "\u0d35\u0d46\u0d33\u0d4d\u0d33\u0d3f", "\u0d36\u0d28\u0d3f"], 
+NARROWWEEKDAYS:["\u0d1e\u0d3e", "\u0d24\u0d3f", "\u0d1a\u0d4a", "\u0d2c\u0d41", "\u0d35\u0d4d\u0d2f\u0d3e", "\u0d35\u0d46", "\u0d36"], STANDALONENARROWWEEKDAYS:["\u0d1e\u0d3e", "\u0d24\u0d3f", "\u0d1a\u0d4a", "\u0d2c\u0d41", "\u0d35\u0d4d\u0d2f\u0d3e", "\u0d35\u0d46", "\u0d36"], SHORTQUARTERS:["Q1", "Q2", "Q3", "Q4"], QUARTERS:["\u0d12\u0d28\u0d4d\u0d28\u0d3e\u0d02 \u0d2a\u0d3e\u0d26\u0d02", "\u0d30\u0d23\u0d4d\u0d1f\u0d3e\u0d02 \u0d2a\u0d3e\u0d26\u0d02", "\u0d2e\u0d42\u0d28\u0d4d\u0d28\u0d3e\u0d02 \u0d2a\u0d3e\u0d26\u0d02", 
+"\u0d28\u0d3e\u0d32\u0d3e\u0d02 \u0d2a\u0d3e\u0d26\u0d02"], AMPMS:["\u0d30\u0d3e\u0d35\u0d3f\u0d32\u0d46", "\u0d35\u0d48\u0d15\u0d41\u0d28\u0d4d\u0d28\u0d47\u0d30\u0d02"], DATEFORMATS:["y, MMMM d, EEEE", "y, MMMM d", "y, MMM d", "dd/MM/yy"], TIMEFORMATS:["h:mm:ss a zzzz", "h:mm:ss a z", "h:mm:ss a", "h:mm a"], FIRSTDAYOFWEEK:6, WEEKENDRANGE:[6, 6], FIRSTWEEKCUTOFFDAY:2};
+goog.i18n.DateTimeSymbols_mr = {ERAS:["\u0908\u0938\u093e\u092a\u0942\u0930\u094d\u0935", "\u0938\u0928"], ERANAMES:["\u0908\u0938\u0935\u0940\u0938\u0928\u092a\u0942\u0930\u094d\u0935", "\u0908\u0938\u0935\u0940\u0938\u0928"], NARROWMONTHS:["\u091c\u093e", "\u092b\u0947", "\u092e\u093e", "\u090f", "\u092e\u0947", "\u091c\u0942", "\u091c\u0941", "\u0911", "\u0938", "\u0911", "\u0928\u094b", "\u0921\u093f"], STANDALONENARROWMONTHS:["\u091c\u093e", "\u092b\u0947", "\u092e\u093e", "\u090f", "\u092e\u0947", 
+"\u091c\u0942", "\u091c\u0941", "\u0911", "\u0938", "\u0911", "\u0928\u094b", "\u0921\u093f"], MONTHS:["\u091c\u093e\u0928\u0947\u0935\u093e\u0930\u0940", "\u092b\u0947\u092c\u094d\u0930\u0941\u0935\u093e\u0930\u0940", "\u092e\u093e\u0930\u094d\u091a", "\u090f\u092a\u094d\u0930\u093f\u0932", "\u092e\u0947", "\u091c\u0942\u0928", "\u091c\u0941\u0932\u0948", "\u0911\u0917\u0938\u094d\u091f", "\u0938\u092a\u094d\u091f\u0947\u0902\u092c\u0930", "\u0911\u0915\u094d\u091f\u094b\u092c\u0930", "\u0928\u094b\u0935\u094d\u0939\u0947\u0902\u092c\u0930", 
+"\u0921\u093f\u0938\u0947\u0902\u092c\u0930"], STANDALONEMONTHS:["\u091c\u093e\u0928\u0947\u0935\u093e\u0930\u0940", "\u092b\u0947\u092c\u094d\u0930\u0941\u0935\u093e\u0930\u0940", "\u092e\u093e\u0930\u094d\u091a", "\u090f\u092a\u094d\u0930\u093f\u0932", "\u092e\u0947", "\u091c\u0942\u0928", "\u091c\u0941\u0932\u0948", "\u0911\u0917\u0938\u094d\u091f", "\u0938\u092a\u094d\u091f\u0947\u0902\u092c\u0930", "\u0911\u0915\u094d\u091f\u094b\u092c\u0930", "\u0928\u094b\u0935\u094d\u0939\u0947\u0902\u092c\u0930", 
+"\u0921\u093f\u0938\u0947\u0902\u092c\u0930"], SHORTMONTHS:["\u091c\u093e\u0928\u0947", "\u092b\u0947\u092c\u094d\u0930\u0941", "\u092e\u093e\u0930\u094d\u091a", "\u090f\u092a\u094d\u0930\u093f", "\u092e\u0947", "\u091c\u0942\u0928", "\u091c\u0941\u0932\u0948", "\u0911\u0917", "\u0938\u0947\u092a\u094d\u091f\u0947\u0902", "\u0911\u0915\u094d\u091f\u094b\u092c\u0930", "\u0928\u094b\u0935\u094d\u0939\u0947\u0902", "\u0921\u093f\u0938\u0947\u0902"], STANDALONESHORTMONTHS:["\u091c\u093e\u0928\u0947", 
+"\u092b\u0947\u092c\u094d\u0930\u0941", "\u092e\u093e\u0930\u094d\u091a", "\u090f\u092a\u094d\u0930\u093f", "\u092e\u0947", "\u091c\u0942\u0928", "\u091c\u0941\u0932\u0948", "\u0911\u0917", "\u0938\u0947\u092a\u094d\u091f\u0947\u0902", "\u0911\u0915\u094d\u091f\u094b\u092c\u0930", "\u0928\u094b\u0935\u094d\u0939\u0947\u0902", "\u0921\u093f\u0938\u0947\u0902"], WEEKDAYS:["\u0930\u0935\u093f\u0935\u093e\u0930", "\u0938\u094b\u092e\u0935\u093e\u0930", "\u092e\u0902\u0917\u0933\u0935\u093e\u0930", "\u092c\u0941\u0927\u0935\u093e\u0930", 
+"\u0917\u0941\u0930\u0941\u0935\u093e\u0930", "\u0936\u0941\u0915\u094d\u0930\u0935\u093e\u0930", "\u0936\u0928\u093f\u0935\u093e\u0930"], STANDALONEWEEKDAYS:["\u0930\u0935\u093f\u0935\u093e\u0930", "\u0938\u094b\u092e\u0935\u093e\u0930", "\u092e\u0902\u0917\u0933\u0935\u093e\u0930", "\u092c\u0941\u0927\u0935\u093e\u0930", "\u0917\u0941\u0930\u0941\u0935\u093e\u0930", "\u0936\u0941\u0915\u094d\u0930\u0935\u093e\u0930", "\u0936\u0928\u093f\u0935\u093e\u0930"], SHORTWEEKDAYS:["\u0930\u0935\u093f", 
+"\u0938\u094b\u092e", "\u092e\u0902\u0917\u0933", "\u092c\u0941\u0927", "\u0917\u0941\u0930\u0941", "\u0936\u0941\u0915\u094d\u0930", "\u0936\u0928\u093f"], STANDALONESHORTWEEKDAYS:["\u0930\u0935\u093f", "\u0938\u094b\u092e", "\u092e\u0902\u0917\u0933", "\u092c\u0941\u0927", "\u0917\u0941\u0930\u0941", "\u0936\u0941\u0915\u094d\u0930", "\u0936\u0928\u093f"], NARROWWEEKDAYS:["\u0930", "\u0938\u094b", "\u092e\u0902", "\u092c\u0941", "\u0917\u0941", "\u0936\u0941", "\u0936"], STANDALONENARROWWEEKDAYS:["\u0930", 
+"\u0938\u094b", "\u092e\u0902", "\u092c\u0941", "\u0917\u0941", "\u0936\u0941", "\u0936"], SHORTQUARTERS:["\u0924\u093f 1", "2 \u0930\u0940 \u0924\u093f\u092e\u093e\u0939\u0940", "\u0924\u093f 3", "\u0924\u093f 4"], QUARTERS:["\u092a\u094d\u0930\u0925\u092e \u0924\u093f\u092e\u093e\u0939\u0940", "\u0926\u094d\u0935\u093f\u0924\u0940\u092f \u0924\u093f\u092e\u093e\u0939\u0940", "\u0924\u0943\u0924\u0940\u092f \u0924\u093f\u092e\u093e\u0939\u0940", "\u091a\u0924\u0941\u0930\u094d\u0925 \u0924\u093f\u092e\u093e\u0939\u0940"], 
+AMPMS:["\u092e.\u092a\u0942.", "\u092e.\u0928\u0902."], DATEFORMATS:["EEEE d MMMM y", "d MMMM y", "d MMM y", "d-M-yy"], TIMEFORMATS:["h-mm-ss a zzzz", "h-mm-ss a z", "h-mm-ss a", "h-mm a"], FIRSTDAYOFWEEK:6, WEEKENDRANGE:[6, 6], FIRSTWEEKCUTOFFDAY:2};
+goog.i18n.DateTimeSymbols_ms = {ERAS:["S.M.", "TM"], ERANAMES:["S.M.", "TM"], NARROWMONTHS:["J", "F", "M", "A", "M", "J", "J", "O", "S", "O", "N", "D"], STANDALONENARROWMONTHS:["J", "F", "M", "A", "M", "J", "J", "O", "S", "O", "N", "D"], MONTHS:["Januari", "Februari", "Mac", "April", "Mei", "Jun", "Julai", "Ogos", "September", "Oktober", "November", "Disember"], STANDALONEMONTHS:["Januari", "Februari", "Mac", "April", "Mei", "Jun", "Julai", "Ogos", "September", "Oktober", "November", "Disember"], 
+SHORTMONTHS:["Jan", "Feb", "Mac", "Apr", "Mei", "Jun", "Jul", "Ogos", "Sep", "Okt", "Nov", "Dis"], STANDALONESHORTMONTHS:["Jan", "Feb", "Mac", "Apr", "Mei", "Jun", "Jul", "Ogos", "Sep", "Okt", "Nov", "Dis"], WEEKDAYS:["Ahad", "Isnin", "Selasa", "Rabu", "Khamis", "Jumaat", "Sabtu"], STANDALONEWEEKDAYS:["Ahad", "Isnin", "Selasa", "Rabu", "Khamis", "Jumaat", "Sabtu"], SHORTWEEKDAYS:["Ahd", "Isn", "Sel", "Rab", "Kha", "Jum", "Sab"], STANDALONESHORTWEEKDAYS:["Ahd", "Isn", "Sel", "Rab", "Kha", "Jum", "Sab"], 
+NARROWWEEKDAYS:["A", "I", "S", "R", "K", "J", "S"], STANDALONENARROWWEEKDAYS:["A", "I", "S", "R", "K", "J", "S"], SHORTQUARTERS:["Suku 1", "Suku Ke-2", "Suku Ke-3", "Suku Ke-4"], QUARTERS:["Suku pertama", "Suku Ke-2", "Suku Ke-3", "Suku Ke-4"], AMPMS:["PG", "PTG"], DATEFORMATS:["EEEE, d MMMM y", "d MMMM y", "dd/MM/yyyy", "d/MM/yy"], TIMEFORMATS:["h:mm:ss a zzzz", "h:mm:ss a z", "h:mm:ss a", "h:mm a"], FIRSTDAYOFWEEK:0, WEEKENDRANGE:[5, 6], FIRSTWEEKCUTOFFDAY:3};
+goog.i18n.DateTimeSymbols_mt = {ERAS:["QK", "WK"], ERANAMES:["Qabel Kristu", "Wara Kristu"], NARROWMONTHS:["J", "F", "M", "A", "M", "\u0120", "L", "A", "S", "O", "N", "D"], STANDALONENARROWMONTHS:["J", "F", "M", "A", "M", "\u0120", "L", "A", "S", "O", "N", "D"], MONTHS:["Jannar", "Frar", "Marzu", "April", "Mejju", "\u0120unju", "Lulju", "Awwissu", "Settembru", "Ottubru", "Novembru", "Di\u010bembru"], STANDALONEMONTHS:["Jannar", "Frar", "Marzu", "April", "Mejju", "\u0120unju", "Lulju", "Awwissu", 
+"Settembru", "Ottubru", "Novembru", "Di\u010bembru"], SHORTMONTHS:["Jan", "Fra", "Mar", "Apr", "Mej", "\u0120un", "Lul", "Aww", "Set", "Ott", "Nov", "Di\u010b"], STANDALONESHORTMONTHS:["Jan", "Fra", "Mar", "Apr", "Mej", "\u0120un", "Lul", "Aww", "Set", "Ott", "Nov", "Di\u010b"], WEEKDAYS:["Il-\u0126add", "It-Tnejn", "It-Tlieta", "L-Erbg\u0127a", "Il-\u0126amis", "Il-\u0120img\u0127a", "Is-Sibt"], STANDALONEWEEKDAYS:["Il-\u0126add", "It-Tnejn", "It-Tlieta", "L-Erbg\u0127a", "Il-\u0126amis", "Il-\u0120img\u0127a", 
+"Is-Sibt"], SHORTWEEKDAYS:["\u0126ad", "Tne", "Tli", "Erb", "\u0126am", "\u0120im", "Sib"], STANDALONESHORTWEEKDAYS:["\u0126ad", "Tne", "Tli", "Erb", "\u0126am", "\u0120im", "Sib"], NARROWWEEKDAYS:["\u0126", "T", "T", "E", "\u0126", "\u0120", "S"], STANDALONENARROWWEEKDAYS:["\u0126", "T", "T", "E", "\u0126", "\u0120", "S"], SHORTQUARTERS:["K1", "K2", "K3", "K4"], QUARTERS:["K1", "K2", "K3", "K4"], AMPMS:["QN", "WN"], DATEFORMATS:["EEEE, d 'ta'\u2019 MMMM y", "d 'ta'\u2019 MMMM y", "dd MMM y", "dd/MM/yyyy"], 
+TIMEFORMATS:["HH:mm:ss zzzz", "HH:mm:ss z", "HH:mm:ss", "HH:mm"], FIRSTDAYOFWEEK:6, WEEKENDRANGE:[5, 6], FIRSTWEEKCUTOFFDAY:2};
+goog.i18n.DateTimeSymbols_nl = {ERAS:["v. Chr.", "n. Chr."], ERANAMES:["Voor Christus", "na Christus"], NARROWMONTHS:["J", "F", "M", "A", "M", "J", "J", "A", "S", "O", "N", "D"], STANDALONENARROWMONTHS:["J", "F", "M", "A", "M", "J", "J", "A", "S", "O", "N", "D"], MONTHS:["januari", "februari", "maart", "april", "mei", "juni", "juli", "augustus", "september", "oktober", "november", "december"], STANDALONEMONTHS:["januari", "februari", "maart", "april", "mei", "juni", "juli", "augustus", "september", 
+"oktober", "november", "december"], SHORTMONTHS:["jan.", "feb.", "mrt.", "apr.", "mei", "jun.", "jul.", "aug.", "sep.", "okt.", "nov.", "dec."], STANDALONESHORTMONTHS:["jan", "feb", "mrt", "apr", "mei", "jun", "jul", "aug", "sep", "okt", "nov", "dec"], WEEKDAYS:["zondag", "maandag", "dinsdag", "woensdag", "donderdag", "vrijdag", "zaterdag"], STANDALONEWEEKDAYS:["zondag", "maandag", "dinsdag", "woensdag", "donderdag", "vrijdag", "zaterdag"], SHORTWEEKDAYS:["zo", "ma", "di", "wo", "do", "vr", "za"], 
+STANDALONESHORTWEEKDAYS:["zo", "ma", "di", "wo", "do", "vr", "za"], NARROWWEEKDAYS:["Z", "M", "D", "W", "D", "V", "Z"], STANDALONENARROWWEEKDAYS:["Z", "M", "D", "W", "D", "V", "Z"], SHORTQUARTERS:["K1", "K2", "K3", "K4"], QUARTERS:["1e kwartaal", "2e kwartaal", "3e kwartaal", "4e kwartaal"], AMPMS:["AM", "PM"], DATEFORMATS:["EEEE d MMMM y", "d MMMM y", "d MMM y", "dd-MM-yy"], TIMEFORMATS:["HH:mm:ss zzzz", "HH:mm:ss z", "HH:mm:ss", "HH:mm"], FIRSTDAYOFWEEK:0, WEEKENDRANGE:[5, 6], FIRSTWEEKCUTOFFDAY:3};
+goog.i18n.DateTimeSymbols_no = {ERAS:["f.Kr.", "e.Kr."], ERANAMES:["f.Kr.", "e.Kr."], NARROWMONTHS:["J", "F", "M", "A", "M", "J", "J", "A", "S", "O", "N", "D"], STANDALONENARROWMONTHS:["J", "F", "M", "A", "M", "J", "J", "A", "S", "O", "N", "D"], MONTHS:["januar", "februar", "mars", "april", "mai", "juni", "juli", "august", "september", "oktober", "november", "desember"], STANDALONEMONTHS:["januar", "februar", "mars", "april", "mai", "juni", "juli", "august", "september", "oktober", "november", "desember"], 
+SHORTMONTHS:["jan.", "feb.", "mars", "apr.", "mai", "juni", "juli", "aug.", "sep.", "okt.", "nov.", "des."], STANDALONESHORTMONTHS:["jan", "feb", "mar", "apr", "mai", "jun", "jul", "aug", "sep", "okt", "nov", "des"], WEEKDAYS:["s\u00f8ndag", "mandag", "tirsdag", "onsdag", "torsdag", "fredag", "l\u00f8rdag"], STANDALONEWEEKDAYS:["s\u00f8ndag", "mandag", "tirsdag", "onsdag", "torsdag", "fredag", "l\u00f8rdag"], SHORTWEEKDAYS:["s\u00f8n.", "man.", "tir.", "ons.", "tor.", "fre.", "l\u00f8r."], STANDALONESHORTWEEKDAYS:["s\u00f8.", 
+"ma.", "ti.", "on.", "to.", "fr.", "l\u00f8."], NARROWWEEKDAYS:["S", "M", "T", "O", "T", "F", "L"], STANDALONENARROWWEEKDAYS:["S", "M", "T", "O", "T", "F", "L"], SHORTQUARTERS:["K1", "K2", "K3", "K4"], QUARTERS:["1. kvartal", "2. kvartal", "3. kvartal", "4. kvartal"], AMPMS:["AM", "PM"], DATEFORMATS:["EEEE d. MMMM y", "d. MMMM y", "d. MMM y", "dd.MM.yy"], TIMEFORMATS:["'kl'. HH:mm:ss zzzz", "HH:mm:ss z", "HH:mm:ss", "HH:mm"], FIRSTDAYOFWEEK:0, WEEKENDRANGE:[5, 6], FIRSTWEEKCUTOFFDAY:3};
+goog.i18n.DateTimeSymbols_or = {ERAS:["BCE", "CE"], ERANAMES:["BCE", "CE"], NARROWMONTHS:["\u0b1c\u0b3e", "\u0b2b\u0b47", "\u0b2e\u0b3e", "\u0b05", "\u0b2e\u0b47", "\u0b1c\u0b41", "\u0b1c\u0b41", "\u0b05", "\u0b38\u0b47", "\u0b05", "\u0b28", "\u0b21\u0b3f"], STANDALONENARROWMONTHS:["\u0b1c\u0b3e", "\u0b2b\u0b47", "\u0b2e\u0b3e", "\u0b05", "\u0b2e\u0b47", "\u0b1c\u0b41", "\u0b1c\u0b41", "\u0b05", "\u0b38\u0b47", "\u0b05", "\u0b28", "\u0b21\u0b3f"], MONTHS:["\u0b1c\u0b3e\u0b28\u0b41\u0b06\u0b30\u0b40", 
+"\u0b2b\u0b47\u0b2c\u0b4d\u0b30\u0b41\u0b5f\u0b3e\u0b30\u0b40", "\u0b2e\u0b3e\u0b30\u0b4d\u0b1a\u0b4d\u0b1a", "\u0b05\u0b2a\u0b4d\u0b30\u0b47\u0b32", "\u0b2e\u0b47", "\u0b1c\u0b41\u0b28", "\u0b1c\u0b41\u0b32\u0b3e\u0b07", "\u0b05\u0b17\u0b37\u0b4d\u0b1f", "\u0b38\u0b47\u0b2a\u0b4d\u0b1f\u0b47\u0b2e\u0b4d\u0b2c\u0b30", "\u0b05\u0b15\u0b4d\u0b1f\u0b4b\u0b2c\u0b30", "\u0b28\u0b2d\u0b47\u0b2e\u0b4d\u0b2c\u0b30", "\u0b21\u0b3f\u0b38\u0b47\u0b2e\u0b4d\u0b2c\u0b30"], STANDALONEMONTHS:["\u0b1c\u0b3e\u0b28\u0b41\u0b06\u0b30\u0b40", 
+"\u0b2b\u0b47\u0b2c\u0b4d\u0b30\u0b41\u0b5f\u0b3e\u0b30\u0b40", "\u0b2e\u0b3e\u0b30\u0b4d\u0b1a\u0b4d\u0b1a", "\u0b05\u0b2a\u0b4d\u0b30\u0b47\u0b32", "\u0b2e\u0b47", "\u0b1c\u0b41\u0b28", "\u0b1c\u0b41\u0b32\u0b3e\u0b07", "\u0b05\u0b17\u0b37\u0b4d\u0b1f", "\u0b38\u0b47\u0b2a\u0b4d\u0b1f\u0b47\u0b2e\u0b4d\u0b2c\u0b30", "\u0b05\u0b15\u0b4d\u0b1f\u0b4b\u0b2c\u0b30", "\u0b28\u0b2d\u0b47\u0b2e\u0b4d\u0b2c\u0b30", "\u0b21\u0b3f\u0b38\u0b47\u0b2e\u0b4d\u0b2c\u0b30"], SHORTMONTHS:["\u0b1c\u0b3e\u0b28\u0b41\u0b06\u0b30\u0b40", 
+"\u0b2b\u0b47\u0b2c\u0b4d\u0b30\u0b41\u0b5f\u0b3e\u0b30\u0b40", "\u0b2e\u0b3e\u0b30\u0b4d\u0b1a\u0b4d\u0b1a", "\u0b05\u0b2a\u0b4d\u0b30\u0b47\u0b32", "\u0b2e\u0b47", "\u0b1c\u0b41\u0b28", "\u0b1c\u0b41\u0b32\u0b3e\u0b07", "\u0b05\u0b17\u0b37\u0b4d\u0b1f", "\u0b38\u0b47\u0b2a\u0b4d\u0b1f\u0b47\u0b2e\u0b4d\u0b2c\u0b30", "\u0b05\u0b15\u0b4d\u0b1f\u0b4b\u0b2c\u0b30", "\u0b28\u0b2d\u0b47\u0b2e\u0b4d\u0b2c\u0b30", "\u0b21\u0b3f\u0b38\u0b47\u0b2e\u0b4d\u0b2c\u0b30"], STANDALONESHORTMONTHS:["\u0b1c\u0b3e\u0b28\u0b41\u0b06\u0b30\u0b40", 
+"\u0b2b\u0b47\u0b2c\u0b4d\u0b30\u0b41\u0b5f\u0b3e\u0b30\u0b40", "\u0b2e\u0b3e\u0b30\u0b4d\u0b1a\u0b4d\u0b1a", "\u0b05\u0b2a\u0b4d\u0b30\u0b47\u0b32", "\u0b2e\u0b47", "\u0b1c\u0b41\u0b28", "\u0b1c\u0b41\u0b32\u0b3e\u0b07", "\u0b05\u0b17\u0b37\u0b4d\u0b1f", "\u0b38\u0b47\u0b2a\u0b4d\u0b1f\u0b47\u0b2e\u0b4d\u0b2c\u0b30", "\u0b05\u0b15\u0b4d\u0b1f\u0b4b\u0b2c\u0b30", "\u0b28\u0b2d\u0b47\u0b2e\u0b4d\u0b2c\u0b30", "\u0b21\u0b3f\u0b38\u0b47\u0b2e\u0b4d\u0b2c\u0b30"], WEEKDAYS:["\u0b30\u0b2c\u0b3f\u0b2c\u0b3e\u0b30", 
+"\u0b38\u0b4b\u0b2e\u0b2c\u0b3e\u0b30", "\u0b2e\u0b19\u0b4d\u0b17\u0b33\u0b2c\u0b3e\u0b30", "\u0b2c\u0b41\u0b27\u0b2c\u0b3e\u0b30", "\u0b17\u0b41\u0b30\u0b41\u0b2c\u0b3e\u0b30", "\u0b36\u0b41\u0b15\u0b4d\u0b30\u0b2c\u0b3e\u0b30", "\u0b36\u0b28\u0b3f\u0b2c\u0b3e\u0b30"], STANDALONEWEEKDAYS:["\u0b30\u0b2c\u0b3f\u0b2c\u0b3e\u0b30", "\u0b38\u0b4b\u0b2e\u0b2c\u0b3e\u0b30", "\u0b2e\u0b19\u0b4d\u0b17\u0b33\u0b2c\u0b3e\u0b30", "\u0b2c\u0b41\u0b27\u0b2c\u0b3e\u0b30", "\u0b17\u0b41\u0b30\u0b41\u0b2c\u0b3e\u0b30", 
+"\u0b36\u0b41\u0b15\u0b4d\u0b30\u0b2c\u0b3e\u0b30", "\u0b36\u0b28\u0b3f\u0b2c\u0b3e\u0b30"], SHORTWEEKDAYS:["\u0b30\u0b2c\u0b3f", "\u0b38\u0b4b\u0b2e", "\u0b2e\u0b19\u0b4d\u0b17\u0b33", "\u0b2c\u0b41\u0b27", "\u0b17\u0b41\u0b30\u0b41", "\u0b36\u0b41\u0b15\u0b4d\u0b30", "\u0b36\u0b28\u0b3f"], STANDALONESHORTWEEKDAYS:["\u0b30\u0b2c\u0b3f", "\u0b38\u0b4b\u0b2e", "\u0b2e\u0b19\u0b4d\u0b17\u0b33", "\u0b2c\u0b41\u0b27", "\u0b17\u0b41\u0b30\u0b41", "\u0b36\u0b41\u0b15\u0b4d\u0b30", "\u0b36\u0b28\u0b3f"], 
+NARROWWEEKDAYS:["\u0b30", "\u0b38\u0b4b", "\u0b2e", "\u0b2c\u0b41", "\u0b17\u0b41", "\u0b36\u0b41", "\u0b36"], STANDALONENARROWWEEKDAYS:["\u0b30", "\u0b38\u0b4b", "\u0b2e", "\u0b2c\u0b41", "\u0b17\u0b41", "\u0b36\u0b41", "\u0b36"], SHORTQUARTERS:["Q1", "Q2", "Q3", "Q4"], QUARTERS:["Q1", "Q2", "Q3", "Q4"], AMPMS:["am", "pm"], DATEFORMATS:["EEEE, d MMMM y", "d MMMM y", "d MMM y", "d-M-yy"], TIMEFORMATS:["h:mm:ss a zzzz", "h:mm:ss a z", "h:mm:ss a", "h:mm a"], FIRSTDAYOFWEEK:6, WEEKENDRANGE:[6, 6], 
+FIRSTWEEKCUTOFFDAY:2};
+goog.i18n.DateTimeSymbols_pl = {ERAS:["p.n.e.", "n.e."], ERANAMES:["p.n.e.", "n.e."], NARROWMONTHS:["s", "l", "m", "k", "m", "c", "l", "s", "w", "p", "l", "g"], STANDALONENARROWMONTHS:["s", "l", "m", "k", "m", "c", "l", "s", "w", "p", "l", "g"], MONTHS:["stycznia", "lutego", "marca", "kwietnia", "maja", "czerwca", "lipca", "sierpnia", "wrze\u015bnia", "pa\u017adziernika", "listopada", "grudnia"], STANDALONEMONTHS:["stycze\u0144", "luty", "marzec", "kwiecie\u0144", "maj", "czerwiec", "lipiec", "sierpie\u0144", 
+"wrzesie\u0144", "pa\u017adziernik", "listopad", "grudzie\u0144"], SHORTMONTHS:["sty", "lut", "mar", "kwi", "maj", "cze", "lip", "sie", "wrz", "pa\u017a", "lis", "gru"], STANDALONESHORTMONTHS:["sty", "lut", "mar", "kwi", "maj", "cze", "lip", "sie", "wrz", "pa\u017a", "lis", "gru"], WEEKDAYS:["niedziela", "poniedzia\u0142ek", "wtorek", "\u015broda", "czwartek", "pi\u0105tek", "sobota"], STANDALONEWEEKDAYS:["niedziela", "poniedzia\u0142ek", "wtorek", "\u015broda", "czwartek", "pi\u0105tek", "sobota"], 
+SHORTWEEKDAYS:["niedz.", "pon.", "wt.", "\u015br.", "czw.", "pt.", "sob."], STANDALONESHORTWEEKDAYS:["niedz.", "pon.", "wt.", "\u015br.", "czw.", "pt.", "sob."], NARROWWEEKDAYS:["N", "P", "W", "\u015a", "C", "P", "S"], STANDALONENARROWWEEKDAYS:["N", "P", "W", "\u015a", "C", "P", "S"], SHORTQUARTERS:["K1", "K2", "K3", "K4"], QUARTERS:["I kwarta\u0142", "II kwarta\u0142", "III kwarta\u0142", "IV kwarta\u0142"], AMPMS:["AM", "PM"], DATEFORMATS:["EEEE, d MMMM y", "d MMMM y", "d MMM y", "dd.MM.yyyy"], 
+TIMEFORMATS:["HH:mm:ss zzzz", "HH:mm:ss z", "HH:mm:ss", "HH:mm"], FIRSTDAYOFWEEK:0, WEEKENDRANGE:[5, 6], FIRSTWEEKCUTOFFDAY:3};
+goog.i18n.DateTimeSymbols_pt = {ERAS:["a.C.", "d.C."], ERANAMES:["Antes de Cristo", "Ano do Senhor"], NARROWMONTHS:["J", "F", "M", "A", "M", "J", "J", "A", "S", "O", "N", "D"], STANDALONENARROWMONTHS:["J", "F", "M", "A", "M", "J", "J", "A", "S", "O", "N", "D"], MONTHS:["janeiro", "fevereiro", "mar\u00e7o", "abril", "maio", "junho", "julho", "agosto", "setembro", "outubro", "novembro", "dezembro"], STANDALONEMONTHS:["janeiro", "fevereiro", "mar\u00e7o", "abril", "maio", "junho", "julho", "agosto", 
+"setembro", "outubro", "novembro", "dezembro"], SHORTMONTHS:["jan", "fev", "mar", "abr", "mai", "jun", "jul", "ago", "set", "out", "nov", "dez"], STANDALONESHORTMONTHS:["jan", "fev", "mar", "abr", "mai", "jun", "jul", "ago", "set", "out", "nov", "dez"], WEEKDAYS:["domingo", "segunda-feira", "ter\u00e7a-feira", "quarta-feira", "quinta-feira", "sexta-feira", "s\u00e1bado"], STANDALONEWEEKDAYS:["domingo", "segunda-feira", "ter\u00e7a-feira", "quarta-feira", "quinta-feira", "sexta-feira", "s\u00e1bado"], 
+SHORTWEEKDAYS:["dom", "seg", "ter", "qua", "qui", "sex", "s\u00e1b"], STANDALONESHORTWEEKDAYS:["dom", "seg", "ter", "qua", "qui", "sex", "s\u00e1b"], NARROWWEEKDAYS:["D", "S", "T", "Q", "Q", "S", "S"], STANDALONENARROWWEEKDAYS:["D", "S", "T", "Q", "Q", "S", "S"], SHORTQUARTERS:["T1", "T2", "T3", "T4"], QUARTERS:["1\u00ba trimestre", "2\u00ba trimestre", "3\u00ba trimestre", "4\u00ba trimestre"], AMPMS:["AM", "PM"], DATEFORMATS:["EEEE, d 'de' MMMM 'de' y", "d 'de' MMMM 'de' y", "dd/MM/yyyy", "dd/MM/yy"], 
+TIMEFORMATS:["HH'h'mm'min'ss's' zzzz", "HH'h'mm'min'ss's' z", "HH:mm:ss", "HH:mm"], FIRSTDAYOFWEEK:6, WEEKENDRANGE:[5, 6], FIRSTWEEKCUTOFFDAY:2};
+goog.i18n.DateTimeSymbols_pt_BR = goog.i18n.DateTimeSymbols_pt;
+goog.i18n.DateTimeSymbols_pt_PT = {ERAS:["a.C.", "d.C."], ERANAMES:["Antes de Cristo", "Ano do Senhor"], NARROWMONTHS:["J", "F", "M", "A", "M", "J", "J", "A", "S", "O", "N", "D"], STANDALONENARROWMONTHS:["J", "F", "M", "A", "M", "J", "J", "A", "S", "O", "N", "D"], MONTHS:["Janeiro", "Fevereiro", "Mar\u00e7o", "Abril", "Maio", "Junho", "Julho", "Agosto", "Setembro", "Outubro", "Novembro", "Dezembro"], STANDALONEMONTHS:["Janeiro", "Fevereiro", "Mar\u00e7o", "Abril", "Maio", "Junho", "Julho", "Agosto", 
+"Setembro", "Outubro", "Novembro", "Dezembro"], SHORTMONTHS:["Jan", "Fev", "Mar", "Abr", "Mai", "Jun", "Jul", "Ago", "Set", "Out", "Nov", "Dez"], STANDALONESHORTMONTHS:["Jan", "Fev", "Mar", "Abr", "Mai", "Jun", "Jul", "Ago", "Set", "Out", "Nov", "Dez"], WEEKDAYS:["Domingo", "Segunda-feira", "Ter\u00e7a-feira", "Quarta-feira", "Quinta-feira", "Sexta-feira", "S\u00e1bado"], STANDALONEWEEKDAYS:["Domingo", "Segunda-feira", "Ter\u00e7a-feira", "Quarta-feira", "Quinta-feira", "Sexta-feira", "S\u00e1bado"], 
+SHORTWEEKDAYS:["dom", "seg", "ter", "qua", "qui", "sex", "s\u00e1b"], STANDALONESHORTWEEKDAYS:["dom", "seg", "ter", "qua", "qui", "sex", "s\u00e1b"], NARROWWEEKDAYS:["D", "S", "T", "Q", "Q", "S", "S"], STANDALONENARROWWEEKDAYS:["D", "S", "T", "Q", "Q", "S", "S"], SHORTQUARTERS:["T1", "T2", "T3", "T4"], QUARTERS:["1.\u00ba trimestre", "2.\u00ba trimestre", "3.\u00ba trimestre", "4.\u00ba trimestre"], AMPMS:["a.m.", "p.m."], DATEFORMATS:["EEEE, d 'de' MMMM 'de' y", "d 'de' MMMM 'de' y", "dd/MM/yyyy", 
+"dd/MM/yy"], TIMEFORMATS:["H:mm:ss zzzz", "H:mm:ss z", "HH:mm:ss", "HH:mm"], FIRSTDAYOFWEEK:0, WEEKENDRANGE:[5, 6], FIRSTWEEKCUTOFFDAY:3};
+goog.i18n.DateTimeSymbols_ro = {ERAS:["\u00ee.Hr.", "d.Hr."], ERANAMES:["\u00eenainte de Hristos", "dup\u0103 Hristos"], NARROWMONTHS:["I", "F", "M", "A", "M", "I", "I", "A", "S", "O", "N", "D"], STANDALONENARROWMONTHS:["I", "F", "M", "A", "M", "I", "I", "A", "S", "O", "N", "D"], MONTHS:["ianuarie", "februarie", "martie", "aprilie", "mai", "iunie", "iulie", "august", "septembrie", "octombrie", "noiembrie", "decembrie"], STANDALONEMONTHS:["ianuarie", "februarie", "martie", "aprilie", "mai", "iunie", 
+"iulie", "august", "septembrie", "octombrie", "noiembrie", "decembrie"], SHORTMONTHS:["ian.", "feb.", "mar.", "apr.", "mai", "iun.", "iul.", "aug.", "sept.", "oct.", "nov.", "dec."], STANDALONESHORTMONTHS:["ian.", "feb.", "mar.", "apr.", "mai", "iun.", "iul.", "aug.", "sept.", "oct.", "nov.", "dec."], WEEKDAYS:["duminic\u0103", "luni", "mar\u021bi", "miercuri", "joi", "vineri", "s\u00e2mb\u0103t\u0103"], STANDALONEWEEKDAYS:["duminic\u0103", "luni", "mar\u021bi", "miercuri", "joi", "vineri", "s\u00e2mb\u0103t\u0103"], 
+SHORTWEEKDAYS:["Du", "Lu", "Ma", "Mi", "Jo", "Vi", "S\u00e2"], STANDALONESHORTWEEKDAYS:["Du", "Lu", "Ma", "Mi", "Jo", "Vi", "S\u00e2"], NARROWWEEKDAYS:["D", "L", "M", "M", "J", "V", "S"], STANDALONENARROWWEEKDAYS:["D", "L", "M", "M", "J", "V", "S"], SHORTQUARTERS:["trim. I", "trim. II", "trim. III", "trim. IV"], QUARTERS:["trimestrul I", "trimestrul al II-lea", "trimestrul al III-lea", "trimestrul al IV-lea"], AMPMS:["AM", "PM"], DATEFORMATS:["EEEE, d MMMM y", "d MMMM y", "dd.MM.yyyy", "dd.MM.yyyy"], 
+TIMEFORMATS:["HH:mm:ss zzzz", "HH:mm:ss z", "HH:mm:ss", "HH:mm"], FIRSTDAYOFWEEK:0, WEEKENDRANGE:[5, 6], FIRSTWEEKCUTOFFDAY:3};
+goog.i18n.DateTimeSymbols_ru = {ERAS:["\u0434\u043e \u043d.\u044d.", "\u043d.\u044d."], ERANAMES:["\u0434\u043e \u043d.\u044d.", "\u043d.\u044d."], NARROWMONTHS:["\u042f", "\u0424", "\u041c", "\u0410", "\u041c", "\u0418", "\u0418", "\u0410", "\u0421", "\u041e", "\u041d", "\u0414"], STANDALONENARROWMONTHS:["\u042f", "\u0424", "\u041c", "\u0410", "\u041c", "\u0418", "\u0418", "\u0410", "\u0421", "\u041e", "\u041d", "\u0414"], MONTHS:["\u044f\u043d\u0432\u0430\u0440\u044f", "\u0444\u0435\u0432\u0440\u0430\u043b\u044f", 
+"\u043c\u0430\u0440\u0442\u0430", "\u0430\u043f\u0440\u0435\u043b\u044f", "\u043c\u0430\u044f", "\u0438\u044e\u043d\u044f", "\u0438\u044e\u043b\u044f", "\u0430\u0432\u0433\u0443\u0441\u0442\u0430", "\u0441\u0435\u043d\u0442\u044f\u0431\u0440\u044f", "\u043e\u043a\u0442\u044f\u0431\u0440\u044f", "\u043d\u043e\u044f\u0431\u0440\u044f", "\u0434\u0435\u043a\u0430\u0431\u0440\u044f"], STANDALONEMONTHS:["\u042f\u043d\u0432\u0430\u0440\u044c", "\u0424\u0435\u0432\u0440\u0430\u043b\u044c", "\u041c\u0430\u0440\u0442", 
+"\u0410\u043f\u0440\u0435\u043b\u044c", "\u041c\u0430\u0439", "\u0418\u044e\u043d\u044c", "\u0418\u044e\u043b\u044c", "\u0410\u0432\u0433\u0443\u0441\u0442", "\u0421\u0435\u043d\u0442\u044f\u0431\u0440\u044c", "\u041e\u043a\u0442\u044f\u0431\u0440\u044c", "\u041d\u043e\u044f\u0431\u0440\u044c", "\u0414\u0435\u043a\u0430\u0431\u0440\u044c"], SHORTMONTHS:["\u044f\u043d\u0432", "\u0444\u0435\u0432", "\u043c\u0430\u0440", "\u0430\u043f\u0440", "\u043c\u0430\u044f", "\u0438\u044e\u043d", "\u0438\u044e\u043b", 
+"\u0430\u0432\u0433", "\u0441\u0435\u043d", "\u043e\u043a\u0442", "\u043d\u043e\u044f", "\u0434\u0435\u043a"], STANDALONESHORTMONTHS:["\u042f\u043d\u0432.", "\u0424\u0435\u0432\u0440.", "\u041c\u0430\u0440\u0442", "\u0410\u043f\u0440.", "\u041c\u0430\u0439", "\u0418\u044e\u043d\u044c", "\u0418\u044e\u043b\u044c", "\u0410\u0432\u0433.", "\u0421\u0435\u043d\u0442.", "\u041e\u043a\u0442.", "\u041d\u043e\u044f\u0431.", "\u0414\u0435\u043a."], WEEKDAYS:["\u0432\u043e\u0441\u043a\u0440\u0435\u0441\u0435\u043d\u044c\u0435", 
+"\u043f\u043e\u043d\u0435\u0434\u0435\u043b\u044c\u043d\u0438\u043a", "\u0432\u0442\u043e\u0440\u043d\u0438\u043a", "\u0441\u0440\u0435\u0434\u0430", "\u0447\u0435\u0442\u0432\u0435\u0440\u0433", "\u043f\u044f\u0442\u043d\u0438\u0446\u0430", "\u0441\u0443\u0431\u0431\u043e\u0442\u0430"], STANDALONEWEEKDAYS:["\u0412\u043e\u0441\u043a\u0440\u0435\u0441\u0435\u043d\u044c\u0435", "\u041f\u043e\u043d\u0435\u0434\u0435\u043b\u044c\u043d\u0438\u043a", "\u0412\u0442\u043e\u0440\u043d\u0438\u043a", "\u0421\u0440\u0435\u0434\u0430", 
+"\u0427\u0435\u0442\u0432\u0435\u0440\u0433", "\u041f\u044f\u0442\u043d\u0438\u0446\u0430", "\u0421\u0443\u0431\u0431\u043e\u0442\u0430"], SHORTWEEKDAYS:["\u0432\u0441", "\u043f\u043d", "\u0432\u0442", "\u0441\u0440", "\u0447\u0442", "\u043f\u0442", "\u0441\u0431"], STANDALONESHORTWEEKDAYS:["\u0412\u0441", "\u041f\u043d", "\u0412\u0442", "\u0421\u0440", "\u0427\u0442", "\u041f\u0442", "\u0421\u0431"], NARROWWEEKDAYS:["\u0412", "\u041f\u043d", "\u0412\u0442", "\u0421", "\u0427", "\u041f", "\u0421"], 
+STANDALONENARROWWEEKDAYS:["\u0412", "\u041f", "\u0412", "\u0421", "\u0427", "\u041f", "\u0421"], SHORTQUARTERS:["1-\u0439 \u043a\u0432.", "2-\u0439 \u043a\u0432.", "3-\u0439 \u043a\u0432.", "4-\u0439 \u043a\u0432."], QUARTERS:["1-\u0439 \u043a\u0432\u0430\u0440\u0442\u0430\u043b", "2-\u0439 \u043a\u0432\u0430\u0440\u0442\u0430\u043b", "3-\u0439 \u043a\u0432\u0430\u0440\u0442\u0430\u043b", "4-\u0439 \u043a\u0432\u0430\u0440\u0442\u0430\u043b"], AMPMS:["\u0434\u043e \u043f\u043e\u043b\u0443\u0434\u043d\u044f", 
+"\u043f\u043e\u0441\u043b\u0435 \u043f\u043e\u043b\u0443\u0434\u043d\u044f"], DATEFORMATS:["EEEE, d MMMM y\u00a0'\u0433'.", "d MMMM y\u00a0'\u0433'.", "dd.MM.yyyy", "dd.MM.yy"], TIMEFORMATS:["H:mm:ss zzzz", "H:mm:ss z", "H:mm:ss", "H:mm"], FIRSTDAYOFWEEK:0, WEEKENDRANGE:[5, 6], FIRSTWEEKCUTOFFDAY:3};
+goog.i18n.DateTimeSymbols_sk = {ERAS:["pred n.l.", "n.l."], ERANAMES:["pred n.l.", "n.l."], NARROWMONTHS:["j", "f", "m", "a", "m", "j", "j", "a", "s", "o", "n", "d"], STANDALONENARROWMONTHS:["j", "f", "m", "a", "m", "j", "j", "a", "s", "o", "n", "d"], MONTHS:["janu\u00e1ra", "febru\u00e1ra", "marca", "apr\u00edla", "m\u00e1ja", "j\u00fana", "j\u00fala", "augusta", "septembra", "okt\u00f3bra", "novembra", "decembra"], STANDALONEMONTHS:["janu\u00e1r", "febru\u00e1r", "marec", "apr\u00edl", "m\u00e1j", 
+"j\u00fan", "j\u00fal", "august", "september", "okt\u00f3ber", "november", "december"], SHORTMONTHS:["jan", "feb", "mar", "apr", "m\u00e1j", "j\u00fan", "j\u00fal", "aug", "sep", "okt", "nov", "dec"], STANDALONESHORTMONTHS:["jan", "feb", "mar", "apr", "m\u00e1j", "j\u00fan", "j\u00fal", "aug", "sep", "okt", "nov", "dec"], WEEKDAYS:["nede\u013ea", "pondelok", "utorok", "streda", "\u0161tvrtok", "piatok", "sobota"], STANDALONEWEEKDAYS:["nede\u013ea", "pondelok", "utorok", "streda", "\u0161tvrtok", 
+"piatok", "sobota"], SHORTWEEKDAYS:["ne", "po", "ut", "st", "\u0161t", "pi", "so"], STANDALONESHORTWEEKDAYS:["ne", "po", "ut", "st", "\u0161t", "pi", "so"], NARROWWEEKDAYS:["N", "P", "U", "S", "\u0160", "P", "S"], STANDALONENARROWWEEKDAYS:["N", "P", "U", "S", "\u0160", "P", "S"], SHORTQUARTERS:["Q1", "Q2", "Q3", "Q4"], QUARTERS:["1. \u0161tvr\u0165rok", "2. \u0161tvr\u0165rok", "3. \u0161tvr\u0165rok", "4. \u0161tvr\u0165rok"], AMPMS:["dopoludnia", "popoludn\u00ed"], DATEFORMATS:["EEEE, d. MMMM y", 
+"d. MMMM y", "d.M.yyyy", "d.M.yyyy"], TIMEFORMATS:["H:mm:ss zzzz", "H:mm:ss z", "H:mm:ss", "H:mm"], FIRSTDAYOFWEEK:0, WEEKENDRANGE:[5, 6], FIRSTWEEKCUTOFFDAY:3};
+goog.i18n.DateTimeSymbols_sl = {ERAS:["pr. n. \u0161t.", "po Kr."], ERANAMES:["pred na\u0161im \u0161tetjem", "na\u0161e \u0161tetje"], NARROWMONTHS:["j", "f", "m", "a", "m", "j", "j", "a", "s", "o", "n", "d"], STANDALONENARROWMONTHS:["j", "f", "m", "a", "m", "j", "j", "a", "s", "o", "n", "d"], MONTHS:["januar", "februar", "marec", "april", "maj", "junij", "julij", "avgust", "september", "oktober", "november", "december"], STANDALONEMONTHS:["januar", "februar", "marec", "april", "maj", "junij", "julij", 
+"avgust", "september", "oktober", "november", "december"], SHORTMONTHS:["jan.", "feb.", "mar.", "apr.", "maj", "jun.", "jul.", "avg.", "sep.", "okt.", "nov.", "dec."], STANDALONESHORTMONTHS:["jan", "feb", "mar", "apr", "maj", "jun", "jul", "avg", "sep", "okt", "nov", "dec"], WEEKDAYS:["nedelja", "ponedeljek", "torek", "sreda", "\u010detrtek", "petek", "sobota"], STANDALONEWEEKDAYS:["nedelja", "ponedeljek", "torek", "sreda", "\u010detrtek", "petek", "sobota"], SHORTWEEKDAYS:["ned.", "pon.", "tor.", 
+"sre.", "\u010det.", "pet.", "sob."], STANDALONESHORTWEEKDAYS:["ned", "pon", "tor", "sre", "\u010det", "pet", "sob"], NARROWWEEKDAYS:["n", "p", "t", "s", "\u010d", "p", "s"], STANDALONENARROWWEEKDAYS:["n", "p", "t", "s", "\u010d", "p", "s"], SHORTQUARTERS:["Q1", "Q2", "Q3", "Q4"], QUARTERS:["1. \u010detrtletje", "2. \u010detrtletje", "3. \u010detrtletje", "4. \u010detrtletje"], AMPMS:["dop.", "pop."], DATEFORMATS:["EEEE, dd. MMMM y", "dd. MMMM y", "d. MMM yyyy", "d. MM. yy"], TIMEFORMATS:["HH:mm:ss zzzz", 
+"HH:mm:ss z", "HH:mm:ss", "HH:mm"], FIRSTDAYOFWEEK:0, WEEKENDRANGE:[5, 6], FIRSTWEEKCUTOFFDAY:3};
+goog.i18n.DateTimeSymbols_sq = {ERAS:["p.e.r.", "n.e.r."], ERANAMES:["p.e.r.", "n.e.r."], NARROWMONTHS:["J", "S", "M", "P", "M", "Q", "K", "G", "S", "T", "N", "D"], STANDALONENARROWMONTHS:["J", "S", "M", "P", "M", "Q", "K", "G", "S", "T", "N", "D"], MONTHS:["janar", "shkurt", "mars", "prill", "maj", "qershor", "korrik", "gusht", "shtator", "tetor", "n\u00ebntor", "dhjetor"], STANDALONEMONTHS:["janar", "shkurt", "mars", "prill", "maj", "qershor", "korrik", "gusht", "shtator", "tetor", "n\u00ebntor", 
+"dhjetor"], SHORTMONTHS:["Jan", "Shk", "Mar", "Pri", "Maj", "Qer", "Kor", "Gsh", "Sht", "Tet", "N\u00ebn", "Dhj"], STANDALONESHORTMONTHS:["Jan", "Shk", "Mar", "Pri", "Maj", "Qer", "Kor", "Gsh", "Sht", "Tet", "N\u00ebn", "Dhj"], WEEKDAYS:["e diel", "e h\u00ebn\u00eb", "e mart\u00eb", "e m\u00ebrkur\u00eb", "e enjte", "e premte", "e shtun\u00eb"], STANDALONEWEEKDAYS:["e diel", "e h\u00ebn\u00eb", "e mart\u00eb", "e m\u00ebrkur\u00eb", "e enjte", "e premte", "e shtun\u00eb"], SHORTWEEKDAYS:["Die", "H\u00ebn", 
+"Mar", "M\u00ebr", "Enj", "Pre", "Sht"], STANDALONESHORTWEEKDAYS:["Die", "H\u00ebn", "Mar", "M\u00ebr", "Enj", "Pre", "Sht"], NARROWWEEKDAYS:["D", "H", "M", "M", "E", "P", "S"], STANDALONENARROWWEEKDAYS:["D", "H", "M", "M", "E", "P", "S"], SHORTQUARTERS:["Q1", "Q2", "Q3", "Q4"], QUARTERS:["Q1", "Q2", "Q3", "Q4"], AMPMS:["PD", "MD"], DATEFORMATS:["EEEE, dd MMMM y", "dd MMMM y", "yyyy-MM-dd", "yy-MM-dd"], TIMEFORMATS:["h.mm.ss.a zzzz", "h.mm.ss.a z", "h.mm.ss.a", "h.mm.a"], FIRSTDAYOFWEEK:0, WEEKENDRANGE:[5, 
+6], FIRSTWEEKCUTOFFDAY:3};
+goog.i18n.DateTimeSymbols_sr = {ERAS:["\u043f. \u043d. \u0435.", "\u043d. \u0435."], ERANAMES:["\u041f\u0440\u0435 \u043d\u043e\u0432\u0435 \u0435\u0440\u0435", "\u041d\u043e\u0432\u0435 \u0435\u0440\u0435"], NARROWMONTHS:["\u0458", "\u0444", "\u043c", "\u0430", "\u043c", "\u0458", "\u0458", "\u0430", "\u0441", "\u043e", "\u043d", "\u0434"], STANDALONENARROWMONTHS:["\u0458", "\u0444", "\u043c", "\u0430", "\u043c", "\u0458", "\u0458", "\u0430", "\u0441", "\u043e", "\u043d", "\u0434"], MONTHS:["\u0458\u0430\u043d\u0443\u0430\u0440", 
+"\u0444\u0435\u0431\u0440\u0443\u0430\u0440", "\u043c\u0430\u0440\u0442", "\u0430\u043f\u0440\u0438\u043b", "\u043c\u0430\u0458", "\u0458\u0443\u043d", "\u0458\u0443\u043b", "\u0430\u0432\u0433\u0443\u0441\u0442", "\u0441\u0435\u043f\u0442\u0435\u043c\u0431\u0430\u0440", "\u043e\u043a\u0442\u043e\u0431\u0430\u0440", "\u043d\u043e\u0432\u0435\u043c\u0431\u0430\u0440", "\u0434\u0435\u0446\u0435\u043c\u0431\u0430\u0440"], STANDALONEMONTHS:["\u0458\u0430\u043d\u0443\u0430\u0440", "\u0444\u0435\u0431\u0440\u0443\u0430\u0440", 
+"\u043c\u0430\u0440\u0442", "\u0430\u043f\u0440\u0438\u043b", "\u043c\u0430\u0458", "\u0458\u0443\u043d", "\u0458\u0443\u043b", "\u0430\u0432\u0433\u0443\u0441\u0442", "\u0441\u0435\u043f\u0442\u0435\u043c\u0431\u0430\u0440", "\u043e\u043a\u0442\u043e\u0431\u0430\u0440", "\u043d\u043e\u0432\u0435\u043c\u0431\u0430\u0440", "\u0434\u0435\u0446\u0435\u043c\u0431\u0430\u0440"], SHORTMONTHS:["\u0458\u0430\u043d", "\u0444\u0435\u0431", "\u043c\u0430\u0440", "\u0430\u043f\u0440", "\u043c\u0430\u0458", "\u0458\u0443\u043d", 
+"\u0458\u0443\u043b", "\u0430\u0432\u0433", "\u0441\u0435\u043f", "\u043e\u043a\u0442", "\u043d\u043e\u0432", "\u0434\u0435\u0446"], STANDALONESHORTMONTHS:["\u0458\u0430\u043d", "\u0444\u0435\u0431", "\u043c\u0430\u0440", "\u0430\u043f\u0440", "\u043c\u0430\u0458", "\u0458\u0443\u043d", "\u0458\u0443\u043b", "\u0430\u0432\u0433", "\u0441\u0435\u043f", "\u043e\u043a\u0442", "\u043d\u043e\u0432", "\u0434\u0435\u0446"], WEEKDAYS:["\u043d\u0435\u0434\u0435\u0459\u0430", "\u043f\u043e\u043d\u0435\u0434\u0435\u0459\u0430\u043a", 
+"\u0443\u0442\u043e\u0440\u0430\u043a", "\u0441\u0440\u0435\u0434\u0430", "\u0447\u0435\u0442\u0432\u0440\u0442\u0430\u043a", "\u043f\u0435\u0442\u0430\u043a", "\u0441\u0443\u0431\u043e\u0442\u0430"], STANDALONEWEEKDAYS:["\u043d\u0435\u0434\u0435\u0459\u0430", "\u043f\u043e\u043d\u0435\u0434\u0435\u0459\u0430\u043a", "\u0443\u0442\u043e\u0440\u0430\u043a", "\u0441\u0440\u0435\u0434\u0430", "\u0447\u0435\u0442\u0432\u0440\u0442\u0430\u043a", "\u043f\u0435\u0442\u0430\u043a", "\u0441\u0443\u0431\u043e\u0442\u0430"], 
+SHORTWEEKDAYS:["\u043d\u0435\u0434", "\u043f\u043e\u043d", "\u0443\u0442\u043e", "\u0441\u0440\u0435", "\u0447\u0435\u0442", "\u043f\u0435\u0442", "\u0441\u0443\u0431"], STANDALONESHORTWEEKDAYS:["\u043d\u0435\u0434", "\u043f\u043e\u043d", "\u0443\u0442\u043e", "\u0441\u0440\u0435", "\u0447\u0435\u0442", "\u043f\u0435\u0442", "\u0441\u0443\u0431"], NARROWWEEKDAYS:["\u043d", "\u043f", "\u0443", "\u0441", "\u0447", "\u043f", "\u0441"], STANDALONENARROWWEEKDAYS:["\u043d", "\u043f", "\u0443", "\u0441", 
+"\u0447", "\u043f", "\u0441"], SHORTQUARTERS:["\u041a1", "\u041a2", "\u041a3", "\u041a4"], QUARTERS:["\u041f\u0440\u0432\u043e \u0442\u0440\u043e\u043c\u0435\u0441\u0435\u0447\u0458\u0435", "\u0414\u0440\u0443\u0433\u043e \u0442\u0440\u043e\u043c\u0435\u0441\u0435\u0447\u0458\u0435", "\u0422\u0440\u0435\u045b\u0435 \u0442\u0440\u043e\u043c\u0435\u0441\u0435\u0447\u0458\u0435", "\u0427\u0435\u0442\u0432\u0440\u0442\u043e \u0442\u0440\u043e\u043c\u0435\u0441\u0435\u0447\u0458\u0435"], AMPMS:["\u043f\u0440\u0435 \u043f\u043e\u0434\u043d\u0435", 
+"\u043f\u043e\u043f\u043e\u0434\u043d\u0435"], DATEFORMATS:["EEEE, dd. MMMM y.", "dd. MMMM y.", "dd.MM.y.", "d.M.yy."], TIMEFORMATS:["HH.mm.ss zzzz", "HH.mm.ss z", "HH.mm.ss", "HH.mm"], FIRSTDAYOFWEEK:0, WEEKENDRANGE:[5, 6], FIRSTWEEKCUTOFFDAY:3};
+goog.i18n.DateTimeSymbols_sv = {ERAS:["f.Kr.", "e.Kr."], ERANAMES:["f\u00f6re Kristus", "efter Kristus"], NARROWMONTHS:["J", "F", "M", "A", "M", "J", "J", "A", "S", "O", "N", "D"], STANDALONENARROWMONTHS:["J", "F", "M", "A", "M", "J", "J", "A", "S", "O", "N", "D"], MONTHS:["januari", "februari", "mars", "april", "maj", "juni", "juli", "augusti", "september", "oktober", "november", "december"], STANDALONEMONTHS:["januari", "februari", "mars", "april", "maj", "juni", "juli", "augusti", "september", 
+"oktober", "november", "december"], SHORTMONTHS:["jan", "feb", "mar", "apr", "maj", "jun", "jul", "aug", "sep", "okt", "nov", "dec"], STANDALONESHORTMONTHS:["jan", "feb", "mar", "apr", "maj", "jun", "jul", "aug", "sep", "okt", "nov", "dec"], WEEKDAYS:["s\u00f6ndag", "m\u00e5ndag", "tisdag", "onsdag", "torsdag", "fredag", "l\u00f6rdag"], STANDALONEWEEKDAYS:["s\u00f6ndag", "m\u00e5ndag", "tisdag", "onsdag", "torsdag", "fredag", "l\u00f6rdag"], SHORTWEEKDAYS:["s\u00f6n", "m\u00e5n", "tis", "ons", "tors", 
+"fre", "l\u00f6r"], STANDALONESHORTWEEKDAYS:["s\u00f6n", "m\u00e5n", "tis", "ons", "tor", "fre", "l\u00f6r"], NARROWWEEKDAYS:["S", "M", "T", "O", "T", "F", "L"], STANDALONENARROWWEEKDAYS:["S", "M", "T", "O", "T", "F", "L"], SHORTQUARTERS:["K1", "K2", "K3", "K4"], QUARTERS:["1:a kvartalet", "2:a kvartalet", "3:e kvartalet", "4:e kvartalet"], AMPMS:["fm", "em"], DATEFORMATS:["EEEE'en' 'den' d:'e' MMMM y", "d MMMM y", "d MMM y", "yyyy-MM-dd"], TIMEFORMATS:["'kl'. HH:mm:ss zzzz", "HH:mm:ss z", "HH:mm:ss", 
+"HH:mm"], FIRSTDAYOFWEEK:0, WEEKENDRANGE:[5, 6], FIRSTWEEKCUTOFFDAY:3};
+goog.i18n.DateTimeSymbols_sw = {ERAS:["KK", "BK"], ERANAMES:["Kabla ya Kristo", "Baada ya Kristo"], NARROWMONTHS:["J", "F", "M", "A", "M", "J", "J", "A", "S", "O", "N", "D"], STANDALONENARROWMONTHS:["J", "F", "M", "A", "M", "J", "J", "A", "S", "O", "N", "D"], MONTHS:["Januari", "Februari", "Machi", "Aprili", "Mei", "Juni", "Julai", "Agosti", "Septemba", "Oktoba", "Novemba", "Desemba"], STANDALONEMONTHS:["Januari", "Februari", "Machi", "Aprili", "Mei", "Juni", "Julai", "Agosti", "Septemba", "Oktoba", 
+"Novemba", "Desemba"], SHORTMONTHS:["Jan", "Feb", "Mac", "Apr", "Mei", "Jun", "Jul", "Ago", "Sep", "Okt", "Nov", "Des"], STANDALONESHORTMONTHS:["Jan", "Feb", "Mac", "Apr", "Mei", "Jun", "Jul", "Ago", "Sep", "Okt", "Nov", "Des"], WEEKDAYS:["Jumapili", "Jumatatu", "Jumanne", "Jumatano", "Alhamisi", "Ijumaa", "Jumamosi"], STANDALONEWEEKDAYS:["Jumapili", "Jumatatu", "Jumanne", "Jumatano", "Alhamisi", "Ijumaa", "Jumamosi"], SHORTWEEKDAYS:["J2", "J3", "J4", "J5", "Alh", "Ij", "J1"], STANDALONESHORTWEEKDAYS:["J2", 
+"J3", "J4", "J5", "Alh", "Ij", "J1"], NARROWWEEKDAYS:["2", "3", "4", "5", "A", "I", "1"], STANDALONENARROWWEEKDAYS:["2", "3", "4", "5", "A", "I", "1"], SHORTQUARTERS:["R1", "R2", "R3", "R4"], QUARTERS:["Robo 1", "Robo 2", "Robo 3", "Robo 4"], AMPMS:["asubuhi", "alasiri"], DATEFORMATS:["EEEE, d MMMM y", "d MMMM y", "d MMM y", "dd/MM/yyyy"], TIMEFORMATS:["h:mm:ss a zzzz", "h:mm:ss a z", "h:mm:ss a", "h:mm a"], FIRSTDAYOFWEEK:0, WEEKENDRANGE:[5, 6], FIRSTWEEKCUTOFFDAY:3};
+goog.i18n.DateTimeSymbols_ta = {ERAS:["\u0b95\u0bbf.\u0bae\u0bc1.", "\u0b95\u0bbf.\u0baa\u0bbf."], ERANAMES:["\u0b95\u0bbf\u0bb1\u0bbf\u0bb8\u0bcd\u0ba4\u0bc1\u0bb5\u0bc1\u0b95\u0bcd\u0b95\u0bc1 \u0bae\u0bc1\u0ba9\u0bcd", "\u0b85\u0ba9\u0bcb \u0b9f\u0bcb\u0bae\u0bbf\u0ba9\u0bbf"], NARROWMONTHS:["\u0b9c", "\u0baa\u0bbf", "\u0bae\u0bbe", "\u0b8f", "\u0bae\u0bc7", "\u0b9c\u0bc2", "\u0b9c\u0bc2", "\u0b86", "\u0b9a\u0bc6", "\u0b85", "\u0ba8", "\u0b9f\u0bbf"], STANDALONENARROWMONTHS:["\u0b9c", "\u0baa\u0bbf", 
+"\u0bae\u0bbe", "\u0b8f", "\u0bae\u0bc7", "\u0b9c\u0bc2", "\u0b9c\u0bc2", "\u0b86", "\u0b9a\u0bc6", "\u0b85", "\u0ba8", "\u0b9f\u0bbf"], MONTHS:["\u0b9c\u0ba9\u0bb5\u0bb0\u0bbf", "\u0baa\u0bbf\u0baa\u0bcd\u0bb0\u0bb5\u0bb0\u0bbf", "\u0bae\u0bbe\u0bb0\u0bcd\u0b9a\u0bcd", "\u0b8f\u0baa\u0bcd\u0bb0\u0bb2\u0bcd", "\u0bae\u0bc7", "\u0b9c\u0bc2\u0ba9\u0bcd", "\u0b9c\u0bc2\u0bb2\u0bc8", "\u0b86\u0b95\u0bb8\u0bcd\u0b9f\u0bcd", "\u0b9a\u0bc6\u0baa\u0bcd\u0b9f\u0bae\u0bcd\u0baa\u0bb0\u0bcd", "\u0b85\u0b95\u0bcd\u0b9f\u0bcb\u0baa\u0bb0\u0bcd", 
+"\u0ba8\u0bb5\u0bae\u0bcd\u0baa\u0bb0\u0bcd", "\u0b9f\u0bbf\u0b9a\u0bae\u0bcd\u0baa\u0bb0\u0bcd"], STANDALONEMONTHS:["\u0b9c\u0ba9\u0bb5\u0bb0\u0bbf", "\u0baa\u0bbf\u0baa\u0bcd\u0bb0\u0bb5\u0bb0\u0bbf", "\u0bae\u0bbe\u0bb0\u0bcd\u0b9a\u0bcd", "\u0b8f\u0baa\u0bcd\u0bb0\u0bb2\u0bcd", "\u0bae\u0bc7", "\u0b9c\u0bc2\u0ba9\u0bcd", "\u0b9c\u0bc2\u0bb2\u0bc8", "\u0b86\u0b95\u0bb8\u0bcd\u0b9f\u0bc1", "\u0b9a\u0bc6\u0baa\u0bcd\u0b9f\u0bae\u0bcd\u0baa\u0bb0\u0bcd", "\u0b85\u0b95\u0bcd\u0b9f\u0bcb\u0baa\u0bb0\u0bcd", 
+"\u0ba8\u0bb5\u0bae\u0bcd\u0baa\u0bb0\u0bcd", "\u0b9f\u0bbf\u0b9a\u0bae\u0bcd\u0baa\u0bb0\u0bcd"], SHORTMONTHS:["\u0b9c\u0ba9.", "\u0baa\u0bbf\u0baa\u0bcd.", "\u0bae\u0bbe\u0bb0\u0bcd.", "\u0b8f\u0baa\u0bcd.", "\u0bae\u0bc7", "\u0b9c\u0bc2\u0ba9\u0bcd", "\u0b9c\u0bc2\u0bb2\u0bc8", "\u0b86\u0b95.", "\u0b9a\u0bc6\u0baa\u0bcd.", "\u0b85\u0b95\u0bcd.", "\u0ba8\u0bb5.", "\u0b9f\u0bbf\u0b9a."], STANDALONESHORTMONTHS:["\u0b9c\u0ba9.", "\u0baa\u0bbf\u0baa\u0bcd.", "\u0bae\u0bbe\u0bb0\u0bcd.", "\u0b8f\u0baa\u0bcd.", 
+"\u0bae\u0bc7", "\u0b9c\u0bc2\u0ba9\u0bcd", "\u0b9c\u0bc2\u0bb2\u0bc8", "\u0b86\u0b95.", "\u0b9a\u0bc6\u0baa\u0bcd.", "\u0b85\u0b95\u0bcd.", "\u0ba8\u0bb5.", "\u0b9f\u0bbf\u0b9a."], WEEKDAYS:["\u0b9e\u0bbe\u0baf\u0bbf\u0bb1\u0bc1", "\u0ba4\u0bbf\u0b99\u0bcd\u0b95\u0bb3\u0bcd", "\u0b9a\u0bc6\u0bb5\u0bcd\u0bb5\u0bbe\u0baf\u0bcd", "\u0baa\u0bc1\u0ba4\u0ba9\u0bcd", "\u0bb5\u0bbf\u0baf\u0bbe\u0bb4\u0ba9\u0bcd", "\u0bb5\u0bc6\u0bb3\u0bcd\u0bb3\u0bbf", "\u0b9a\u0ba9\u0bbf"], STANDALONEWEEKDAYS:["\u0b9e\u0bbe\u0baf\u0bbf\u0bb1\u0bc1", 
+"\u0ba4\u0bbf\u0b99\u0bcd\u0b95\u0bb3\u0bcd", "\u0b9a\u0bc6\u0bb5\u0bcd\u0bb5\u0bbe\u0baf\u0bcd", "\u0baa\u0bc1\u0ba4\u0ba9\u0bcd", "\u0bb5\u0bbf\u0baf\u0bbe\u0bb4\u0ba9\u0bcd", "\u0bb5\u0bc6\u0bb3\u0bcd\u0bb3\u0bbf", "\u0b9a\u0ba9\u0bbf"], SHORTWEEKDAYS:["\u0b9e\u0bbe", "\u0ba4\u0bbf", "\u0b9a\u0bc6", "\u0baa\u0bc1", "\u0bb5\u0bbf", "\u0bb5\u0bc6", "\u0b9a"], STANDALONESHORTWEEKDAYS:["\u0b9e\u0bbe", "\u0ba4\u0bbf", "\u0b9a\u0bc6", "\u0baa\u0bc1", "\u0bb5\u0bbf", "\u0bb5\u0bc6", "\u0b9a"], NARROWWEEKDAYS:["\u0b9e\u0bbe", 
+"\u0ba4\u0bbf", "\u0b9a\u0bc6", "\u0baa\u0bc1", "\u0bb5\u0bbf", "\u0bb5\u0bc6", "\u0b9a"], STANDALONENARROWWEEKDAYS:["\u0b9e\u0bbe", "\u0ba4\u0bbf", "\u0b9a\u0bc6", "\u0baa\u0bc1", "\u0bb5\u0bbf", "\u0bb5\u0bc6", "\u0b9a"], SHORTQUARTERS:["\u0b95\u0bbe\u0bb2\u0bbe\u0ba3\u0bcd\u0b9f\u0bc11", "\u0b95\u0bbe\u0bb2\u0bbe\u0ba3\u0bcd\u0b9f\u0bc12", "\u0b95\u0bbe\u0bb2\u0bbe\u0ba3\u0bcd\u0b9f\u0bc13", "\u0b95\u0bbe\u0bb2\u0bbe\u0ba3\u0bcd\u0b9f\u0bc14"], QUARTERS:["\u0bae\u0bc1\u0ba4\u0bb2\u0bcd \u0b95\u0bbe\u0bb2\u0bbe\u0ba3\u0bcd\u0b9f\u0bc1", 
+"\u0b87\u0bb0\u0ba3\u0bcd\u0b9f\u0bbe\u0bae\u0bcd \u0b95\u0bbe\u0bb2\u0bbe\u0ba3\u0bcd\u0b9f\u0bc1", "\u0bae\u0bc2\u0ba9\u0bcd\u0bb1\u0bbe\u0bae\u0bcd \u0b95\u0bbe\u0bb2\u0bbe\u0ba3\u0bcd\u0b9f\u0bc1", "\u0ba8\u0bbe\u0ba9\u0bcd\u0b95\u0bbe\u0bae\u0bcd \u0b95\u0bbe\u0bb2\u0bbe\u0ba3\u0bcd\u0b9f\u0bc1"], AMPMS:["\u0bae\u0bc1\u0bb1\u0bcd\u0baa\u0b95\u0bb2\u0bcd", "\u0baa\u0bbf\u0bb1\u0bcd\u0baa\u0b95\u0bb2\u0bcd"], DATEFORMATS:["EEEE, d MMMM, y", "d MMMM, y", "d MMM, y", "d-M-yy"], TIMEFORMATS:["h:mm:ss a zzzz", 
+"h:mm:ss a z", "h:mm:ss a", "h:mm a"], FIRSTDAYOFWEEK:6, WEEKENDRANGE:[6, 6], FIRSTWEEKCUTOFFDAY:2};
+goog.i18n.DateTimeSymbols_te = {ERAS:["\u0c08\u0c38\u0c3e\u0c2a\u0c42\u0c30\u0c4d\u0c35.", "\u0c38\u0c28\u0c4d."], ERANAMES:["\u0c08\u0c38\u0c3e\u0c2a\u0c42\u0c30\u0c4d\u0c35.", "\u0c38\u0c28\u0c4d."], NARROWMONTHS:["\u0c1c", "\u0c2b\u0c3f", "\u0c2e\u0c3e", "\u0c0f", "\u0c2e\u0c46", "\u0c1c\u0c41", "\u0c1c\u0c41", "\u0c06", "\u0c38\u0c46", "\u0c05", "\u0c28", "\u0c21\u0c3f"], STANDALONENARROWMONTHS:["\u0c1c", "\u0c2b\u0c3f", "\u0c2e", "\u0c0e", "\u0c2e\u0c46", "\u0c1c\u0c41", "\u0c1c\u0c41", "\u0c06", 
+"\u0c38\u0c46", "\u0c05", "\u0c28", "\u0c21\u0c3f"], MONTHS:["\u0c1c\u0c28\u0c35\u0c30\u0c3f", "\u0c2b\u0c3f\u0c2c\u0c4d\u0c30\u0c35\u0c30\u0c3f", "\u0c2e\u0c3e\u0c30\u0c4d\u0c1a\u0c3f", "\u0c0e\u0c2a\u0c4d\u0c30\u0c3f\u0c32\u0c4d", "\u0c2e\u0c47", "\u0c1c\u0c42\u0c28\u0c4d", "\u0c1c\u0c42\u0c32\u0c48", "\u0c06\u0c17\u0c38\u0c4d\u0c1f\u0c41", "\u0c38\u0c46\u0c2a\u0c4d\u0c1f\u0c46\u0c02\u0c2c\u0c30\u0c4d", "\u0c05\u0c15\u0c4d\u0c1f\u0c4b\u0c2c\u0c30\u0c4d", "\u0c28\u0c35\u0c02\u0c2c\u0c30\u0c4d", 
+"\u0c21\u0c3f\u0c38\u0c46\u0c02\u0c2c\u0c30\u0c4d"], STANDALONEMONTHS:["\u0c1c\u0c28\u0c35\u0c30\u0c3f", "\u0c2b\u0c3f\u0c2c\u0c4d\u0c30\u0c35\u0c30\u0c3f", "\u0c2e\u0c3e\u0c30\u0c4d\u0c1a\u0c3f", "\u0c0e\u0c2a\u0c4d\u0c30\u0c3f\u0c32\u0c4d", "\u0c2e\u0c47", "\u0c1c\u0c42\u0c28\u0c4d", "\u0c1c\u0c42\u0c32\u0c48", "\u0c06\u0c17\u0c38\u0c4d\u0c1f\u0c41", "\u0c38\u0c46\u0c2a\u0c4d\u0c1f\u0c46\u0c02\u0c2c\u0c30\u0c4d", "\u0c05\u0c15\u0c4d\u0c1f\u0c4b\u0c2c\u0c30\u0c4d", "\u0c28\u0c35\u0c02\u0c2c\u0c30\u0c4d", 
+"\u0c21\u0c3f\u0c38\u0c46\u0c02\u0c2c\u0c30\u0c4d"], SHORTMONTHS:["\u0c1c\u0c28", "\u0c2b\u0c3f\u0c2c\u0c4d\u0c30", "\u0c2e\u0c3e\u0c30\u0c4d\u0c1a\u0c3f", "\u0c0f\u0c2a\u0c4d\u0c30\u0c3f", "\u0c2e\u0c47", "\u0c1c\u0c42\u0c28\u0c4d", "\u0c1c\u0c42\u0c32\u0c48", "\u0c06\u0c17\u0c38\u0c4d\u0c1f\u0c41", "\u0c38\u0c46\u0c2a\u0c4d\u0c1f\u0c46\u0c02\u0c2c\u0c30\u0c4d", "\u0c05\u0c15\u0c4d\u0c1f\u0c4b\u0c2c\u0c30\u0c4d", "\u0c28\u0c35\u0c02\u0c2c\u0c30\u0c4d", "\u0c21\u0c3f\u0c38\u0c46\u0c02\u0c2c\u0c30\u0c4d"], 
+STANDALONESHORTMONTHS:["\u0c1c\u0c28", "\u0c2b\u0c3f\u0c2c\u0c4d\u0c30", "\u0c2e\u0c3e\u0c30\u0c4d\u0c1a\u0c3f", "\u0c0f\u0c2a\u0c4d\u0c30\u0c3f", "\u0c2e\u0c47", "\u0c1c\u0c42\u0c28\u0c4d", "\u0c1c\u0c42\u0c32\u0c48", "\u0c06\u0c17\u0c38\u0c4d\u0c1f\u0c41", "\u0c38\u0c46\u0c2a\u0c4d\u0c1f\u0c46\u0c02\u0c2c\u0c30\u0c4d", "\u0c05\u0c15\u0c4d\u0c1f\u0c4b\u0c2c\u0c30\u0c4d", "\u0c28\u0c35\u0c02\u0c2c\u0c30\u0c4d", "\u0c21\u0c3f\u0c38\u0c46\u0c02\u0c2c\u0c30\u0c4d"], WEEKDAYS:["\u0c06\u0c26\u0c3f\u0c35\u0c3e\u0c30\u0c02", 
+"\u0c38\u0c4b\u0c2e\u0c35\u0c3e\u0c30\u0c02", "\u0c2e\u0c02\u0c17\u0c33\u0c35\u0c3e\u0c30\u0c02", "\u0c2c\u0c41\u0c27\u0c35\u0c3e\u0c30\u0c02", "\u0c17\u0c41\u0c30\u0c41\u0c35\u0c3e\u0c30\u0c02", "\u0c36\u0c41\u0c15\u0c4d\u0c30\u0c35\u0c3e\u0c30\u0c02", "\u0c36\u0c28\u0c3f\u0c35\u0c3e\u0c30\u0c02"], STANDALONEWEEKDAYS:["\u0c06\u0c26\u0c3f\u0c35\u0c3e\u0c30\u0c02", "\u0c38\u0c4b\u0c2e\u0c35\u0c3e\u0c30\u0c02", "\u0c2e\u0c02\u0c17\u0c33\u0c35\u0c3e\u0c30\u0c02", "\u0c2c\u0c41\u0c27\u0c35\u0c3e\u0c30\u0c02", 
+"\u0c17\u0c41\u0c30\u0c41\u0c35\u0c3e\u0c30\u0c02", "\u0c36\u0c41\u0c15\u0c4d\u0c30\u0c35\u0c3e\u0c30\u0c02", "\u0c36\u0c28\u0c3f\u0c35\u0c3e\u0c30\u0c02"], SHORTWEEKDAYS:["\u0c06\u0c26\u0c3f", "\u0c38\u0c4b\u0c2e", "\u0c2e\u0c02\u0c17\u0c33", "\u0c2c\u0c41\u0c27", "\u0c17\u0c41\u0c30\u0c41", "\u0c36\u0c41\u0c15\u0c4d\u0c30", "\u0c36\u0c28\u0c3f"], STANDALONESHORTWEEKDAYS:["\u0c06\u0c26\u0c3f", "\u0c38\u0c4b\u0c2e", "\u0c2e\u0c02\u0c17\u0c33", "\u0c2c\u0c41\u0c27", "\u0c17\u0c41\u0c30\u0c41", "\u0c36\u0c41\u0c15\u0c4d\u0c30", 
+"\u0c36\u0c28\u0c3f"], NARROWWEEKDAYS:["\u0c06", "\u0c38\u0c4b", "\u0c2e", "\u0c2d\u0c41", "\u0c17\u0c41", "\u0c36\u0c41", "\u0c36"], STANDALONENARROWWEEKDAYS:["\u0c06", "\u0c38\u0c4b", "\u0c2e", "\u0c2d\u0c41", "\u0c17\u0c41", "\u0c36\u0c41", "\u0c36"], SHORTQUARTERS:["\u0c12\u0c15\u0c1f\u0c3f 1", "\u0c30\u0c46\u0c02\u0c21\u0c41 2", "\u0c2e\u0c42\u0c21\u0c41 3", "\u0c28\u0c3e\u0c32\u0c41\u0c17\u0c41 4"], QUARTERS:["\u0c12\u0c15\u0c1f\u0c3f 1", "\u0c30\u0c46\u0c02\u0c21\u0c41 2", "\u0c2e\u0c42\u0c21\u0c41 3", 
+"\u0c28\u0c3e\u0c32\u0c41\u0c17\u0c41 4"], AMPMS:["\u0c2a\u0c42\u0c30\u0c4d\u0c35\u0c3e\u0c39\u0c4d\u0c28\u0c02", "\u0c05\u0c2a\u0c30\u0c3e\u0c39\u0c4d\u0c28\u0c02"], DATEFORMATS:["EEEE d MMMM y", "d MMMM y", "d MMM y", "dd-MM-yy"], TIMEFORMATS:["h:mm:ss a zzzz", "h:mm:ss a z", "h:mm:ss a", "h:mm a"], FIRSTDAYOFWEEK:6, WEEKENDRANGE:[6, 6], FIRSTWEEKCUTOFFDAY:2};
+goog.i18n.DateTimeSymbols_th = {ERAS:["\u0e1b\u0e35\u0e01\u0e48\u0e2d\u0e19 \u0e04.\u0e28.", "\u0e04.\u0e28."], ERANAMES:["\u0e1b\u0e35\u0e01\u0e48\u0e2d\u0e19\u0e04\u0e23\u0e34\u0e2a\u0e15\u0e4c\u0e28\u0e31\u0e01\u0e23\u0e32\u0e0a", "\u0e04\u0e23\u0e34\u0e2a\u0e15\u0e4c\u0e28\u0e31\u0e01\u0e23\u0e32\u0e0a"], NARROWMONTHS:["\u0e21.\u0e04.", "\u0e01.\u0e1e.", "\u0e21\u0e35.\u0e04.", "\u0e40\u0e21.\u0e22.", "\u0e1e.\u0e04.", "\u0e21\u0e34.\u0e22", "\u0e01.\u0e04.", "\u0e2a.\u0e04.", "\u0e01.\u0e22.", 
+"\u0e15.\u0e04.", "\u0e1e.\u0e22.", "\u0e18.\u0e04."], STANDALONENARROWMONTHS:["\u0e21.\u0e04.", "\u0e01.\u0e1e.", "\u0e21\u0e35.\u0e04.", "\u0e40\u0e21.\u0e22.", "\u0e1e.\u0e04.", "\u0e21\u0e34.\u0e22.", "\u0e01.\u0e04.", "\u0e2a.\u0e04.", "\u0e01.\u0e22.", "\u0e15.\u0e04.", "\u0e1e.\u0e22.", "\u0e18.\u0e04."], MONTHS:["\u0e21\u0e01\u0e23\u0e32\u0e04\u0e21", "\u0e01\u0e38\u0e21\u0e20\u0e32\u0e1e\u0e31\u0e19\u0e18\u0e4c", "\u0e21\u0e35\u0e19\u0e32\u0e04\u0e21", "\u0e40\u0e21\u0e29\u0e32\u0e22\u0e19", 
+"\u0e1e\u0e24\u0e29\u0e20\u0e32\u0e04\u0e21", "\u0e21\u0e34\u0e16\u0e38\u0e19\u0e32\u0e22\u0e19", "\u0e01\u0e23\u0e01\u0e0e\u0e32\u0e04\u0e21", "\u0e2a\u0e34\u0e07\u0e2b\u0e32\u0e04\u0e21", "\u0e01\u0e31\u0e19\u0e22\u0e32\u0e22\u0e19", "\u0e15\u0e38\u0e25\u0e32\u0e04\u0e21", "\u0e1e\u0e24\u0e28\u0e08\u0e34\u0e01\u0e32\u0e22\u0e19", "\u0e18\u0e31\u0e19\u0e27\u0e32\u0e04\u0e21"], STANDALONEMONTHS:["\u0e21\u0e01\u0e23\u0e32\u0e04\u0e21", "\u0e01\u0e38\u0e21\u0e20\u0e32\u0e1e\u0e31\u0e19\u0e18\u0e4c", 
+"\u0e21\u0e35\u0e19\u0e32\u0e04\u0e21", "\u0e40\u0e21\u0e29\u0e32\u0e22\u0e19", "\u0e1e\u0e24\u0e29\u0e20\u0e32\u0e04\u0e21", "\u0e21\u0e34\u0e16\u0e38\u0e19\u0e32\u0e22\u0e19", "\u0e01\u0e23\u0e01\u0e0e\u0e32\u0e04\u0e21", "\u0e2a\u0e34\u0e07\u0e2b\u0e32\u0e04\u0e21", "\u0e01\u0e31\u0e19\u0e22\u0e32\u0e22\u0e19", "\u0e15\u0e38\u0e25\u0e32\u0e04\u0e21", "\u0e1e\u0e24\u0e28\u0e08\u0e34\u0e01\u0e32\u0e22\u0e19", "\u0e18\u0e31\u0e19\u0e27\u0e32\u0e04\u0e21"], SHORTMONTHS:["\u0e21.\u0e04.", "\u0e01.\u0e1e.", 
+"\u0e21\u0e35.\u0e04.", "\u0e40\u0e21.\u0e22.", "\u0e1e.\u0e04.", "\u0e21\u0e34.\u0e22.", "\u0e01.\u0e04.", "\u0e2a.\u0e04.", "\u0e01.\u0e22.", "\u0e15.\u0e04.", "\u0e1e.\u0e22.", "\u0e18.\u0e04."], STANDALONESHORTMONTHS:["\u0e21.\u0e04.", "\u0e01.\u0e1e.", "\u0e21\u0e35.\u0e04.", "\u0e40\u0e21.\u0e22.", "\u0e1e.\u0e04.", "\u0e21\u0e34.\u0e22.", "\u0e01.\u0e04.", "\u0e2a.\u0e04.", "\u0e01.\u0e22.", "\u0e15.\u0e04.", "\u0e1e.\u0e22.", "\u0e18.\u0e04."], WEEKDAYS:["\u0e27\u0e31\u0e19\u0e2d\u0e32\u0e17\u0e34\u0e15\u0e22\u0e4c", 
+"\u0e27\u0e31\u0e19\u0e08\u0e31\u0e19\u0e17\u0e23\u0e4c", "\u0e27\u0e31\u0e19\u0e2d\u0e31\u0e07\u0e04\u0e32\u0e23", "\u0e27\u0e31\u0e19\u0e1e\u0e38\u0e18", "\u0e27\u0e31\u0e19\u0e1e\u0e24\u0e2b\u0e31\u0e2a\u0e1a\u0e14\u0e35", "\u0e27\u0e31\u0e19\u0e28\u0e38\u0e01\u0e23\u0e4c", "\u0e27\u0e31\u0e19\u0e40\u0e2a\u0e32\u0e23\u0e4c"], STANDALONEWEEKDAYS:["\u0e27\u0e31\u0e19\u0e2d\u0e32\u0e17\u0e34\u0e15\u0e22\u0e4c", "\u0e27\u0e31\u0e19\u0e08\u0e31\u0e19\u0e17\u0e23\u0e4c", "\u0e27\u0e31\u0e19\u0e2d\u0e31\u0e07\u0e04\u0e32\u0e23", 
+"\u0e27\u0e31\u0e19\u0e1e\u0e38\u0e18", "\u0e27\u0e31\u0e19\u0e1e\u0e24\u0e2b\u0e31\u0e2a\u0e1a\u0e14\u0e35", "\u0e27\u0e31\u0e19\u0e28\u0e38\u0e01\u0e23\u0e4c", "\u0e27\u0e31\u0e19\u0e40\u0e2a\u0e32\u0e23\u0e4c"], SHORTWEEKDAYS:["\u0e2d\u0e32.", "\u0e08.", "\u0e2d.", "\u0e1e.", "\u0e1e\u0e24.", "\u0e28.", "\u0e2a."], STANDALONESHORTWEEKDAYS:["\u0e2d\u0e32.", "\u0e08.", "\u0e2d.", "\u0e1e.", "\u0e1e\u0e24.", "\u0e28.", "\u0e2a."], NARROWWEEKDAYS:["\u0e2d", "\u0e08", "\u0e2d", "\u0e1e", "\u0e1e", 
+"\u0e28", "\u0e2a"], STANDALONENARROWWEEKDAYS:["\u0e2d", "\u0e08", "\u0e2d", "\u0e1e", "\u0e1e", "\u0e28", "\u0e2a"], SHORTQUARTERS:["Q1", "Q2", "Q3", "Q4"], QUARTERS:["\u0e44\u0e15\u0e23\u0e21\u0e32\u0e2a 1", "\u0e44\u0e15\u0e23\u0e21\u0e32\u0e2a 2", "\u0e44\u0e15\u0e23\u0e21\u0e32\u0e2a 3", "\u0e44\u0e15\u0e23\u0e21\u0e32\u0e2a 4"], AMPMS:["\u0e01\u0e48\u0e2d\u0e19\u0e40\u0e17\u0e35\u0e48\u0e22\u0e07", "\u0e2b\u0e25\u0e31\u0e07\u0e40\u0e17\u0e35\u0e48\u0e22\u0e07"], DATEFORMATS:["EEEE\u0e17\u0e35\u0e48 d MMMM G y", 
+"d MMMM y", "d MMM y", "d/M/yyyy"], TIMEFORMATS:["H \u0e19\u0e32\u0e2c\u0e34\u0e01\u0e32 m \u0e19\u0e32\u0e17\u0e35 ss \u0e27\u0e34\u0e19\u0e32\u0e17\u0e35 zzzz", "H \u0e19\u0e32\u0e2c\u0e34\u0e01\u0e32 m \u0e19\u0e32\u0e17\u0e35 ss \u0e27\u0e34\u0e19\u0e32\u0e17\u0e35 z", "H:mm:ss", "H:mm"], FIRSTDAYOFWEEK:6, WEEKENDRANGE:[5, 6], FIRSTWEEKCUTOFFDAY:2};
+goog.i18n.DateTimeSymbols_tl = {ERAS:["BC", "AD"], ERANAMES:["BC", "AD"], NARROWMONTHS:["E", "P", "M", "A", "M", "H", "H", "A", "S", "O", "N", "D"], STANDALONENARROWMONTHS:["E", "P", "M", "A", "M", "H", "H", "A", "S", "O", "N", "D"], MONTHS:["Enero", "Pebrero", "Marso", "Abril", "Mayo", "Hunyo", "Hulyo", "Agosto", "Setyembre", "Oktubre", "Nobyembre", "Disyembre"], STANDALONEMONTHS:["Enero", "Pebrero", "Marso", "Abril", "Mayo", "Hunyo", "Hulyo", "Agosto", "Setyembre", "Oktubre", "Nobyembre", "Disyembre"], 
+SHORTMONTHS:["Ene", "Peb", "Mar", "Abr", "May", "Hun", "Hul", "Ago", "Set", "Okt", "Nob", "Dis"], STANDALONESHORTMONTHS:["Ene", "Peb", "Mar", "Abr", "May", "Hun", "Hul", "Ago", "Set", "Okt", "Nob", "Dis"], WEEKDAYS:["Linggo", "Lunes", "Martes", "Miyerkules", "Huwebes", "Biyernes", "Sabado"], STANDALONEWEEKDAYS:["Linggo", "Lunes", "Martes", "Miyerkules", "Huwebes", "Biyernes", "Sabado"], SHORTWEEKDAYS:["Lin", "Lun", "Mar", "Mye", "Huw", "Bye", "Sab"], STANDALONESHORTWEEKDAYS:["Lin", "Lun", "Mar", 
+"Miy", "Huw", "Biy", "Sab"], NARROWWEEKDAYS:["L", "L", "M", "M", "H", "B", "S"], STANDALONENARROWWEEKDAYS:["L", "L", "M", "M", "H", "B", "S"], SHORTQUARTERS:["Q1", "Q2", "Q3", "Q4"], QUARTERS:["ika-1 sangkapat", "ika-2 sangkapat", "ika-3 quarter", "ika-4 na quarter"], AMPMS:["AM", "PM"], DATEFORMATS:["EEEE, MMMM dd y", "MMMM d, y", "MMM d, y", "M/d/yy"], TIMEFORMATS:["HH:mm:ss zzzz", "HH:mm:ss z", "HH:mm:ss", "HH:mm"], FIRSTDAYOFWEEK:6, WEEKENDRANGE:[5, 6], FIRSTWEEKCUTOFFDAY:2};
+goog.i18n.DateTimeSymbols_tr = {ERAS:["M\u00d6", "MS"], ERANAMES:["Milattan \u00d6nce", "Milattan Sonra"], NARROWMONTHS:["O", "\u015e", "M", "N", "M", "H", "T", "A", "E", "E", "K", "A"], STANDALONENARROWMONTHS:["O", "\u015e", "M", "N", "M", "H", "T", "A", "E", "E", "K", "A"], MONTHS:["Ocak", "\u015eubat", "Mart", "Nisan", "May\u0131s", "Haziran", "Temmuz", "A\u011fustos", "Eyl\u00fcl", "Ekim", "Kas\u0131m", "Aral\u0131k"], STANDALONEMONTHS:["Ocak", "\u015eubat", "Mart", "Nisan", "May\u0131s", "Haziran", 
+"Temmuz", "A\u011fustos", "Eyl\u00fcl", "Ekim", "Kas\u0131m", "Aral\u0131k"], SHORTMONTHS:["Oca", "\u015eub", "Mar", "Nis", "May", "Haz", "Tem", "A\u011fu", "Eyl", "Eki", "Kas", "Ara"], STANDALONESHORTMONTHS:["Oca", "\u015eub", "Mar", "Nis", "May", "Haz", "Tem", "A\u011fu", "Eyl", "Eki", "Kas", "Ara"], WEEKDAYS:["Pazar", "Pazartesi", "Sal\u0131", "\u00c7ar\u015famba", "Per\u015fembe", "Cuma", "Cumartesi"], STANDALONEWEEKDAYS:["Pazar", "Pazartesi", "Sal\u0131", "\u00c7ar\u015famba", "Per\u015fembe", 
+"Cuma", "Cumartesi"], SHORTWEEKDAYS:["Paz", "Pzt", "Sal", "\u00c7ar", "Per", "Cum", "Cmt"], STANDALONESHORTWEEKDAYS:["Paz", "Pzt", "Sal", "\u00c7ar", "Per", "Cum", "Cmt"], NARROWWEEKDAYS:["P", "P", "S", "\u00c7", "P", "C", "C"], STANDALONENARROWWEEKDAYS:["P", "P", "S", "\u00c7", "P", "C", "C"], SHORTQUARTERS:["\u00c71", "\u00c72", "\u00c73", "\u00c74"], QUARTERS:["1. \u00e7eyrek", "2. \u00e7eyrek", "3. \u00e7eyrek", "4. \u00e7eyrek"], AMPMS:["AM", "PM"], DATEFORMATS:["d MMMM y EEEE", "d MMMM y", 
+"d MMM y", "dd MM yyyy"], TIMEFORMATS:["HH:mm:ss zzzz", "HH:mm:ss z", "HH:mm:ss", "HH:mm"], FIRSTDAYOFWEEK:0, WEEKENDRANGE:[5, 6], FIRSTWEEKCUTOFFDAY:3};
+goog.i18n.DateTimeSymbols_uk = {ERAS:["\u0434\u043e \u043d.\u0435.", "\u043d.\u0435."], ERANAMES:["\u0434\u043e \u043d\u0430\u0448\u043e\u0457 \u0435\u0440\u0438", "\u043d\u0430\u0448\u043e\u0457 \u0435\u0440\u0438"], NARROWMONTHS:["\u0421", "\u041b", "\u0411", "\u041a", "\u0422", "\u0427", "\u041b", "\u0421", "\u0412", "\u0416", "\u041b", "\u0413"], STANDALONENARROWMONTHS:["\u0421", "\u041b", "\u0411", "\u041a", "\u0422", "\u0427", "\u041b", "\u0421", "\u0412", "\u0416", "\u041b", "\u0413"], MONTHS:["\u0441\u0456\u0447\u043d\u044f", 
+"\u043b\u044e\u0442\u043e\u0433\u043e", "\u0431\u0435\u0440\u0435\u0437\u043d\u044f", "\u043a\u0432\u0456\u0442\u043d\u044f", "\u0442\u0440\u0430\u0432\u043d\u044f", "\u0447\u0435\u0440\u0432\u043d\u044f", "\u043b\u0438\u043f\u043d\u044f", "\u0441\u0435\u0440\u043f\u043d\u044f", "\u0432\u0435\u0440\u0435\u0441\u043d\u044f", "\u0436\u043e\u0432\u0442\u043d\u044f", "\u043b\u0438\u0441\u0442\u043e\u043f\u0430\u0434\u0430", "\u0433\u0440\u0443\u0434\u043d\u044f"], STANDALONEMONTHS:["\u0421\u0456\u0447\u0435\u043d\u044c", 
+"\u041b\u044e\u0442\u0438\u0439", "\u0411\u0435\u0440\u0435\u0437\u0435\u043d\u044c", "\u041a\u0432\u0456\u0442\u0435\u043d\u044c", "\u0422\u0440\u0430\u0432\u0435\u043d\u044c", "\u0427\u0435\u0440\u0432\u0435\u043d\u044c", "\u041b\u0438\u043f\u0435\u043d\u044c", "\u0421\u0435\u0440\u043f\u0435\u043d\u044c", "\u0412\u0435\u0440\u0435\u0441\u0435\u043d\u044c", "\u0416\u043e\u0432\u0442\u0435\u043d\u044c", "\u041b\u0438\u0441\u0442\u043e\u043f\u0430\u0434", "\u0413\u0440\u0443\u0434\u0435\u043d\u044c"], 
+SHORTMONTHS:["\u0441\u0456\u0447.", "\u043b\u044e\u0442.", "\u0431\u0435\u0440.", "\u043a\u0432\u0456\u0442.", "\u0442\u0440\u0430\u0432.", "\u0447\u0435\u0440\u0432.", "\u043b\u0438\u043f.", "\u0441\u0435\u0440\u043f.", "\u0432\u0435\u0440.", "\u0436\u043e\u0432\u0442.", "\u043b\u0438\u0441\u0442.", "\u0433\u0440\u0443\u0434."], STANDALONESHORTMONTHS:["\u0421\u0456\u0447", "\u041b\u044e\u0442", "\u0411\u0435\u0440", "\u041a\u0432\u0456", "\u0422\u0440\u0430", "\u0427\u0435\u0440", "\u041b\u0438\u043f", 
+"\u0421\u0435\u0440", "\u0412\u0435\u0440", "\u0416\u043e\u0432", "\u041b\u0438\u0441", "\u0413\u0440\u0443"], WEEKDAYS:["\u041d\u0435\u0434\u0456\u043b\u044f", "\u041f\u043e\u043d\u0435\u0434\u0456\u043b\u043e\u043a", "\u0412\u0456\u0432\u0442\u043e\u0440\u043e\u043a", "\u0421\u0435\u0440\u0435\u0434\u0430", "\u0427\u0435\u0442\u0432\u0435\u0440", "\u041f\u02bc\u044f\u0442\u043d\u0438\u0446\u044f", "\u0421\u0443\u0431\u043e\u0442\u0430"], STANDALONEWEEKDAYS:["\u041d\u0435\u0434\u0456\u043b\u044f", 
+"\u041f\u043e\u043d\u0435\u0434\u0456\u043b\u043e\u043a", "\u0412\u0456\u0432\u0442\u043e\u0440\u043e\u043a", "\u0421\u0435\u0440\u0435\u0434\u0430", "\u0427\u0435\u0442\u0432\u0435\u0440", "\u041f\u02bc\u044f\u0442\u043d\u0438\u0446\u044f", "\u0421\u0443\u0431\u043e\u0442\u0430"], SHORTWEEKDAYS:["\u041d\u0434", "\u041f\u043d", "\u0412\u0442", "\u0421\u0440", "\u0427\u0442", "\u041f\u0442", "\u0421\u0431"], STANDALONESHORTWEEKDAYS:["\u041d\u0434", "\u041f\u043d", "\u0412\u0442", "\u0421\u0440", "\u0427\u0442", 
+"\u041f\u0442", "\u0421\u0431"], NARROWWEEKDAYS:["\u041d", "\u041f", "\u0412", "\u0421", "\u0427", "\u041f", "\u0421"], STANDALONENARROWWEEKDAYS:["\u041d", "\u041f", "\u0412", "\u0421", "\u0427", "\u041f", "\u0421"], SHORTQUARTERS:["I \u043a\u0432.", "II \u043a\u0432.", "III \u043a\u0432.", "IV \u043a\u0432."], QUARTERS:["I \u043a\u0432\u0430\u0440\u0442\u0430\u043b", "II \u043a\u0432\u0430\u0440\u0442\u0430\u043b", "III \u043a\u0432\u0430\u0440\u0442\u0430\u043b", "IV \u043a\u0432\u0430\u0440\u0442\u0430\u043b"], 
+AMPMS:["\u0434\u043f", "\u043f\u043f"], DATEFORMATS:["EEEE, d MMMM y '\u0440'.", "d MMMM y '\u0440'.", "d MMM y", "dd.MM.yy"], TIMEFORMATS:["HH:mm:ss zzzz", "HH:mm:ss z", "HH:mm:ss", "HH:mm"], FIRSTDAYOFWEEK:0, WEEKENDRANGE:[5, 6], FIRSTWEEKCUTOFFDAY:3};
+goog.i18n.DateTimeSymbols_ur = {ERAS:["\u0642 \u0645", "\u0639\u064a\u0633\u0648\u06cc \u0633\u0646"], ERANAMES:["\u0642\u0628\u0644 \u0645\u0633\u064a\u062d", "\u0639\u064a\u0633\u0648\u06cc \u0633\u0646"], NARROWMONTHS:["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12"], STANDALONENARROWMONTHS:["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12"], MONTHS:["\u062c\u0646\u0648\u0631\u06cc", "\u0641\u0631\u0648\u0631\u06cc", "\u0645\u0627\u0631 \u0686", "\u0627\u067e\u0631\u064a\u0644", 
+"\u0645\u0626", "\u062c\u0648\u0646", "\u062c\u0648\u0644\u0627\u0626", "\u0627\u06af\u0633\u062a", "\u0633\u062a\u0645\u0628\u0631", "\u0627\u06a9\u062a\u0648\u0628\u0631", "\u0646\u0648\u0645\u0628\u0631", "\u062f\u0633\u0645\u0628\u0631"], STANDALONEMONTHS:["\u062c\u0646\u0648\u0631\u06cc", "\u0641\u0631\u0648\u0631\u06cc", "\u0645\u0627\u0631 \u0686", "\u0627\u067e\u0631\u064a\u0644", "\u0645\u0626", "\u062c\u0648\u0646", "\u062c\u0648\u0644\u0627\u0626", "\u0627\u06af\u0633\u062a", "\u0633\u062a\u0645\u0628\u0631", 
+"\u0627\u06a9\u062a\u0648\u0628\u0631", "\u0646\u0648\u0645\u0628\u0631", "\u062f\u0633\u0645\u0628\u0631"], SHORTMONTHS:["\u062c\u0646\u0648\u0631\u06cc", "\u0641\u0631\u0648\u0631\u06cc", "\u0645\u0627\u0631 \u0686", "\u0627\u067e\u0631\u064a\u0644", "\u0645\u0626", "\u062c\u0648\u0646", "\u062c\u0648\u0644\u0627\u0626", "\u0627\u06af\u0633\u062a", "\u0633\u062a\u0645\u0628\u0631", "\u0627\u06a9\u062a\u0648\u0628\u0631", "\u0646\u0648\u0645\u0628\u0631", "\u062f\u0633\u0645\u0628\u0631"], STANDALONESHORTMONTHS:["\u062c\u0646\u0648\u0631\u06cc", 
+"\u0641\u0631\u0648\u0631\u06cc", "\u0645\u0627\u0631 \u0686", "\u0627\u067e\u0631\u064a\u0644", "\u0645\u0626", "\u062c\u0648\u0646", "\u062c\u0648\u0644\u0627\u0626", "\u0627\u06af\u0633\u062a", "\u0633\u062a\u0645\u0628\u0631", "\u0627\u06a9\u062a\u0648\u0628\u0631", "\u0646\u0648\u0645\u0628\u0631", "\u062f\u0633\u0645\u0628\u0631"], WEEKDAYS:["\u0627\u062a\u0648\u0627\u0631", "\u067e\u064a\u0631", "\u0645\u0646\u06af\u0644", "\u0628\u062f\u0647", "\u062c\u0645\u0639\u0631\u0627\u062a", "\u062c\u0645\u0639\u06c1", 
+"\u06c1\u0641\u062a\u06c1"], STANDALONEWEEKDAYS:["\u0627\u062a\u0648\u0627\u0631", "\u067e\u064a\u0631", "\u0645\u0646\u06af\u0644", "\u0628\u062f\u0647", "\u062c\u0645\u0639\u0631\u0627\u062a", "\u062c\u0645\u0639\u06c1", "\u06c1\u0641\u062a\u06c1"], SHORTWEEKDAYS:["\u0627\u062a\u0648\u0627\u0631", "\u067e\u064a\u0631", "\u0645\u0646\u06af\u0644", "\u0628\u062f\u0647", "\u062c\u0645\u0639\u0631\u0627\u062a", "\u062c\u0645\u0639\u06c1", "\u06c1\u0641\u062a\u06c1"], STANDALONESHORTWEEKDAYS:["\u0627\u062a\u0648\u0627\u0631", 
+"\u067e\u064a\u0631", "\u0645\u0646\u06af\u0644", "\u0628\u062f\u0647", "\u062c\u0645\u0639\u0631\u0627\u062a", "\u062c\u0645\u0639\u06c1", "\u06c1\u0641\u062a\u06c1"], NARROWWEEKDAYS:["1", "2", "3", "4", "5", "6", "7"], STANDALONENARROWWEEKDAYS:["1", "2", "3", "4", "5", "6", "7"], SHORTQUARTERS:["\u067e\u06c1\u0644\u06cc \u0633\u06c1 \u0645\u0627\u06c1\u06cc", "\u062f\u0648\u0633\u0631\u06cc \u0633\u06c1 \u0645\u0627\u06c1\u06cc", "\u062a\u064a\u0633\u0631\u06cc \u0633\u06c1 \u0645\u0627\u06c1\u06cc", 
+"\u0686\u0648\u062a\u0647\u06cc \u0633\u06c1 \u0645\u0627\u06c1\u06cc"], QUARTERS:["\u067e\u06c1\u0644\u06cc \u0633\u06c1 \u0645\u0627\u06c1\u06cc", "\u062f\u0648\u0633\u0631\u06cc \u0633\u06c1 \u0645\u0627\u06c1\u06cc", "\u062a\u064a\u0633\u0631\u06cc \u0633\u06c1 \u0645\u0627\u06c1\u06cc", "\u0686\u0648\u062a\u0647\u06cc \u0633\u06c1 \u0645\u0627\u06c1\u06cc"], AMPMS:["\u062f\u0646", "\u0631\u0627\u062a"], DATEFORMATS:["EEEE\u060d d\u060d MMMM y", "d\u060d MMMM y", "d\u060d MMM y", "d/M/yy"], TIMEFORMATS:["h:mm:ss a zzzz", 
+"h:mm:ss a z", "h:mm:ss a", "h:mm a"], FIRSTDAYOFWEEK:6, WEEKENDRANGE:[5, 6], FIRSTWEEKCUTOFFDAY:2};
+goog.i18n.DateTimeSymbols_vi = {ERAS:["tr. CN", "sau CN"], ERANAMES:["tr. CN", "sau CN"], NARROWMONTHS:["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12"], STANDALONENARROWMONTHS:["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12"], MONTHS:["th\u00e1ng m\u1ed9t", "th\u00e1ng hai", "th\u00e1ng ba", "th\u00e1ng t\u01b0", "th\u00e1ng n\u0103m", "th\u00e1ng s\u00e1u", "th\u00e1ng b\u1ea3y", "th\u00e1ng t\u00e1m", "th\u00e1ng ch\u00edn", "th\u00e1ng m\u01b0\u1eddi", "th\u00e1ng m\u01b0\u1eddi m\u1ed9t", 
+"th\u00e1ng m\u01b0\u1eddi hai"], STANDALONEMONTHS:["th\u00e1ng m\u1ed9t", "th\u00e1ng hai", "th\u00e1ng ba", "th\u00e1ng t\u01b0", "th\u00e1ng n\u0103m", "th\u00e1ng s\u00e1u", "th\u00e1ng b\u1ea3y", "th\u00e1ng t\u00e1m", "th\u00e1ng ch\u00edn", "th\u00e1ng m\u01b0\u1eddi", "th\u00e1ng m\u01b0\u1eddi m\u1ed9t", "th\u00e1ng m\u01b0\u1eddi hai"], SHORTMONTHS:["thg 1", "thg 2", "thg 3", "thg 4", "thg 5", "thg 6", "thg 7", "thg 8", "thg 9", "thg 10", "thg 11", "thg 12"], STANDALONESHORTMONTHS:["thg 1", 
+"thg 2", "thg 3", "thg 4", "thg 5", "thg 6", "thg 7", "thg 8", "thg 9", "thg 10", "thg 11", "thg 12"], WEEKDAYS:["Ch\u1ee7 nh\u1eadt", "Th\u1ee9 hai", "Th\u1ee9 ba", "Th\u1ee9 t\u01b0", "Th\u1ee9 n\u0103m", "Th\u1ee9 s\u00e1u", "Th\u1ee9 b\u1ea3y"], STANDALONEWEEKDAYS:["Ch\u1ee7 nh\u1eadt", "Th\u1ee9 hai", "Th\u1ee9 ba", "Th\u1ee9 t\u01b0", "Th\u1ee9 n\u0103m", "Th\u1ee9 s\u00e1u", "Th\u1ee9 b\u1ea3y"], SHORTWEEKDAYS:["CN", "Th 2", "Th 3", "Th 4", "Th 5", "Th 6", "Th 7"], STANDALONESHORTWEEKDAYS:["CN", 
+"Th 2", "Th 3", "Th 4", "Th 5", "Th 6", "Th 7"], NARROWWEEKDAYS:["CN", "T2", "T3", "T4", "T5", "T6", "T7"], STANDALONENARROWWEEKDAYS:["CN", "T2", "T3", "T4", "T5", "T6", "T7"], SHORTQUARTERS:["Q1", "Q2", "Q3", "Q4"], QUARTERS:["Qu\u00fd 1", "Qu\u00fd 2", "Qu\u00fd 3", "Qu\u00fd 4"], AMPMS:["SA", "CH"], DATEFORMATS:["EEEE, 'ng\u00e0y' dd MMMM 'n\u0103m' y", "'Ng\u00e0y' dd 'th\u00e1ng' M 'n\u0103m' y", "dd-MM-yyyy", "dd/MM/yyyy"], TIMEFORMATS:["HH:mm:ss zzzz", "HH:mm:ss z", "HH:mm:ss", "HH:mm"], FIRSTDAYOFWEEK:0, 
+WEEKENDRANGE:[5, 6], FIRSTWEEKCUTOFFDAY:3};
+goog.i18n.DateTimeSymbols_zh = {ERAS:["\u516c\u5143\u524d", "\u516c\u5143"], ERANAMES:["\u516c\u5143\u524d", "\u516c\u5143"], NARROWMONTHS:["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12"], STANDALONENARROWMONTHS:["1\u6708", "2\u6708", "3\u6708", "4\u6708", "5\u6708", "6\u6708", "7\u6708", "8\u6708", "9\u6708", "10\u6708", "11\u6708", "12\u6708"], MONTHS:["1\u6708", "2\u6708", "3\u6708", "4\u6708", "5\u6708", "6\u6708", "7\u6708", "8\u6708", "9\u6708", "10\u6708", "11\u6708", "12\u6708"], 
+STANDALONEMONTHS:["\u4e00\u6708", "\u4e8c\u6708", "\u4e09\u6708", "\u56db\u6708", "\u4e94\u6708", "\u516d\u6708", "\u4e03\u6708", "\u516b\u6708", "\u4e5d\u6708", "\u5341\u6708", "\u5341\u4e00\u6708", "\u5341\u4e8c\u6708"], SHORTMONTHS:["1\u6708", "2\u6708", "3\u6708", "4\u6708", "5\u6708", "6\u6708", "7\u6708", "8\u6708", "9\u6708", "10\u6708", "11\u6708", "12\u6708"], STANDALONESHORTMONTHS:["\u4e00\u6708", "\u4e8c\u6708", "\u4e09\u6708", "\u56db\u6708", "\u4e94\u6708", "\u516d\u6708", "\u4e03\u6708", 
+"\u516b\u6708", "\u4e5d\u6708", "\u5341\u6708", "\u5341\u4e00\u6708", "\u5341\u4e8c\u6708"], WEEKDAYS:["\u661f\u671f\u65e5", "\u661f\u671f\u4e00", "\u661f\u671f\u4e8c", "\u661f\u671f\u4e09", "\u661f\u671f\u56db", "\u661f\u671f\u4e94", "\u661f\u671f\u516d"], STANDALONEWEEKDAYS:["\u661f\u671f\u65e5", "\u661f\u671f\u4e00", "\u661f\u671f\u4e8c", "\u661f\u671f\u4e09", "\u661f\u671f\u56db", "\u661f\u671f\u4e94", "\u661f\u671f\u516d"], SHORTWEEKDAYS:["\u5468\u65e5", "\u5468\u4e00", "\u5468\u4e8c", "\u5468\u4e09", 
+"\u5468\u56db", "\u5468\u4e94", "\u5468\u516d"], STANDALONESHORTWEEKDAYS:["\u5468\u65e5", "\u5468\u4e00", "\u5468\u4e8c", "\u5468\u4e09", "\u5468\u56db", "\u5468\u4e94", "\u5468\u516d"], NARROWWEEKDAYS:["\u65e5", "\u4e00", "\u4e8c", "\u4e09", "\u56db", "\u4e94", "\u516d"], STANDALONENARROWWEEKDAYS:["\u65e5", "\u4e00", "\u4e8c", "\u4e09", "\u56db", "\u4e94", "\u516d"], SHORTQUARTERS:["1\u5b63", "2\u5b63", "3\u5b63", "4\u5b63"], QUARTERS:["\u7b2c1\u5b63\u5ea6", "\u7b2c2\u5b63\u5ea6", "\u7b2c3\u5b63\u5ea6", 
+"\u7b2c4\u5b63\u5ea6"], AMPMS:["\u4e0a\u5348", "\u4e0b\u5348"], DATEFORMATS:["y\u5e74M\u6708d\u65e5EEEE", "y\u5e74M\u6708d\u65e5", "yyyy-M-d", "yy-M-d"], TIMEFORMATS:["zzzzah\u65f6mm\u5206ss\u79d2", "zah\u65f6mm\u5206ss\u79d2", "ah:mm:ss", "ah:mm"], FIRSTDAYOFWEEK:6, WEEKENDRANGE:[5, 6], FIRSTWEEKCUTOFFDAY:2};
+goog.i18n.DateTimeSymbols_zh_CN = goog.i18n.DateTimeSymbols_zh;
+goog.i18n.DateTimeSymbols_zh_HK = {ERAS:["\u897f\u5143\u524d", "\u897f\u5143"], ERANAMES:["\u897f\u5143\u524d", "\u897f\u5143"], NARROWMONTHS:["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12"], STANDALONENARROWMONTHS:["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12"], MONTHS:["1\u6708", "2\u6708", "3\u6708", "4\u6708", "5\u6708", "6\u6708", "7\u6708", "8\u6708", "9\u6708", "10\u6708", "11\u6708", "12\u6708"], STANDALONEMONTHS:["\u4e00\u6708", "\u4e8c\u6708", "\u4e09\u6708", 
+"\u56db\u6708", "\u4e94\u6708", "\u516d\u6708", "\u4e03\u6708", "\u516b\u6708", "\u4e5d\u6708", "\u5341\u6708", "\u5341\u4e00\u6708", "\u5341\u4e8c\u6708"], SHORTMONTHS:["1\u6708", "2\u6708", "3\u6708", "4\u6708", "5\u6708", "6\u6708", "7\u6708", "8\u6708", "9\u6708", "10\u6708", "11\u6708", "12\u6708"], STANDALONESHORTMONTHS:["1\u6708", "2\u6708", "3\u6708", "4\u6708", "5\u6708", "6\u6708", "7\u6708", "8\u6708", "9\u6708", "10\u6708", "11\u6708", "12\u6708"], WEEKDAYS:["\u661f\u671f\u65e5", "\u661f\u671f\u4e00", 
+"\u661f\u671f\u4e8c", "\u661f\u671f\u4e09", "\u661f\u671f\u56db", "\u661f\u671f\u4e94", "\u661f\u671f\u516d"], STANDALONEWEEKDAYS:["\u661f\u671f\u65e5", "\u661f\u671f\u4e00", "\u661f\u671f\u4e8c", "\u661f\u671f\u4e09", "\u661f\u671f\u56db", "\u661f\u671f\u4e94", "\u661f\u671f\u516d"], SHORTWEEKDAYS:["\u9031\u65e5", "\u9031\u4e00", "\u9031\u4e8c", "\u9031\u4e09", "\u9031\u56db", "\u9031\u4e94", "\u9031\u516d"], STANDALONESHORTWEEKDAYS:["\u5468\u65e5", "\u5468\u4e00", "\u5468\u4e8c", "\u5468\u4e09", 
+"\u5468\u56db", "\u5468\u4e94", "\u5468\u516d"], NARROWWEEKDAYS:["\u65e5", "\u4e00", "\u4e8c", "\u4e09", "\u56db", "\u4e94", "\u516d"], STANDALONENARROWWEEKDAYS:["\u65e5", "\u4e00", "\u4e8c", "\u4e09", "\u56db", "\u4e94", "\u516d"], SHORTQUARTERS:["1\u5b63", "2\u5b63", "3\u5b63", "4\u5b63"], QUARTERS:["\u7b2c1\u5b63", "\u7b2c2\u5b63", "\u7b2c3\u5b63", "\u7b2c4\u5b63"], AMPMS:["\u4e0a\u5348", "\u4e0b\u5348"], DATEFORMATS:["y\u5e74M\u6708d\u65e5EEEE", "y\u5e74M\u6708d\u65e5", "y\u5e74M\u6708d\u65e5", 
+"yy\u5e74M\u6708d\u65e5"], TIMEFORMATS:["ah:mm:ss [zzzz]", "ah:mm:ss [z]", "ahh:mm:ss", "ah:mm"], FIRSTDAYOFWEEK:6, WEEKENDRANGE:[5, 6], FIRSTWEEKCUTOFFDAY:2};
+goog.i18n.DateTimeSymbols_zh_TW = {ERAS:["\u897f\u5143\u524d", "\u897f\u5143"], ERANAMES:["\u897f\u5143\u524d", "\u897f\u5143"], NARROWMONTHS:["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12"], STANDALONENARROWMONTHS:["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12"], MONTHS:["1\u6708", "2\u6708", "3\u6708", "4\u6708", "5\u6708", "6\u6708", "7\u6708", "8\u6708", "9\u6708", "10\u6708", "11\u6708", "12\u6708"], STANDALONEMONTHS:["\u4e00\u6708", "\u4e8c\u6708", "\u4e09\u6708", 
+"\u56db\u6708", "\u4e94\u6708", "\u516d\u6708", "\u4e03\u6708", "\u516b\u6708", "\u4e5d\u6708", "\u5341\u6708", "\u5341\u4e00\u6708", "\u5341\u4e8c\u6708"], SHORTMONTHS:["1\u6708", "2\u6708", "3\u6708", "4\u6708", "5\u6708", "6\u6708", "7\u6708", "8\u6708", "9\u6708", "10\u6708", "11\u6708", "12\u6708"], STANDALONESHORTMONTHS:["1\u6708", "2\u6708", "3\u6708", "4\u6708", "5\u6708", "6\u6708", "7\u6708", "8\u6708", "9\u6708", "10\u6708", "11\u6708", "12\u6708"], WEEKDAYS:["\u661f\u671f\u65e5", "\u661f\u671f\u4e00", 
+"\u661f\u671f\u4e8c", "\u661f\u671f\u4e09", "\u661f\u671f\u56db", "\u661f\u671f\u4e94", "\u661f\u671f\u516d"], STANDALONEWEEKDAYS:["\u661f\u671f\u65e5", "\u661f\u671f\u4e00", "\u661f\u671f\u4e8c", "\u661f\u671f\u4e09", "\u661f\u671f\u56db", "\u661f\u671f\u4e94", "\u661f\u671f\u516d"], SHORTWEEKDAYS:["\u9031\u65e5", "\u9031\u4e00", "\u9031\u4e8c", "\u9031\u4e09", "\u9031\u56db", "\u9031\u4e94", "\u9031\u516d"], STANDALONESHORTWEEKDAYS:["\u5468\u65e5", "\u5468\u4e00", "\u5468\u4e8c", "\u5468\u4e09", 
+"\u5468\u56db", "\u5468\u4e94", "\u5468\u516d"], NARROWWEEKDAYS:["\u65e5", "\u4e00", "\u4e8c", "\u4e09", "\u56db", "\u4e94", "\u516d"], STANDALONENARROWWEEKDAYS:["\u65e5", "\u4e00", "\u4e8c", "\u4e09", "\u56db", "\u4e94", "\u516d"], SHORTQUARTERS:["1\u5b63", "2\u5b63", "3\u5b63", "4\u5b63"], QUARTERS:["\u7b2c1\u5b63", "\u7b2c2\u5b63", "\u7b2c3\u5b63", "\u7b2c4\u5b63"], AMPMS:["\u4e0a\u5348", "\u4e0b\u5348"], DATEFORMATS:["y\u5e74M\u6708d\u65e5EEEE", "y\u5e74M\u6708d\u65e5", "yyyy/M/d", "yy/M/d"], 
+TIMEFORMATS:["zzzzah\u6642mm\u5206ss\u79d2", "zah\u6642mm\u5206ss\u79d2", "ah:mm:ss", "ah:mm"], FIRSTDAYOFWEEK:6, WEEKENDRANGE:[5, 6], FIRSTWEEKCUTOFFDAY:2};
+if(goog.LOCALE == "am") {
+  goog.i18n.DateTimeSymbols = goog.i18n.DateTimeSymbols_am
+}else {
+  if(goog.LOCALE == "ar") {
+    goog.i18n.DateTimeSymbols = goog.i18n.DateTimeSymbols_ar
+  }else {
+    if(goog.LOCALE == "bg") {
+      goog.i18n.DateTimeSymbols = goog.i18n.DateTimeSymbols_bg
+    }else {
+      if(goog.LOCALE == "bn") {
+        goog.i18n.DateTimeSymbols = goog.i18n.DateTimeSymbols_bn
+      }else {
+        if(goog.LOCALE == "ca") {
+          goog.i18n.DateTimeSymbols = goog.i18n.DateTimeSymbols_ca
+        }else {
+          if(goog.LOCALE == "cs") {
+            goog.i18n.DateTimeSymbols = goog.i18n.DateTimeSymbols_cs
+          }else {
+            if(goog.LOCALE == "da") {
+              goog.i18n.DateTimeSymbols = goog.i18n.DateTimeSymbols_da
+            }else {
+              if(goog.LOCALE == "de") {
+                goog.i18n.DateTimeSymbols = goog.i18n.DateTimeSymbols_de
+              }else {
+                if(goog.LOCALE == "de_AT" || goog.LOCALE == "de-AT") {
+                  goog.i18n.DateTimeSymbols = goog.i18n.DateTimeSymbols_de_AT
+                }else {
+                  if(goog.LOCALE == "de_CH" || goog.LOCALE == "de-CH") {
+                    goog.i18n.DateTimeSymbols = goog.i18n.DateTimeSymbols_de
+                  }else {
+                    if(goog.LOCALE == "el") {
+                      goog.i18n.DateTimeSymbols = goog.i18n.DateTimeSymbols_el
+                    }else {
+                      if(goog.LOCALE == "en") {
+                        goog.i18n.DateTimeSymbols = goog.i18n.DateTimeSymbols_en
+                      }else {
+                        if(goog.LOCALE == "en_AU" || goog.LOCALE == "en-AU") {
+                          goog.i18n.DateTimeSymbols = goog.i18n.DateTimeSymbols_en_AU
+                        }else {
+                          if(goog.LOCALE == "en_GB" || goog.LOCALE == "en-GB") {
+                            goog.i18n.DateTimeSymbols = goog.i18n.DateTimeSymbols_en_GB
+                          }else {
+                            if(goog.LOCALE == "en_IE" || goog.LOCALE == "en-IE") {
+                              goog.i18n.DateTimeSymbols = goog.i18n.DateTimeSymbols_en_IE
+                            }else {
+                              if(goog.LOCALE == "en_IN" || goog.LOCALE == "en-IN") {
+                                goog.i18n.DateTimeSymbols = goog.i18n.DateTimeSymbols_en_IN
+                              }else {
+                                if(goog.LOCALE == "en_SG" || goog.LOCALE == "en-SG") {
+                                  goog.i18n.DateTimeSymbols = goog.i18n.DateTimeSymbols_en_SG
+                                }else {
+                                  if(goog.LOCALE == "en_US" || goog.LOCALE == "en-US") {
+                                    goog.i18n.DateTimeSymbols = goog.i18n.DateTimeSymbols_en
+                                  }else {
+                                    if(goog.LOCALE == "en_ZA" || goog.LOCALE == "en-ZA") {
+                                      goog.i18n.DateTimeSymbols = goog.i18n.DateTimeSymbols_en_ZA
+                                    }else {
+                                      if(goog.LOCALE == "es") {
+                                        goog.i18n.DateTimeSymbols = goog.i18n.DateTimeSymbols_es
+                                      }else {
+                                        if(goog.LOCALE == "es_419" || goog.LOCALE == "es-419") {
+                                          goog.i18n.DateTimeSymbols = goog.i18n.DateTimeSymbols_es
+                                        }else {
+                                          if(goog.LOCALE == "et") {
+                                            goog.i18n.DateTimeSymbols = goog.i18n.DateTimeSymbols_et
+                                          }else {
+                                            if(goog.LOCALE == "eu") {
+                                              goog.i18n.DateTimeSymbols = goog.i18n.DateTimeSymbols_eu
+                                            }else {
+                                              if(goog.LOCALE == "fa") {
+                                                goog.i18n.DateTimeSymbols = goog.i18n.DateTimeSymbols_fa
+                                              }else {
+                                                if(goog.LOCALE == "fi") {
+                                                  goog.i18n.DateTimeSymbols = goog.i18n.DateTimeSymbols_fi
+                                                }else {
+                                                  if(goog.LOCALE == "fil") {
+                                                    goog.i18n.DateTimeSymbols = goog.i18n.DateTimeSymbols_fil
+                                                  }else {
+                                                    if(goog.LOCALE == "fr") {
+                                                      goog.i18n.DateTimeSymbols = goog.i18n.DateTimeSymbols_fr
+                                                    }else {
+                                                      if(goog.LOCALE == "fr_CA" || goog.LOCALE == "fr-CA") {
+                                                        goog.i18n.DateTimeSymbols = goog.i18n.DateTimeSymbols_fr_CA
+                                                      }else {
+                                                        if(goog.LOCALE == "gl") {
+                                                          goog.i18n.DateTimeSymbols = goog.i18n.DateTimeSymbols_gl
+                                                        }else {
+                                                          if(goog.LOCALE == "gsw") {
+                                                            goog.i18n.DateTimeSymbols = goog.i18n.DateTimeSymbols_gsw
+                                                          }else {
+                                                            if(goog.LOCALE == "gu") {
+                                                              goog.i18n.DateTimeSymbols = goog.i18n.DateTimeSymbols_gu
+                                                            }else {
+                                                              if(goog.LOCALE == "he") {
+                                                                goog.i18n.DateTimeSymbols = goog.i18n.DateTimeSymbols_he
+                                                              }else {
+                                                                if(goog.LOCALE == "hi") {
+                                                                  goog.i18n.DateTimeSymbols = goog.i18n.DateTimeSymbols_hi
+                                                                }else {
+                                                                  if(goog.LOCALE == "hr") {
+                                                                    goog.i18n.DateTimeSymbols = goog.i18n.DateTimeSymbols_hr
+                                                                  }else {
+                                                                    if(goog.LOCALE == "hu") {
+                                                                      goog.i18n.DateTimeSymbols = goog.i18n.DateTimeSymbols_hu
+                                                                    }else {
+                                                                      if(goog.LOCALE == "id") {
+                                                                        goog.i18n.DateTimeSymbols = goog.i18n.DateTimeSymbols_id
+                                                                      }else {
+                                                                        if(goog.LOCALE == "in") {
+                                                                          goog.i18n.DateTimeSymbols = goog.i18n.DateTimeSymbols_in
+                                                                        }else {
+                                                                          if(goog.LOCALE == "is") {
+                                                                            goog.i18n.DateTimeSymbols = goog.i18n.DateTimeSymbols_is
+                                                                          }else {
+                                                                            if(goog.LOCALE == "it") {
+                                                                              goog.i18n.DateTimeSymbols = goog.i18n.DateTimeSymbols_it
+                                                                            }else {
+                                                                              if(goog.LOCALE == "iw") {
+                                                                                goog.i18n.DateTimeSymbols = goog.i18n.DateTimeSymbols_iw
+                                                                              }else {
+                                                                                if(goog.LOCALE == "ja") {
+                                                                                  goog.i18n.DateTimeSymbols = goog.i18n.DateTimeSymbols_ja
+                                                                                }else {
+                                                                                  if(goog.LOCALE == "kn") {
+                                                                                    goog.i18n.DateTimeSymbols = goog.i18n.DateTimeSymbols_kn
+                                                                                  }else {
+                                                                                    if(goog.LOCALE == "ko") {
+                                                                                      goog.i18n.DateTimeSymbols = goog.i18n.DateTimeSymbols_ko
+                                                                                    }else {
+                                                                                      if(goog.LOCALE == "ln") {
+                                                                                        goog.i18n.DateTimeSymbols = goog.i18n.DateTimeSymbols_ln
+                                                                                      }else {
+                                                                                        if(goog.LOCALE == "lt") {
+                                                                                          goog.i18n.DateTimeSymbols = goog.i18n.DateTimeSymbols_lt
+                                                                                        }else {
+                                                                                          if(goog.LOCALE == "lv") {
+                                                                                            goog.i18n.DateTimeSymbols = goog.i18n.DateTimeSymbols_lv
+                                                                                          }else {
+                                                                                            if(goog.LOCALE == "ml") {
+                                                                                              goog.i18n.DateTimeSymbols = goog.i18n.DateTimeSymbols_ml
+                                                                                            }else {
+                                                                                              if(goog.LOCALE == "mr") {
+                                                                                                goog.i18n.DateTimeSymbols = goog.i18n.DateTimeSymbols_mr
+                                                                                              }else {
+                                                                                                if(goog.LOCALE == "ms") {
+                                                                                                  goog.i18n.DateTimeSymbols = goog.i18n.DateTimeSymbols_ms
+                                                                                                }else {
+                                                                                                  if(goog.LOCALE == "mt") {
+                                                                                                    goog.i18n.DateTimeSymbols = goog.i18n.DateTimeSymbols_mt
+                                                                                                  }else {
+                                                                                                    if(goog.LOCALE == "nl") {
+                                                                                                      goog.i18n.DateTimeSymbols = goog.i18n.DateTimeSymbols_nl
+                                                                                                    }else {
+                                                                                                      if(goog.LOCALE == "no") {
+                                                                                                        goog.i18n.DateTimeSymbols = goog.i18n.DateTimeSymbols_no
+                                                                                                      }else {
+                                                                                                        if(goog.LOCALE == "or") {
+                                                                                                          goog.i18n.DateTimeSymbols = goog.i18n.DateTimeSymbols_or
+                                                                                                        }else {
+                                                                                                          if(goog.LOCALE == "pl") {
+                                                                                                            goog.i18n.DateTimeSymbols = goog.i18n.DateTimeSymbols_pl
+                                                                                                          }else {
+                                                                                                            if(goog.LOCALE == "pt") {
+                                                                                                              goog.i18n.DateTimeSymbols = goog.i18n.DateTimeSymbols_pt
+                                                                                                            }else {
+                                                                                                              if(goog.LOCALE == "pt_BR" || goog.LOCALE == "pt-BR") {
+                                                                                                                goog.i18n.DateTimeSymbols = goog.i18n.DateTimeSymbols_pt
+                                                                                                              }else {
+                                                                                                                if(goog.LOCALE == "pt_PT" || goog.LOCALE == "pt-PT") {
+                                                                                                                  goog.i18n.DateTimeSymbols = goog.i18n.DateTimeSymbols_pt_PT
+                                                                                                                }else {
+                                                                                                                  if(goog.LOCALE == "ro") {
+                                                                                                                    goog.i18n.DateTimeSymbols = goog.i18n.DateTimeSymbols_ro
+                                                                                                                  }else {
+                                                                                                                    if(goog.LOCALE == "ru") {
+                                                                                                                      goog.i18n.DateTimeSymbols = goog.i18n.DateTimeSymbols_ru
+                                                                                                                    }else {
+                                                                                                                      if(goog.LOCALE == "sk") {
+                                                                                                                        goog.i18n.DateTimeSymbols = goog.i18n.DateTimeSymbols_sk
+                                                                                                                      }else {
+                                                                                                                        if(goog.LOCALE == "sl") {
+                                                                                                                          goog.i18n.DateTimeSymbols = goog.i18n.DateTimeSymbols_sl
+                                                                                                                        }else {
+                                                                                                                          if(goog.LOCALE == "sq") {
+                                                                                                                            goog.i18n.DateTimeSymbols = goog.i18n.DateTimeSymbols_sq
+                                                                                                                          }else {
+                                                                                                                            if(goog.LOCALE == "sr") {
+                                                                                                                              goog.i18n.DateTimeSymbols = goog.i18n.DateTimeSymbols_sr
+                                                                                                                            }else {
+                                                                                                                              if(goog.LOCALE == "sv") {
+                                                                                                                                goog.i18n.DateTimeSymbols = goog.i18n.DateTimeSymbols_sv
+                                                                                                                              }else {
+                                                                                                                                if(goog.LOCALE == "sw") {
+                                                                                                                                  goog.i18n.DateTimeSymbols = goog.i18n.DateTimeSymbols_sw
+                                                                                                                                }else {
+                                                                                                                                  if(goog.LOCALE == "ta") {
+                                                                                                                                    goog.i18n.DateTimeSymbols = goog.i18n.DateTimeSymbols_ta
+                                                                                                                                  }else {
+                                                                                                                                    if(goog.LOCALE == "te") {
+                                                                                                                                      goog.i18n.DateTimeSymbols = goog.i18n.DateTimeSymbols_te
+                                                                                                                                    }else {
+                                                                                                                                      if(goog.LOCALE == "th") {
+                                                                                                                                        goog.i18n.DateTimeSymbols = goog.i18n.DateTimeSymbols_th
+                                                                                                                                      }else {
+                                                                                                                                        if(goog.LOCALE == "tl") {
+                                                                                                                                          goog.i18n.DateTimeSymbols = goog.i18n.DateTimeSymbols_tl
+                                                                                                                                        }else {
+                                                                                                                                          if(goog.LOCALE == "tr") {
+                                                                                                                                            goog.i18n.DateTimeSymbols = goog.i18n.DateTimeSymbols_tr
+                                                                                                                                          }else {
+                                                                                                                                            if(goog.LOCALE == "uk") {
+                                                                                                                                              goog.i18n.DateTimeSymbols = goog.i18n.DateTimeSymbols_uk
+                                                                                                                                            }else {
+                                                                                                                                              if(goog.LOCALE == "ur") {
+                                                                                                                                                goog.i18n.DateTimeSymbols = goog.i18n.DateTimeSymbols_ur
+                                                                                                                                              }else {
+                                                                                                                                                if(goog.LOCALE == "vi") {
+                                                                                                                                                  goog.i18n.DateTimeSymbols = goog.i18n.DateTimeSymbols_vi
+                                                                                                                                                }else {
+                                                                                                                                                  if(goog.LOCALE == "zh") {
+                                                                                                                                                    goog.i18n.DateTimeSymbols = goog.i18n.DateTimeSymbols_zh
+                                                                                                                                                  }else {
+                                                                                                                                                    if(goog.LOCALE == "zh_CN" || goog.LOCALE == "zh-CN") {
+                                                                                                                                                      goog.i18n.DateTimeSymbols = goog.i18n.DateTimeSymbols_zh
+                                                                                                                                                    }else {
+                                                                                                                                                      if(goog.LOCALE == "zh_HK" || goog.LOCALE == "zh-HK") {
+                                                                                                                                                        goog.i18n.DateTimeSymbols = goog.i18n.DateTimeSymbols_zh_HK
+                                                                                                                                                      }else {
+                                                                                                                                                        if(goog.LOCALE == "zh_TW" || goog.LOCALE == "zh-TW") {
+                                                                                                                                                          goog.i18n.DateTimeSymbols = goog.i18n.DateTimeSymbols_zh_TW
+                                                                                                                                                        }else {
+                                                                                                                                                          goog.i18n.DateTimeSymbols = goog.i18n.DateTimeSymbols_en
+                                                                                                                                                        }
+                                                                                                                                                      }
+                                                                                                                                                    }
+                                                                                                                                                  }
+                                                                                                                                                }
+                                                                                                                                              }
+                                                                                                                                            }
+                                                                                                                                          }
+                                                                                                                                        }
+                                                                                                                                      }
+                                                                                                                                    }
+                                                                                                                                  }
+                                                                                                                                }
+                                                                                                                              }
+                                                                                                                            }
+                                                                                                                          }
+                                                                                                                        }
+                                                                                                                      }
+                                                                                                                    }
+                                                                                                                  }
+                                                                                                                }
+                                                                                                              }
+                                                                                                            }
+                                                                                                          }
+                                                                                                        }
+                                                                                                      }
+                                                                                                    }
+                                                                                                  }
+                                                                                                }
+                                                                                              }
+                                                                                            }
+                                                                                          }
+                                                                                        }
+                                                                                      }
+                                                                                    }
+                                                                                  }
+                                                                                }
+                                                                              }
+                                                                            }
+                                                                          }
+                                                                        }
+                                                                      }
+                                                                    }
+                                                                  }
+                                                                }
+                                                              }
+                                                            }
+                                                          }
+                                                        }
+                                                      }
+                                                    }
+                                                  }
+                                                }
+                                              }
+                                            }
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+;goog.provide("goog.events.EventWrapper");
 goog.events.EventWrapper = function() {
 };
 goog.events.EventWrapper.prototype.listen = function(src, listener, opt_capt, opt_scope, opt_eventHandler) {
 };
 goog.events.EventWrapper.prototype.unlisten = function(src, listener, opt_capt, opt_scope, opt_eventHandler) {
+};
+goog.provide("goog.date.DateLike");
+goog.date.DateLike;
+goog.provide("goog.date");
+goog.provide("goog.date.Date");
+goog.provide("goog.date.DateTime");
+goog.provide("goog.date.Interval");
+goog.provide("goog.date.month");
+goog.provide("goog.date.weekDay");
+goog.require("goog.asserts");
+goog.require("goog.date.DateLike");
+goog.require("goog.i18n.DateTimeSymbols");
+goog.require("goog.string");
+goog.date.weekDay = {MON:0, TUE:1, WED:2, THU:3, FRI:4, SAT:5, SUN:6};
+goog.date.month = {JAN:0, FEB:1, MAR:2, APR:3, MAY:4, JUN:5, JUL:6, AUG:7, SEP:8, OCT:9, NOV:10, DEC:11};
+goog.date.formatMonthAndYear = function(monthName, yearNum) {
+  var MSG_MONTH_AND_YEAR = goog.getMsg("{$monthName} {$yearNum}", {"monthName":monthName, "yearNum":yearNum});
+  return MSG_MONTH_AND_YEAR
+};
+goog.date.splitDateStringRegex_ = new RegExp("^(\\d{4})(?:(?:-?(\\d{2})(?:-?(\\d{2}))?)|" + "(?:-?(\\d{3}))|(?:-?W(\\d{2})(?:-?([1-7]))?))?$");
+goog.date.splitTimeStringRegex_ = /^(\d{2})(?::?(\d{2})(?::?(\d{2})(\.\d+)?)?)?$/;
+goog.date.splitTimezoneStringRegex_ = /Z|(?:([-+])(\d{2})(?::?(\d{2}))?)$/;
+goog.date.splitDurationRegex_ = new RegExp("^(-)?P(?:(\\d+)Y)?(?:(\\d+)M)?(?:(\\d+)D)?" + "(T(?:(\\d+)H)?(?:(\\d+)M)?(?:(\\d+(?:\\.\\d+)?)S)?)?$");
+goog.date.isLeapYear = function(year) {
+  return year % 4 == 0 && (year % 100 != 0 || year % 400 == 0)
+};
+goog.date.isLongIsoYear = function(year) {
+  var n = 5 * year + 12 - 4 * (Math.floor(year / 100) - Math.floor(year / 400));
+  n += Math.floor((year - 100) / 400) - Math.floor((year - 102) / 400);
+  n += Math.floor((year - 200) / 400) - Math.floor((year - 199) / 400);
+  return n % 28 < 5
+};
+goog.date.getNumberOfDaysInMonth = function(year, month) {
+  switch(month) {
+    case goog.date.month.FEB:
+      return goog.date.isLeapYear(year) ? 29 : 28;
+    case goog.date.month.JUN:
+    ;
+    case goog.date.month.SEP:
+    ;
+    case goog.date.month.NOV:
+    ;
+    case goog.date.month.APR:
+      return 30
+  }
+  return 31
+};
+goog.date.isSameDay = function(date, opt_now) {
+  var now = opt_now || new Date(goog.now());
+  return date.getDate() == now.getDate() && goog.date.isSameMonth(date, now)
+};
+goog.date.isSameMonth = function(date, opt_now) {
+  var now = opt_now || new Date(goog.now());
+  return date.getMonth() == now.getMonth() && goog.date.isSameYear(date, now)
+};
+goog.date.isSameYear = function(date, opt_now) {
+  var now = opt_now || new Date(goog.now());
+  return date.getFullYear() == now.getFullYear()
+};
+goog.date.getWeekNumber = function(year, month, date, opt_weekDay, opt_firstDayOfWeek) {
+  var d = new Date(year, month, date);
+  var cutoff = opt_weekDay || goog.date.weekDay.THU;
+  var firstday = opt_firstDayOfWeek || goog.date.weekDay.MON;
+  var ONE_DAY = 24 * 60 * 60 * 1E3;
+  var isoday = (d.getDay() + 6) % 7;
+  var daypos = (isoday - firstday + 7) % 7;
+  var cutoffpos = (cutoff - firstday + 7) % 7;
+  var cutoffSameWeek = d.valueOf() + (cutoffpos - daypos) * ONE_DAY;
+  var jan1 = (new Date((new Date(cutoffSameWeek)).getFullYear(), 0, 1)).valueOf();
+  return Math.floor(Math.round((cutoffSameWeek - jan1) / ONE_DAY) / 7) + 1
+};
+goog.date.fromIsoString = function(formatted) {
+  var ret = new goog.date.DateTime(2E3);
+  return goog.date.setIso8601DateTime(ret, formatted) ? ret : null
+};
+goog.date.setIso8601DateTime = function(dateTime, formatted) {
+  formatted = goog.string.trim(formatted);
+  var delim = formatted.indexOf("T") == -1 ? " " : "T";
+  var parts = formatted.split(delim);
+  return goog.date.setIso8601DateOnly_(dateTime, parts[0]) && (parts.length < 2 || goog.date.setIso8601TimeOnly_(dateTime, parts[1]))
+};
+goog.date.setIso8601DateOnly_ = function(d, formatted) {
+  var parts = formatted.match(goog.date.splitDateStringRegex_);
+  if(!parts) {
+    return false
+  }
+  var year = Number(parts[1]);
+  var month = Number(parts[2]);
+  var date = Number(parts[3]);
+  var dayOfYear = Number(parts[4]);
+  var week = Number(parts[5]);
+  var dayOfWeek = Number(parts[6]) || 1;
+  d.setFullYear(year);
+  if(dayOfYear) {
+    d.setDate(1);
+    d.setMonth(0);
+    var offset = dayOfYear - 1;
+    d.add(new goog.date.Interval(goog.date.Interval.DAYS, offset))
+  }else {
+    if(week) {
+      goog.date.setDateFromIso8601Week_(d, week, dayOfWeek)
+    }else {
+      if(month) {
+        d.setDate(1);
+        d.setMonth(month - 1)
+      }
+      if(date) {
+        d.setDate(date)
+      }
+    }
+  }
+  return true
+};
+goog.date.setDateFromIso8601Week_ = function(d, week, dayOfWeek) {
+  d.setMonth(0);
+  d.setDate(1);
+  var jsDay = d.getDay();
+  var jan1WeekDay = jsDay || 7;
+  var THURSDAY = 4;
+  if(jan1WeekDay <= THURSDAY) {
+    var startDelta = 1 - jan1WeekDay
+  }else {
+    startDelta = 8 - jan1WeekDay
+  }
+  var absoluteDays = Number(dayOfWeek) + 7 * (Number(week) - 1);
+  var delta = startDelta + absoluteDays - 1;
+  var interval = new goog.date.Interval(goog.date.Interval.DAYS, delta);
+  d.add(interval)
+};
+goog.date.setIso8601TimeOnly_ = function(d, formatted) {
+  var parts = formatted.match(goog.date.splitTimezoneStringRegex_);
+  var offset = 0;
+  if(parts) {
+    if(parts[0] != "Z") {
+      offset = parts[2] * 60 + Number(parts[3]);
+      offset *= parts[1] == "-" ? 1 : -1
+    }
+    offset -= d.getTimezoneOffset();
+    formatted = formatted.substr(0, formatted.length - parts[0].length)
+  }
+  parts = formatted.match(goog.date.splitTimeStringRegex_);
+  if(!parts) {
+    return false
+  }
+  d.setHours(Number(parts[1]));
+  d.setMinutes(Number(parts[2]) || 0);
+  d.setSeconds(Number(parts[3]) || 0);
+  d.setMilliseconds(parts[4] ? parts[4] * 1E3 : 0);
+  if(offset != 0) {
+    d.setTime(d.getTime() + offset * 6E4)
+  }
+  return true
+};
+goog.date.Interval = function(opt_years, opt_months, opt_days, opt_hours, opt_minutes, opt_seconds) {
+  if(goog.isString(opt_years)) {
+    var type = opt_years;
+    var interval = opt_months;
+    this.years = type == goog.date.Interval.YEARS ? interval : 0;
+    this.months = type == goog.date.Interval.MONTHS ? interval : 0;
+    this.days = type == goog.date.Interval.DAYS ? interval : 0;
+    this.hours = type == goog.date.Interval.HOURS ? interval : 0;
+    this.minutes = type == goog.date.Interval.MINUTES ? interval : 0;
+    this.seconds = type == goog.date.Interval.SECONDS ? interval : 0
+  }else {
+    this.years = opt_years || 0;
+    this.months = opt_months || 0;
+    this.days = opt_days || 0;
+    this.hours = opt_hours || 0;
+    this.minutes = opt_minutes || 0;
+    this.seconds = opt_seconds || 0
+  }
+};
+goog.date.Interval.fromIsoString = function(duration) {
+  var parts = duration.match(goog.date.splitDurationRegex_);
+  if(!parts) {
+    return null
+  }
+  var timeEmpty = !(parts[6] || parts[7] || parts[8]);
+  var dateTimeEmpty = timeEmpty && !(parts[2] || parts[3] || parts[4]);
+  if(dateTimeEmpty || timeEmpty && parts[5]) {
+    return null
+  }
+  var negative = parts[1];
+  var years = parseInt(parts[2], 10) || 0;
+  var months = parseInt(parts[3], 10) || 0;
+  var days = parseInt(parts[4], 10) || 0;
+  var hours = parseInt(parts[6], 10) || 0;
+  var minutes = parseInt(parts[7], 10) || 0;
+  var seconds = parseFloat(parts[8]) || 0;
+  return negative ? new goog.date.Interval(-years, -months, -days, -hours, -minutes, -seconds) : new goog.date.Interval(years, months, days, hours, minutes, seconds)
+};
+goog.date.Interval.prototype.toIsoString = function(opt_verbose) {
+  var minField = Math.min(this.years, this.months, this.days, this.hours, this.minutes, this.seconds);
+  var maxField = Math.max(this.years, this.months, this.days, this.hours, this.minutes, this.seconds);
+  if(minField < 0 && maxField > 0) {
+    return null
+  }
+  if(!opt_verbose && minField == 0 && maxField == 0) {
+    return"PT0S"
+  }
+  var res = [];
+  if(minField < 0) {
+    res.push("-")
+  }
+  res.push("P");
+  if(this.years || opt_verbose) {
+    res.push(Math.abs(this.years) + "Y")
+  }
+  if(this.months || opt_verbose) {
+    res.push(Math.abs(this.months) + "M")
+  }
+  if(this.days || opt_verbose) {
+    res.push(Math.abs(this.days) + "D")
+  }
+  if(this.hours || this.minutes || this.seconds || opt_verbose) {
+    res.push("T");
+    if(this.hours || opt_verbose) {
+      res.push(Math.abs(this.hours) + "H")
+    }
+    if(this.minutes || opt_verbose) {
+      res.push(Math.abs(this.minutes) + "M")
+    }
+    if(this.seconds || opt_verbose) {
+      res.push(Math.abs(this.seconds) + "S")
+    }
+  }
+  return res.join("")
+};
+goog.date.Interval.prototype.equals = function(other) {
+  return other.years == this.years && other.months == this.months && other.days == this.days && other.hours == this.hours && other.minutes == this.minutes && other.seconds == this.seconds
+};
+goog.date.Interval.prototype.clone = function() {
+  return new goog.date.Interval(this.years, this.months, this.days, this.hours, this.minutes, this.seconds)
+};
+goog.date.Interval.YEARS = "y";
+goog.date.Interval.MONTHS = "m";
+goog.date.Interval.DAYS = "d";
+goog.date.Interval.HOURS = "h";
+goog.date.Interval.MINUTES = "n";
+goog.date.Interval.SECONDS = "s";
+goog.date.Interval.prototype.getInverse = function() {
+  return this.times(-1)
+};
+goog.date.Interval.prototype.times = function(n) {
+  return new goog.date.Interval(this.years * n, this.months * n, this.days * n, this.hours * n, this.minutes * n, this.seconds * n)
+};
+goog.date.Interval.prototype.getTotalSeconds = function() {
+  goog.asserts.assert(this.years == 0 && this.months == 0);
+  return((this.days * 24 + this.hours) * 60 + this.minutes) * 60 + this.seconds
+};
+goog.date.Interval.prototype.add = function(interval) {
+  this.years += interval.years;
+  this.months += interval.months;
+  this.days += interval.days;
+  this.hours += interval.hours;
+  this.minutes += interval.minutes;
+  this.seconds += interval.seconds
+};
+goog.date.Date = function(opt_year, opt_month, opt_date) {
+  if(goog.isNumber(opt_year)) {
+    this.date_ = new Date(opt_year, opt_month || 0, opt_date || 1);
+    this.maybeFixDst_(opt_date || 1)
+  }else {
+    if(goog.isObject(opt_year)) {
+      this.date_ = new Date(opt_year.getFullYear(), opt_year.getMonth(), opt_year.getDate());
+      this.maybeFixDst_(opt_year.getDate())
+    }else {
+      this.date_ = new Date(goog.now());
+      this.date_.setHours(0);
+      this.date_.setMinutes(0);
+      this.date_.setSeconds(0);
+      this.date_.setMilliseconds(0)
+    }
+  }
+};
+goog.date.Date.prototype.firstDayOfWeek_ = goog.i18n.DateTimeSymbols.FIRSTDAYOFWEEK;
+goog.date.Date.prototype.firstWeekCutOffDay_ = goog.i18n.DateTimeSymbols.FIRSTWEEKCUTOFFDAY;
+goog.date.Date.prototype.clone = function() {
+  var date = new goog.date.Date(this.date_);
+  date.firstDayOfWeek_ = this.firstDayOfWeek_;
+  date.firstWeekCutOffDay_ = this.firstWeekCutOffDay_;
+  return date
+};
+goog.date.Date.prototype.getFullYear = function() {
+  return this.date_.getFullYear()
+};
+goog.date.Date.prototype.getYear = function() {
+  return this.getFullYear()
+};
+goog.date.Date.prototype.getMonth = function() {
+  return this.date_.getMonth()
+};
+goog.date.Date.prototype.getDate = function() {
+  return this.date_.getDate()
+};
+goog.date.Date.prototype.getTime = function() {
+  return this.date_.getTime()
+};
+goog.date.Date.prototype.getDay = function() {
+  return this.date_.getDay()
+};
+goog.date.Date.prototype.getIsoWeekday = function() {
+  return(this.getDay() + 6) % 7
+};
+goog.date.Date.prototype.getWeekday = function() {
+  return(this.getIsoWeekday() - this.firstDayOfWeek_ + 7) % 7
+};
+goog.date.Date.prototype.getUTCFullYear = function() {
+  return this.date_.getUTCFullYear()
+};
+goog.date.Date.prototype.getUTCMonth = function() {
+  return this.date_.getUTCMonth()
+};
+goog.date.Date.prototype.getUTCDate = function() {
+  return this.date_.getUTCDate()
+};
+goog.date.Date.prototype.getUTCDay = function() {
+  return this.date_.getDay()
+};
+goog.date.Date.prototype.getUTCHours = function() {
+  return this.date_.getUTCHours()
+};
+goog.date.Date.prototype.getUTCMinutes = function() {
+  return this.date_.getUTCMinutes()
+};
+goog.date.Date.prototype.getUTCIsoWeekday = function() {
+  return(this.date_.getUTCDay() + 6) % 7
+};
+goog.date.Date.prototype.getUTCWeekday = function() {
+  return(this.getUTCIsoWeekday() - this.firstDayOfWeek_ + 7) % 7
+};
+goog.date.Date.prototype.getFirstDayOfWeek = function() {
+  return this.firstDayOfWeek_
+};
+goog.date.Date.prototype.getFirstWeekCutOffDay = function() {
+  return this.firstWeekCutOffDay_
+};
+goog.date.Date.prototype.getNumberOfDaysInMonth = function() {
+  return goog.date.getNumberOfDaysInMonth(this.getFullYear(), this.getMonth())
+};
+goog.date.Date.prototype.getWeekNumber = function() {
+  return goog.date.getWeekNumber(this.getFullYear(), this.getMonth(), this.getDate(), this.firstWeekCutOffDay_, this.firstDayOfWeek_)
+};
+goog.date.Date.prototype.getDayOfYear = function() {
+  var dayOfYear = this.getDate();
+  var year = this.getFullYear();
+  for(var m = this.getMonth() - 1;m >= 0;m--) {
+    dayOfYear += goog.date.getNumberOfDaysInMonth(year, m)
+  }
+  return dayOfYear
+};
+goog.date.Date.prototype.getTimezoneOffset = function() {
+  return this.date_.getTimezoneOffset()
+};
+goog.date.Date.prototype.getTimezoneOffsetString = function() {
+  var tz;
+  var offset = this.getTimezoneOffset();
+  if(offset == 0) {
+    tz = "Z"
+  }else {
+    var n = Math.abs(offset) / 60;
+    var h = Math.floor(n);
+    var m = (n - h) * 60;
+    tz = (offset > 0 ? "-" : "+") + goog.string.padNumber(h, 2) + ":" + goog.string.padNumber(m, 2)
+  }
+  return tz
+};
+goog.date.Date.prototype.set = function(date) {
+  this.date_ = new Date(date.getFullYear(), date.getMonth(), date.getDate())
+};
+goog.date.Date.prototype.setFullYear = function(year) {
+  this.date_.setFullYear(year)
+};
+goog.date.Date.prototype.setYear = function(year) {
+  this.setFullYear(year)
+};
+goog.date.Date.prototype.setMonth = function(month) {
+  this.date_.setMonth(month)
+};
+goog.date.Date.prototype.setDate = function(date) {
+  this.date_.setDate(date)
+};
+goog.date.Date.prototype.setTime = function(ms) {
+  this.date_.setTime(ms)
+};
+goog.date.Date.prototype.setUTCFullYear = function(year) {
+  this.date_.setUTCFullYear(year)
+};
+goog.date.Date.prototype.setUTCMonth = function(month) {
+  this.date_.setUTCMonth(month)
+};
+goog.date.Date.prototype.setUTCDate = function(date) {
+  this.date_.setUTCDate(date)
+};
+goog.date.Date.prototype.setFirstDayOfWeek = function(day) {
+  this.firstDayOfWeek_ = day
+};
+goog.date.Date.prototype.setFirstWeekCutOffDay = function(day) {
+  this.firstWeekCutOffDay_ = day
+};
+goog.date.Date.prototype.add = function(interval) {
+  if(interval.years || interval.months) {
+    var month = this.getMonth() + interval.months + interval.years * 12;
+    var year = this.getYear() + Math.floor(month / 12);
+    month %= 12;
+    if(month < 0) {
+      month += 12
+    }
+    var daysInTargetMonth = goog.date.getNumberOfDaysInMonth(year, month);
+    var date = Math.min(daysInTargetMonth, this.getDate());
+    this.setDate(1);
+    this.setFullYear(year);
+    this.setMonth(month);
+    this.setDate(date)
+  }
+  if(interval.days) {
+    var noon = new Date(this.getYear(), this.getMonth(), this.getDate(), 12);
+    var result = new Date(noon.getTime() + interval.days * 864E5);
+    this.setDate(1);
+    this.setFullYear(result.getFullYear());
+    this.setMonth(result.getMonth());
+    this.setDate(result.getDate());
+    this.maybeFixDst_(result.getDate())
+  }
+};
+goog.date.Date.prototype.toIsoString = function(opt_verbose, opt_tz) {
+  var str = [this.getFullYear(), goog.string.padNumber(this.getMonth() + 1, 2), goog.string.padNumber(this.getDate(), 2)];
+  return str.join(opt_verbose ? "-" : "") + (opt_tz ? this.getTimezoneOffsetString() : "")
+};
+goog.date.Date.prototype.toUTCIsoString = function(opt_verbose, opt_tz) {
+  var str = [this.getUTCFullYear(), goog.string.padNumber(this.getUTCMonth() + 1, 2), goog.string.padNumber(this.getUTCDate(), 2)];
+  return str.join(opt_verbose ? "-" : "") + (opt_tz ? "Z" : "")
+};
+goog.date.Date.prototype.equals = function(other) {
+  return this.getYear() == other.getYear() && this.getMonth() == other.getMonth() && this.getDate() == other.getDate()
+};
+goog.date.Date.prototype.toString = function() {
+  return this.toIsoString()
+};
+goog.date.Date.prototype.maybeFixDst_ = function(expected) {
+  if(this.getDate() != expected) {
+    var dir = this.getDate() < expected ? 1 : -1;
+    this.date_.setUTCHours(this.date_.getUTCHours() + dir)
+  }
+};
+goog.date.Date.prototype.valueOf = function() {
+  return this.date_.valueOf()
+};
+goog.date.Date.compare = function(date1, date2) {
+  return date1.getTime() - date2.getTime()
+};
+goog.date.DateTime = function(opt_year, opt_month, opt_date, opt_hours, opt_minutes, opt_seconds, opt_milliseconds) {
+  if(goog.isNumber(opt_year)) {
+    this.date_ = new Date(opt_year, opt_month || 0, opt_date || 1, opt_hours || 0, opt_minutes || 0, opt_seconds || 0, opt_milliseconds || 0)
+  }else {
+    this.date_ = new Date(opt_year ? opt_year.getTime() : goog.now())
+  }
+};
+goog.inherits(goog.date.DateTime, goog.date.Date);
+goog.date.DateTime.fromRfc822String = function(formatted) {
+  var date = new Date(formatted);
+  return!isNaN(date.getTime()) ? new goog.date.DateTime(date) : null
+};
+goog.date.DateTime.prototype.getHours = function() {
+  return this.date_.getHours()
+};
+goog.date.DateTime.prototype.getMinutes = function() {
+  return this.date_.getMinutes()
+};
+goog.date.DateTime.prototype.getSeconds = function() {
+  return this.date_.getSeconds()
+};
+goog.date.DateTime.prototype.getMilliseconds = function() {
+  return this.date_.getMilliseconds()
+};
+goog.date.DateTime.prototype.getUTCDay = function() {
+  return this.date_.getUTCDay()
+};
+goog.date.DateTime.prototype.getUTCHours = function() {
+  return this.date_.getUTCHours()
+};
+goog.date.DateTime.prototype.getUTCMinutes = function() {
+  return this.date_.getUTCMinutes()
+};
+goog.date.DateTime.prototype.getUTCSeconds = function() {
+  return this.date_.getUTCSeconds()
+};
+goog.date.DateTime.prototype.getUTCMilliseconds = function() {
+  return this.date_.getUTCMilliseconds()
+};
+goog.date.DateTime.prototype.setHours = function(hours) {
+  this.date_.setHours(hours)
+};
+goog.date.DateTime.prototype.setMinutes = function(minutes) {
+  this.date_.setMinutes(minutes)
+};
+goog.date.DateTime.prototype.setSeconds = function(seconds) {
+  this.date_.setSeconds(seconds)
+};
+goog.date.DateTime.prototype.setMilliseconds = function(ms) {
+  this.date_.setMilliseconds(ms)
+};
+goog.date.DateTime.prototype.setUTCHours = function(hours) {
+  this.date_.setUTCHours(hours)
+};
+goog.date.DateTime.prototype.setUTCMinutes = function(minutes) {
+  this.date_.setUTCMinutes(minutes)
+};
+goog.date.DateTime.prototype.setUTCSeconds = function(seconds) {
+  this.date_.setUTCSeconds(seconds)
+};
+goog.date.DateTime.prototype.setUTCMilliseconds = function(ms) {
+  this.date_.setUTCMilliseconds(ms)
+};
+goog.date.DateTime.prototype.add = function(interval) {
+  goog.date.Date.prototype.add.call(this, interval);
+  if(interval.hours) {
+    this.setHours(this.date_.getHours() + interval.hours)
+  }
+  if(interval.minutes) {
+    this.setMinutes(this.date_.getMinutes() + interval.minutes)
+  }
+  if(interval.seconds) {
+    this.setSeconds(this.date_.getSeconds() + interval.seconds)
+  }
+};
+goog.date.DateTime.prototype.toIsoString = function(opt_verbose, opt_tz) {
+  var dateString = goog.date.Date.prototype.toIsoString.call(this, opt_verbose);
+  if(opt_verbose) {
+    return dateString + " " + goog.string.padNumber(this.getHours(), 2) + ":" + goog.string.padNumber(this.getMinutes(), 2) + ":" + goog.string.padNumber(this.getSeconds(), 2) + (opt_tz ? this.getTimezoneOffsetString() : "")
+  }
+  return dateString + "T" + goog.string.padNumber(this.getHours(), 2) + goog.string.padNumber(this.getMinutes(), 2) + goog.string.padNumber(this.getSeconds(), 2) + (opt_tz ? this.getTimezoneOffsetString() : "")
+};
+goog.date.DateTime.prototype.toXmlDateTime = function(opt_timezone) {
+  return goog.date.Date.prototype.toIsoString.call(this, true) + "T" + goog.string.padNumber(this.getHours(), 2) + ":" + goog.string.padNumber(this.getMinutes(), 2) + ":" + goog.string.padNumber(this.getSeconds(), 2) + (opt_timezone ? this.getTimezoneOffsetString() : "")
+};
+goog.date.DateTime.prototype.toUTCIsoString = function(opt_verbose, opt_tz) {
+  var dateStr = goog.date.Date.prototype.toUTCIsoString.call(this, opt_verbose);
+  if(opt_verbose) {
+    return dateStr + " " + goog.string.padNumber(this.getUTCHours(), 2) + ":" + goog.string.padNumber(this.getUTCMinutes(), 2) + ":" + goog.string.padNumber(this.getUTCSeconds(), 2) + (opt_tz ? "Z" : "")
+  }
+  return dateStr + "T" + goog.string.padNumber(this.getUTCHours(), 2) + goog.string.padNumber(this.getUTCMinutes(), 2) + goog.string.padNumber(this.getUTCSeconds(), 2) + (opt_tz ? "Z" : "")
+};
+goog.date.DateTime.prototype.equals = function(other) {
+  return this.getTime() == other.getTime()
+};
+goog.date.DateTime.prototype.toString = function() {
+  return this.toIsoString()
+};
+goog.date.DateTime.prototype.toUsTimeString = function(opt_padHours, opt_showAmPm, opt_omitZeroMinutes) {
+  var hours = this.getHours();
+  if(!goog.isDef(opt_showAmPm)) {
+    opt_showAmPm = true
+  }
+  var isPM = hours == 12;
+  if(hours > 12) {
+    hours -= 12;
+    isPM = true
+  }
+  if(hours == 0 && opt_showAmPm) {
+    hours = 12
+  }
+  var label = opt_padHours ? goog.string.padNumber(hours, 2) : String(hours);
+  var minutes = this.getMinutes();
+  if(!opt_omitZeroMinutes || minutes > 0) {
+    label += ":" + goog.string.padNumber(minutes, 2)
+  }
+  if(opt_showAmPm) {
+    var MSG_TIME_AM = goog.getMsg("am");
+    var MSG_TIME_PM = goog.getMsg("pm");
+    label += isPM ? MSG_TIME_PM : MSG_TIME_AM
+  }
+  return label
+};
+goog.date.DateTime.prototype.toIsoTimeString = function(opt_showSeconds) {
+  var hours = this.getHours();
+  var label = goog.string.padNumber(hours, 2) + ":" + goog.string.padNumber(this.getMinutes(), 2);
+  if(!goog.isDef(opt_showSeconds) || opt_showSeconds) {
+    label += ":" + goog.string.padNumber(this.getSeconds(), 2)
+  }
+  return label
+};
+goog.date.DateTime.prototype.clone = function() {
+  var date = new goog.date.DateTime(this.date_);
+  date.setFirstDayOfWeek(this.getFirstDayOfWeek());
+  date.setFirstWeekCutOffDay(this.getFirstWeekCutOffDay());
+  return date
 };
 goog.provide("goog.events.BrowserFeature");
 goog.require("goog.userAgent");
@@ -21696,30 +23054,39 @@ goog.Timer.callOnce = function(listener, opt_delay, opt_handler) {
 goog.Timer.clear = function(timerId) {
   goog.Timer.defaultTimerObject.clearTimeout(timerId)
 };
-goog.provide("hello");
+goog.provide("countdownd");
 goog.require("cljs.core");
 goog.require("clojure.browser.dom");
+goog.require("goog.dom");
 goog.require("goog.Timer");
 goog.require("goog.events");
-hello.set_counter = function set_counter(s) {
-  return clojure.browser.dom.set_text.call(null, "\ufdd0'countdown", s)
+goog.require("goog.date");
+countdownd.days_hours_minutes_seconds = function days_hours_minutes_seconds(s) {
+  var seconds__22475 = s % 60;
+  var minutes__22476 = cljs.core.quot.call(null, s, 60) % 60;
+  var hours__22477 = cljs.core.quot.call(null, s, 3600) % 24;
+  var days__22478 = cljs.core.quot.call(null, s, 24 * 3600);
+  return cljs.core.PersistentVector.fromArray([days__22478, hours__22477, minutes__22476, seconds__22475])
 };
-goog.exportSymbol("hello.set_counter", hello.set_counter);
-hello.append_content = function append_content() {
-  return clojure.browser.dom.append.call(null, clojure.browser.dom.get_element.call(null, "content"), clojure.browser.dom.element.call(null, "\ufdd0'div", "divider"))
+countdownd.format_seconds = function format_seconds(s) {
+  return cljs.core.apply.call(null, cljs.core.str, cljs.core.map.call(null, cljs.core.str, countdownd.days_hours_minutes_seconds.call(null, s), cljs.core.PersistentVector.fromArray(["d ", "h ", "m ", "s"])))
 };
-goog.exportSymbol("hello.append_content", hello.append_content);
-hello.update_counter = function update_counter() {
-  var d__16435 = new Date;
-  return clojure.browser.dom.set_text.call(null, "\ufdd0'countdown", d__16435)
+goog.exportSymbol("countdownd.format_seconds", countdownd.format_seconds);
+countdownd.get_text = function get_text(id) {
+  return goog.dom.getTextContent.call(null, clojure.browser.dom.get_element.call(null, id))
 };
-hello.poll = function poll() {
-  var timer__16436 = new goog.Timer(1E3);
-  hello.update_counter.call(null);
-  timer__16436.start();
-  return goog.events.listen.call(null, timer__16436, goog.Timer.TICK, hello.update_counter)
+countdownd.update_counter = function update_counter() {
+  var target__22479 = new goog.date.DateTime(2012, 7, 1);
+  var seconds_to__22480 = cljs.core.quot.call(null, target__22479 - goog.now.call(null), 1E3);
+  return clojure.browser.dom.set_text.call(null, "\ufdd0'countdown", countdownd.get_text.call(null, "event_year"))
 };
-goog.exportSymbol("hello.poll", hello.poll);
-hello.start_counter = function start_counter() {
+countdownd.poll = function poll() {
+  var timer__22481 = new goog.Timer(200);
+  countdownd.update_counter.call(null);
+  timer__22481.start();
+  return goog.events.listen.call(null, timer__22481, goog.Timer.TICK, countdownd.update_counter)
+};
+goog.exportSymbol("countdownd.poll", countdownd.poll);
+countdownd.start_counter = function start_counter() {
   return clojure.browser.dom.set_text.call(null, "\ufdd0'countdown", "starting 2...")
 };
