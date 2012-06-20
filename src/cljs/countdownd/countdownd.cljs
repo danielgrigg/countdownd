@@ -37,7 +37,6 @@
 (defn update-counter []
   (let [target (target-date)
         seconds-to (max 0 (quot (- target (goog.now)) 1000))]
-;;    (dom/set-text :countdown seconds-to)))
   (dom/set-text :countdown (format-seconds seconds-to))))
 
 (defn poll []
