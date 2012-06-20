@@ -32,12 +32,15 @@
 (defn target-date []
   (gdate/DateTime. (get-int "event_year")
                    (get-int "event_month")
-                   (get-int "event_day")))
+                   (get-int "event_day")
+                   (get-int "event_hour")
+                   (get-int "event_minute")))
                    
 (defn update-counter []
   (let [target (target-date)
         seconds-to (max 0 (quot (- target (goog.now)) 1000))]
-  (dom/set-text :countdown (format-seconds seconds-to))))
+      (dom/set-text :countdown (format-seconds seconds-to))))
+    ;;  (dom/set-text :countdown seconds-to)))
 
 (defn poll []
   (let [timer (goog.Timer. 200)]

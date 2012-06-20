@@ -8,10 +8,9 @@
                  [compojure "1.1.0"]
                  [hiccup "1.0.0"]
                  [clj-time "0.4.3"]
-              ;;   [ring/ring-core "1.0.2"]
-                 ;;   [ring/ring-jetty-adapter "1.0.2"]]
-                 [ring "1.1.1"]]
-  :plugins [;;[lein-ring "0.7.1"]
+                 [ring "1.1.1"]
+                 ]
+  :plugins [[lein-ring "0.7.1"]
             [lein-cljsbuild "0.2.1"]]
   :hooks [leiningen.cljsbuild]
   :cljsbuild {
@@ -19,6 +18,6 @@
               :compiler {:output-to "resources/public/js/main.js"
                          :optimizations :whitespace
                          :pretty-print true}}]}            
-  ;;:ring {:handler countdownd.routes/app}
-  :main countdownd.routes
+  :ring {:handler countdownd.routes/app}
+;;  :main countdownd.routes
   )

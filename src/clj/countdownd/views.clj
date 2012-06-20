@@ -1,4 +1,5 @@
 (ns countdownd.views
+  (:use countdownd.events)
   (:require
    [clj-time
     [core :as time]
@@ -15,17 +16,6 @@
    (javascript-tag "var CLOSURE_NO_DEPS = true;")
     (include-js path)))
 
-(def ^:const all-months
-  (vec (map keyword ["Jan" "Feb" "Mar" "Apr" "May" "Jun"
-   "Jul" "Aug" "Sep" "Oct" "Nov" "Dec"])))
-
-(def ^:const month-map
-  (zipmap all-months (range 0 12)))
-
-(defn month-from-n [n]
-  "Get month corresponding to its natural index (1-12)"
-  (all-months (dec n)))
-
 (defhtml date-select-fields [for-date] 
 ;;  (label {:class "hidden"} "year" "Year")
   ;;  (label {:class "hidden"} "month" "Month")
@@ -39,10 +29,9 @@
   [:br]
   [:div
    [:h4.text_line "Give it a time?"]
-   (drop-down  {:class "choose"} "hour" (range 0 24) 0)
-   (drop-down  {:class "choose"} "minute" (range 0 60) 0)]
+   (drop-down  {:class "choose"} "hour" (range 0 24) (time/hour for-date))
+   (drop-down  {:class "choose"} "minute" (range 0 60) (time/minute for-date))]
   [:br.text_line]
-
   )
 
 (defhtml add-fields []
@@ -71,31 +60,39 @@
      (add-fields)
      (submit-button "Submit"))]]))
 
-(defn event-date-str [{:keys [year month day]}]
-  (str year "/" (inc month) "/" (inc day)))
-
-(defn event-time-str [{:keys [hour minute second]}]
-  (str hour ":" minute ":" second))
-
-(defn index-page [{:keys [name year month day] :as event }]
+(defn index-page [{:keys [name year month day hour minute] :as event }]
   (html5
     [:head
      [:title "Countdown"]
      [:style {:type "text/css"}
       (str "div.hidden {display:none;}\n"
            "div.boxxed {margin-left:10px;margin-right:10px;
-                        background-color:floralWhite;border:1px solid #CCC}")]
+                        background-color:floralWhite;border:1px solid #CCC}"
+           "html, body, #container { height: 100%; margin: 0; padding: 0; }"
+           "body > #container { height: auto; min-height: 100%; }"
+           "#content { padding-bottom: 3em; }"
+           "#footer { clear: both; position: relative; z-index: 10; height: 2em; margin-top: -2em; }"
+           "#footer { text-align: center; font-size:75%;line-height: 1em; }"
+           )]
      ]
     (include-css "/css/base.css")
     [:body {:onload "countdownd.main()"}
-     (include-scripts "/js/main.js" )
-     [:h1 name]
-     [:br
-      [:h2 (event-date-str event)]]
-     [:br
-      [:div.boxxed
-       [:h3#countdown {:style "text-align:center;margin-top:10px"}]]]
-     [:div#event_year.hidden year]
-     [:div#event_month.hidden month]
-     [:div#event_day.hidden day]]))
-
+     [:div#container
+      [:div#content
+       (include-scripts "/js/main.js" )
+       [:h1 name]
+       [:br
+        [:h2 (event-date-str event)]]
+       [:h2 (event-time-str event)]
+      ;;   [:br
+       [:div.boxxed
+        [:h3#countdown {:style "font-size:2em;text-align:center;margin-top:10px"}]]
+       [:div#event_year.hidden year]
+       [:div#event_month.hidden month]
+       [:div#event_day.hidden day]
+      [:div#event_hour.hidden hour]
+       [:div#event_minute.hidden minute]]]
+      [:div#footer
+       (str "Copyright © " (time/year (local-now)) " Daniel C Grigg")]]
+     ))
+  
