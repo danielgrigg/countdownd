@@ -43,29 +43,38 @@
 (defn new-event-page []
   (html5
    [:head
-    [:title "Add form"]
+    [:title "Slipup"]
     [:meta {:name "viewport" :content "width=device-width, initial-scale=1, maximum-scale=1"}]
     (include-css "/css/base.css")
     [:style {:type "text/css"}
      (str "div.hidden {display:none;}\n"
           ".choose {width:80px;display:inline;margin:5px;}\n"
-          ".text_line { clear:both;margin-bottom:0px;}")]
+          ".text_line { clear:both;margin-bottom:0px;}"
+          "html, body, #container { height: 100%; margin: 0; padding: 0; }"
+           "body > #container { height: auto; min-height: 100%; }"
+           "#content { padding-bottom: 3em; }"
+           "#footer { clear: both; position: relative; z-index: 10; height: 2em; margin-top: -2em; }"
+           "#footer { text-align: center; font-size:75%;line-height: 1em; }"
+          )]
      ]
    [:body 
     (include-scripts "/js/main.js" )
-    [:h1 {:style "margin:5px"} "Slip-up"]
-   
-    [:div {:style "margin:5px"}
+    [:div#container
+     [:div#content
+      [:h1 {:style "margin:5px"} "Slip-up"]
+      [:div {:style "margin:5px"}
     (form-to
      [:post "/"]
      (add-fields)
-     (submit-button "Submit"))]]))
+     (submit-button "Submit"))]]]
+      [:div#footer
+       (str "Copyright © " (time/year (local-now)) " Daniel C Grigg")]]
+     ))
 
 (defn index-page [{:keys [name year month day hour minute] :as event }]
   (html5
     [:head
      [:title "Countdown"]
-;; <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
      [:meta {:name "viewport" :content "width=device-width, initial-scale=1, maximum-scale=1"}]
      [:style {:type "text/css"}
       (str "div.hidden {display:none;}\n"
