@@ -44,6 +44,7 @@
   (html5
    [:head
     [:title "Add form"]
+    [:meta {:name "viewport" :content "width=device-width, initial-scale=1, maximum-scale=1"}]
     (include-css "/css/base.css")
     [:style {:type "text/css"}
      (str "div.hidden {display:none;}\n"
@@ -52,7 +53,7 @@
      ]
    [:body 
     (include-scripts "/js/main.js" )
-    [:h1 {:style "margin:5px"} "Countdown"]
+    [:h1 {:style "margin:5px"} "Slip-up"]
    
     [:div {:style "margin:5px"}
     (form-to
@@ -64,6 +65,8 @@
   (html5
     [:head
      [:title "Countdown"]
+;; <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+     [:meta {:name "viewport" :content "width=device-width, initial-scale=1, maximum-scale=1"}]
      [:style {:type "text/css"}
       (str "div.hidden {display:none;}\n"
            "div.boxxed {margin-left:10px;margin-right:10px;

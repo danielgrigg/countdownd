@@ -1,0 +1,36 @@
+Ubuntu deployment
+=========
+
+The process is crude but straightforward.  We use the lein-ring plugin 
+to launch the server, so the server-install just needs an upstart job
+to run lein from wherever countdownd is installed.  
+
+I assume you'll have a user and run the server unprivileged.
+countdown runs on port 8080 by default, edit countdownd.conf to change. 
+Since we're unprivileged, if you want to run port 80, iptables is the easiest
+solution imo, ie:
+
+sudo iptables -t nat -A PREROUTING -i eth0 -p tcp --dport 80 -j REDIRECT --to-port 8080
+
+
+# bootstrap lein 
+scp deploy/scbootstrap.sh $USERNAME@$HOST
+ssh usernam@host "sh ./bootstrap.sh"
+
+# copy countdown.conf to /etc/init/
+# First edit countdown.conf and set RUN_AS to the $USERNAME running countdownd,
+
+scp deploy/countdown.conf username@host:/tmp
+ssh -t "sudo mv /tmp/countdown.conf /etc/init/countdown.conf"
+
+# sync the repo to the server.  Note cljsbuild seems flaky so make sure 
+# when you later run countdownd that resources/public/js/main.js exists.  Else 
+# try building locally&copying, rerunning cljsbuild from the server etc...
+
+sh deploy/scdeploy.sh $USERNAME $HOST
+
+# fire it up!
+ssh -t $ADMIN@$HOST "sudo start countdownd"
+
+# Logs are written to /var/log/countdownd/countdown.log
+

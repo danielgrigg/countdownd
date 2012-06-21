@@ -1,15 +1,23 @@
 # countdownd
 
-I'm an app. Or maybe I'm a library? I haven't decided yet. 
+Really need to update this...
 
-The choice is up to you!
+countdown is a little webapp to create 'countdown' timers. It consists
+of two pages, a page to create a timer with a name & details, followed 
+by a page to view any existing countdown.
+
+Handy say if you have an event coming up and want a web-timer for it..
+
+Mostly the project's to demonstrate creating a webapp purely with Clojure
+and Clojurescript. Specifically using Ring, Compojure and Hiccup.
 
 ## Usage
 
-FIXME
+For now check the deploy folder for instructions installing to a ubuntu server.
 
 ## License
 
-Copyright © 2012 FIXME
+Copyright © 2012 Daniel Grigg, Sliplane Software
 
 Distributed under the Eclipse Public License, the same as Clojure.
+

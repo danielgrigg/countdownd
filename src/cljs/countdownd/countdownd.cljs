@@ -47,6 +47,6 @@
     (do (update-counter)
         (. timer (start))
         (events/listen timer goog.Timer/TICK update-counter))))
-    
-(defn ^export main []
+
+(defn ^:export main []
   (poll))
