@@ -20,7 +20,7 @@
 ;;  (label {:class "hidden"} "year" "Year")
   ;;  (label {:class "hidden"} "month" "Month")
   ;; (label {:class "hidden"} "day" "Day")
-  [:h4.text_line {:style "margin-bottom:0px"} "Give it a date?"]
+  [:h4.text_line {:style "margin-bottom:0px"} "Give it a date"]
   (drop-down {:class "choose"} "day" (range 1 32) (time/day for-date))
   (drop-down {:class "choose"} "month" all-months (month-from-n (time/month for-date)))
   (drop-down {:class "choose"} "year" (for [y (range (time/year for-date)
@@ -28,7 +28,7 @@
 
   [:br]
   [:div
-   [:h4.text_line "Give it a time?"]
+   [:h4.text_line "Give it a time"]
    (drop-down  {:class "choose"} "hour" (range 0 24) (time/hour for-date))
    (drop-down  {:class "choose"} "minute" (range 0 60) (time/minute for-date))]
   [:br.text_line]

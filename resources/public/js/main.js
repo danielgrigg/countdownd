@@ -23062,11 +23062,11 @@ goog.require("goog.Timer");
 goog.require("goog.events");
 goog.require("goog.date");
 countdownd.days_hours_minutes_seconds = function days_hours_minutes_seconds(s) {
-  var seconds__20864 = s % 60;
-  var minutes__20865 = cljs.core.quot.call(null, s, 60) % 60;
-  var hours__20866 = cljs.core.quot.call(null, s, 3600) % 24;
-  var days__20867 = cljs.core.quot.call(null, s, 24 * 3600);
-  return cljs.core.PersistentVector.fromArray([days__20867, hours__20866, minutes__20865, seconds__20864])
+  var seconds__4475 = s % 60;
+  var minutes__4476 = cljs.core.quot.call(null, s, 60) % 60;
+  var hours__4477 = cljs.core.quot.call(null, s, 3600) % 24;
+  var days__4478 = cljs.core.quot.call(null, s, 24 * 3600);
+  return cljs.core.PersistentVector.fromArray([days__4478, hours__4477, minutes__4476, seconds__4475])
 };
 countdownd.format_seconds = function format_seconds(s) {
   return cljs.core.apply.call(null, cljs.core.str, cljs.core.map.call(null, cljs.core.str, countdownd.days_hours_minutes_seconds.call(null, s), cljs.core.PersistentVector.fromArray(["d ", "h ", "m ", "s"])))
@@ -23085,15 +23085,15 @@ countdownd.target_date = function target_date() {
   return new goog.date.DateTime(countdownd.get_int.call(null, "event_year"), countdownd.get_int.call(null, "event_month"), countdownd.get_int.call(null, "event_day"), countdownd.get_int.call(null, "event_hour"), countdownd.get_int.call(null, "event_minute"))
 };
 countdownd.update_counter = function update_counter() {
-  var target__20868 = countdownd.target_date.call(null);
-  var seconds_to__20869 = 0 > cljs.core.quot.call(null, target__20868 - goog.now.call(null), 1E3) ? 0 : cljs.core.quot.call(null, target__20868 - goog.now.call(null), 1E3);
-  return clojure.browser.dom.set_text.call(null, "\ufdd0'countdown", countdownd.format_seconds.call(null, seconds_to__20869))
+  var target__4479 = countdownd.target_date.call(null);
+  var seconds_to__4480 = 0 > cljs.core.quot.call(null, target__4479 - goog.now.call(null), 1E3) ? 0 : cljs.core.quot.call(null, target__4479 - goog.now.call(null), 1E3);
+  return clojure.browser.dom.set_text.call(null, "\ufdd0'countdown", countdownd.format_seconds.call(null, seconds_to__4480))
 };
 countdownd.poll = function poll() {
-  var timer__20870 = new goog.Timer(200);
+  var timer__4481 = new goog.Timer(200);
   countdownd.update_counter.call(null);
-  timer__20870.start();
-  return goog.events.listen.call(null, timer__20870, goog.Timer.TICK, countdownd.update_counter)
+  timer__4481.start();
+  return goog.events.listen.call(null, timer__4481, goog.Timer.TICK, countdownd.update_counter)
 };
 countdownd.main = function main() {
   return countdownd.poll.call(null)
