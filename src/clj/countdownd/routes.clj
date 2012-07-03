@@ -13,24 +13,18 @@
   )
 
 (defroutes main-routes
- ; (GET "/*" {:as x} (str x))
-  (POST "/" [& event]        
-        (if-let [e (parse-event event)]
-          (do (add-event e)
-;;              (str e))))
-              (ring-resp/redirect-after-post         
-               (str "/events/" (:name e))))))
+  (POST "/" [& event]
+        (if-let [e (event-add (parse-event event))]
+          (ring-resp/redirect-after-post         
+           (str "/events/" (:id e) "/" (:name e)))))
   (GET "/" [] (new-event-page))
-  (GET "/events/:name" [name]
-       (if-let [e (get-event name)]
-         (index-page e)
-         (ring-resp/redirect "/")))
+  (GET ["/events/:id/*" :id #"[0-9]+"] [id]
+       (if-let [e (event-with-id id)]
+         (view-page e)
+  ))
   (route/resources "/")
-  (route/not-found "Page not found")
+  (GET "/*" [] (ring-resp/redirect "/"))
+  (route/not-found "Uh oh..")
 )
 
 (def app  (handler/site main-routes))
-
-;(defn start-server  []  (run-jetty (var app) {:port 8080 :join? false}))
-
-;(defn -main [& args]  (start-server))

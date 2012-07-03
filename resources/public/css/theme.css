@@ -1,0 +1,16 @@
+div.hidden { display:none; }
+
+.choose {width:80px;display:inline;margin:5px;}
+
+.text_line { clear:both;margin-bottom:0px;}
+
+html, body, #container { height: 100%; margin: 0; padding: 0; }
+
+body > #container { height: auto; min-height: 100%; }
+
+#content { padding-bottom: 3em; }
+
+#footer { clear: both; position: relative; z-index: 10; height: 2em; margin-top: -2em; }
+#footer { text-align: center; font-size:75%;line-height: 1em; }
+   
+

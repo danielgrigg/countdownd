@@ -9,6 +9,8 @@
                  [hiccup "1.0.0"]
                  [clj-time "0.4.3"]
                  [ring "1.1.1"]
+                 [mysql/mysql-connector-java "5.1.20"]
+                 [clojureql "1.0.3"]
                  ]
   :plugins [[lein-ring "0.7.1"]
             [lein-cljsbuild "0.2.1"]]
