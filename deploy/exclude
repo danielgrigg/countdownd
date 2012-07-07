@@ -2,7 +2,6 @@
 .gitignore
 test
 stale
-deploy
 target
 lib
 classes
