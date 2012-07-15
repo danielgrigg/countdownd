@@ -6611,7 +6611,7 @@ ca("countdownd.add_page_load", function() {
   b.selectedIndex = 2012 - h.getYear();
   c.selectedIndex = h.getMonth();
   d.selectedIndex = h.getDay();
-  g.selectedIndex = h.getHours() - 1;
+  g.selectedIndex = h.getHours();
   return a.selectedIndex = h.getMinutes()
 });
 ca("countdownd.view_page_load", function() {

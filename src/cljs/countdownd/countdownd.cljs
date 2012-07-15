@@ -43,7 +43,7 @@
         (set! (.-selectedIndex year) (- 2012 (.getYear now-local)))
         (set! (.-selectedIndex month) (.getMonth now-local))
         (set! (.-selectedIndex day) (.getDay now-local))
-        (set! (.-selectedIndex hour) (dec (.getHours now-local)))
+        (set! (.-selectedIndex hour) (.getHours now-local))
         (set! (.-selectedIndex minute) (.getMinutes now-local))
 )))
         
