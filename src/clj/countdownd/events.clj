@@ -45,7 +45,7 @@
 (defn parse-event 
   "Parse an event from component value map. Supplied date-time values are local to tzone"
   [{:keys [name minute hour day month year tzone]}]
-  (let [tzone-minutes (- (Integer. tzone))] 
+  (let [tzone-minutes (- (Integer. tzone))]
     {:expires_at (to-timestamp
                   (tm/from-time-zone
                    (tm/date-time (Integer. year)
@@ -57,3 +57,4 @@
                                             (mod tzone-minutes 60))))   
      :name name
      :comment ""}))
+
