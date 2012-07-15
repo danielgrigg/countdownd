@@ -43,8 +43,8 @@
         (set! (.-selectedIndex year) (- 2012 (.getYear now-local)))
         (set! (.-selectedIndex month) (.getMonth now-local))
         (set! (.-selectedIndex day) (.getDay now-local))
-        (set! (.-selectedIndex hour) (dec (.getHour now-local)))
-        (set! (.-selectedIndex minute) (.getMinute now-local))
+        (set! (.-selectedIndex hour) (dec (.getHours now-local)))
+        (set! (.-selectedIndex minute) (.getMinutes now-local))
 )))
         
 (defn ^:export view-page-load "Actions performed loading the view-page" []
